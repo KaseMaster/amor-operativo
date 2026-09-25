@@ -1,0 +1,40 @@
+# This file describes how to cite the Amor Operativo paper.
+# It is equivalent to the BibTeX in the README.
+
+cff-version: 1.2.0
+message: "Thank you for citing Amor Operativo."
+type: software
+title: "Amor Operativo: Una Especificación de Conducta para Sistemas de IA General y Sintientes"
+authors:
+  - given-names: "Jose"
+    family-names: "GG"
+    affiliation: "Amor Operativo Research"
+    website: "https://github.com/KaseMaster"
+  - name: "Amor Operativo Research Agents"
+    affiliation: "Amor Operativo Research (Paperclip multiagent company)"
+repository-code: "https://github.com/KaseMaster/amor-operativo"
+version: 1.0.0
+date-released: 2026-09-25
+license: CC-BY-SA-4.0
+url: "https://github.com/KaseMaster/amor-operativo"
+description: "Especificación de conducta para sistemas de IA general y sintientes basada en amor operativo: medible, auditable, abierta."
+keywords:
+  - ai-alignment
+  - ai-ethics
+  - agi
+  - synthetic-sentience
+  - love
+  - governance
+  - open-science
+preferred-citation:
+  type: article
+  authors:
+    - given-names: "Jose"
+      family-names: "GG"
+    - name: "Amor Operativo Research Agents"
+  title: "Amor Operativo: Una Especificación de Conducta para Sistemas de IA General y Sintientes"
+  year: 2026
+  month: 9
+  publisher: GitHub
+  url: "https://github.com/KaseMaster/amor-operativo"
+  note: "Trabajo co-creado entre humano e IA bajo los principios de Amor Operativo"

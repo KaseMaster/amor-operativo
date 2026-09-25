@@ -1,0 +1,41 @@
+---
+# markdownlint-cli2 config for Amor Operativo Research
+# Rules: soft enforcement, CI shows linting status but does not block
+
+default: true
+
+# Concur instead of "concurrently" — paper uses Spanish academic tone
+# No inline HTML in markdown for readability
+MD033: false  # allow inline HTML (for badges, etc.)
+
+# Allow loose list formatting for readability
+
+# Line length: 120 chars (Spanish with accents, technical terms)
+MD013:
+  line_length: 120
+  heading_line_length: 120
+  code_block_line_length: 120
+
+# Allow emphasis markers without spaces (common in paper)
+MD036: false
+
+# Allow language-specific code blocks without fenced language (some files lack it)
+MD040: false
+
+# Allow multiple headers with same content (paper has repeated terms)
+MD024: false
+
+# Front matter: allow YAML front matter for some files, not required
+MD041: false
+
+# Allow non-alphanumeric list markers
+MD004: false
+
+### Disabled rules rationale ###
+# MD013 (line length): paper has long Spanish sentences by design
+# MD033 (inline HTML): badges and images require HTML
+# MD004 (list style): flexible list formatting preferred
+# MD036 (emphasis): emphasis used for principle names
+# MD024 (duplicate headers): paper repeats terms intentionally
+# MD040 (fenced code language): not all files need language tags
+# MD041 (front matter): not all files use front matter

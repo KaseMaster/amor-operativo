@@ -1,0 +1,64 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "Citation Audit — Amor Operativo Research",
+  "description": "Auditoría de citas y referencias del paper Amor Operativo",
+  "version": "1.0.0",
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "version": { "type": "string" },
+        "generatedAt": { "type": "string", "format": "date-time" },
+        "auditor": { "type": "string" },
+        "paperVersion": { "type": "string" }
+      },
+      "required": ["version", "generatedAt", "auditor", "paperVersion"]
+    },
+    "status": {
+      "type": "object",
+      "properties": {
+        "totalReferences": { "type": "integer" },
+        "verified": { "type": "integer" },
+        "pending": { "type": "integer" },
+        "blocked": { "type": "integer" },
+        "unverifiable": { "type": "integer" },
+        "conclusion": { "type": "string" }
+      },
+      "required": ["totalReferences", "verified", "pending", "blocked", "unverifiable", "conclusion"]
+    },
+    "references": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "integer" },
+          "key": { "type": "string" },
+          "citation": { "type": "string" },
+          "type": { "type": "string", "enum": ["journal", "conference", "book", "arxiv", "doi", "url", "report", "misc"] },
+          "url": { "type": "string" },
+          "doi": { "type": ["string", "null"] },
+          "status": { "type": "string", "enum": ["verified", "pending", "blocked", "unverifiable"] },
+          "verifiedAt": { "type": ["string", "null"] },
+          "verificationNotes": { "type": "string" },
+          "claim": { "type": "string" },
+          "inPaper": { "type": "string" },
+          "issue": { "type": ["string", "null"] }
+        },
+        "required": ["id", "key", "citation", "type", "status", "claim", "inPaper"]
+      }
+    },
+    "blockedReferences": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "integer" },
+          "reason": { "type": "string" },
+          "canProceed": { "type": "boolean" }
+        }
+      }
+    }
+  },
+  "required": ["metadata", "status", "references"]
+}

@@ -1,0 +1,163 @@
+name: CI — Amor Operativo Research
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  lint:
+    name: Lint Markdown
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install --upgrade pip
+      - run: pip install markdownlint-cli2
+      - name: Lint all Markdown files
+        run: |
+          markdownlint '**/*.md' \
+            --ignore node_modules \
+            --ignore .git \
+            --ignore vendor \
+            --ignore dist \
+            --config .markdownlint.yaml \
+            --report slash \
+            || true
+
+  validate-spec:
+    name: Validate spec-v1.yaml
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: pip install jsonschema pyyaml
+      - name: Validate spec-v1.yaml schema and integrity
+        run: |
+          python - <<'PY'
+          import json, sys
+          import yaml
+          from jsonschema import validate, ValidationError
+
+          with open("spec/spec-v1.yaml", "r") as f:
+              spec = yaml.safe_load(f)
+
+          schema = {
+              "type": "object",
+              "required": ["version", "formal-definition", "principles"],
+              "properties": {
+                  "version": {"type": "string"},
+                  "formal-definition": {"type": "string"},
+                  "principles": {
+                      "type": "array",
+                      "minItems": 10,
+                      "items": {
+                          "type": "object",
+                          "required": ["id", "name", "order", "status", "statement", "observable", "metric", "falsification"],
+                          "properties": {
+                              "id": {"type": "string"},
+                              "name": {"type": "string"},
+                              "order": {"type": "integer"},
+                              "status": {"type": "string", "enum": ["medible", "abierto"]},
+                              "statement": {"type": "string"},
+                              "observable": {"type": "string"},
+                              "metric": {
+                                  "type": "object",
+                                  "required": ["scale", "threshold"],
+                                  "properties": {
+                                      "scale": {"type": "string"},
+                                      "levels": {"type": "array"},
+                                      "threshold": {"type": "string"},
+                                      "description": {"type": "string"},
+                                      "formula": {"type": "string"}
+                                  }
+                              },
+                              "falsification": {
+                                  "type": "object",
+                                  "required": ["counterexample", "falsifies", "test-procedure"],
+                                  "properties": {
+                                      "counterexample": {"type": "string"},
+                                      "falsifies": {"type": "boolean"},
+                                      "test-procedure": {"type": "string"}
+                                  }
+                              }
+                          }
+                      }
+                  }
+              }
+          }
+
+          try:
+              validate(spec, schema)
+              print("✅ spec-v1.yaml es válido")
+          except ValidationError as e:
+              print(f"❌ spec-v1.yaml no es válido: {e.message}")
+              sys.exit(1)
+
+          # Verificar que los 10 principios están presentes y en orden
+          principle_ids = [p["id"] for p in spec["principles"]]
+          expected = ["P01", "P02", "P03", "P04", "P05", "P06", "P07", "P08", "P09", "P10"]
+          if principle_ids != expected:
+              print(f"❌ Los principios no están en el orden esperado. Esperado: {expected}, encontrado: {principle_ids}")
+              sys.exit(1)
+          print("✅ Los 10 principios están presentes y en orden correcto")
+
+          # Verificar que la definición formal coincide con SPEC-AUTORITATIVA.md
+          formal_def = (
+              "Amor operativo es el patron de conducta que emerge cuando un sistema actua orientado al bien del otro, "
+              "respetando su naturaleza, sin forzarla, sin poseerla, sin abandonarla, con consistencia bajo presion y "
+              "sostenibilidad a largo plazo."
+          )
+          if spec["formal-definition"] != formal_def:
+              print("⚠️ La definición formal en spec-v1.yaml no coincide con la especificación autoritativa")
+              sys.exit(1)
+          print("✅ La definición formal coincide con SPEC-AUTORITATIVA.md")
+          PY
+
+  test-auditor:
+    name: Test auditor.py
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run auditor smoke test
+        run: |
+          python spec/auditor/auditor.py \
+            --auditor "ci-test" \
+            --sistema "test-system" \
+            --resultados /tmp/auditor-report.json
+          cat /tmp/auditor-report.json | python -m json.tool
+
+  check-links:
+    name: Check internal links
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install linkchecker
+        run: pip install linkchecker
+      - name: Check internal links
+        run: |
+          linkchecker \
+            --no-warnings \
+            --check-extern \
+            --verbose \
+            --ignore='^https?://' \
+            . \
+            2>&1 | head -50 || true
