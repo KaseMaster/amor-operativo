@@ -86,7 +86,7 @@ En resumen: el borrador está completo, honesto sobre lo que aún no está ejecu
 
 ## Próximo paso
 
-Este informe es el informe de la fase de preparación del repositorio. Si el operador aprueba, la fase de publicación se ejecuta con la conexión GitHub ya activa de Paperclip, sin `gh` CLI ni token local, y solo con la aprobación explícita del operador (puerta F11).
+Este informe es el informe de la fase de preparación del repositorio. La publicación se ejecutó el 2026-09-25 tras la aprobación explícita del operador, con la conexión GitHub gestionada de Paperclip (sin `gh` CLI ni token local): https://github.com/KaseMaster/amor-operativo
 
 Si quiere cambios antes de aprobar, indíquelos y yo los aplico antes de volver a enviar el informe.
 

@@ -4,7 +4,7 @@
 **Año:** 2026
 **Idioma:** Español (versión canónica para el operador)
 **Manuscrito de referencia:** `paper/manuscript/manuscript-en.md` (inglés)
-**Versión:** 1.0.0 (staging — pendiente de aprobación humana, puerta F11)
+**Versión:** 1.0.0 (publicada el 2026-09-25; aprobación explícita del operador)
 
 ---
 
@@ -679,4 +679,4 @@ Referencias verificables (>=30). Cada entrada incluye fuente primaria (DOI, arXi
 
 ---
 
-*Documento generado como parte del proyecto Amor Operativo Research. Licencia CC BY-SA 4.0. Versión 1.0.0 — staging, pendiente de aprobación humana (puerta F11).*
+*Documento generado como parte del proyecto Amor Operativo Research. Licencia CC BY-SA 4.0. Versión 1.0.0 publicada el 2026-09-25 (github.com/KaseMaster/amor-operativo).*

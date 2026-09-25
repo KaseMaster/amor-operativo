@@ -93,7 +93,7 @@ La especificación de los 10 principios está completa. Las métricas están def
 | Paper completo | En desarrollo | Borrador en `paper/paper.md` y `paper/paper_en.md`. |
 | Guía de implementación | En desarrollo | Borrador en `paper/implementacion.md`. |
 | Revisión crítica | Diseñada, no ejecutada | Escenarios S1–S10 listos; sin ejecución real. |
-| Publicación v1.0.0 | Pendiente | Requiere aprobación humana (puerta F11). |
+| Publicación v1.0.0 | **Hecha** | https://github.com/KaseMaster/amor-operativo — commit 482463af (2026-09-25), aprobación explícita del operador. |
 | Traducciones | Pendiente | Solo ES y EN disponibles. |
 | Test de amor operativo | Diseñado, sin ejecución real | `eval/scenarios/` listo; `eval/results/` vacío. |
 
@@ -148,4 +148,4 @@ Equipo de Amor Operativo Research (AMO):
 
 ---
 
-*Repositorio en staging, sin publicación. El push a GitHub, la activación de GitHub Pages y la release v1.0.0 están pendientes de aprobación humana explícita (puerta F11).*
+*Repositorio publicado: https://github.com/KaseMaster/amor-operativo (v1.0.0, 2026-09-25). La activación de GitHub Pages y la release nominal siguen pendientes de decisión del operador.*

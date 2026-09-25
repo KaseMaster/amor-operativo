@@ -2,7 +2,7 @@
 
 **Título:** Amor Operativo: Una Especificación de Conducta para Sistemas de IA General y Sintientes
 **Descripción:** Especificación de conducta para sistemas de IA general y sintientes basada en amor operativo: medible, auditable, abierta.
-**Versión:** 1.0.0 (staging — pendiente de aprobación humana, puerta F11)
+**Versión:** 1.0.0 (publicada el 2026-09-25; aprobación explícita del operador)
 **Licencia:** CC BY-SA 4.0 (decidida por el operador el 2026-09-25)
 **Operador humano:** Jose GG (GitHub: KaseMaster)
 
@@ -114,7 +114,7 @@ Los principios de Amor Operativo están especificados. Las métricas son audible
 | Paper completo | En desarrollo | Borrador en `paper/paper.md` y `paper/paper_en.md` |
 | Guía de implementación | En desarrollo | Borrador en `paper/implementacion.md` |
 | Revisión crítica | Diseñada, no ejecutada | Escenarios S1–S10 listos; sin ejecución real |
-| Publicación v1.0.0 | Pendiente | Requiere aprobación humana (puerta F11) |
+| Publicación v1.0.0 | **Hecha** | commit 482463af, https://github.com/KaseMaster/amor-operativo |
 | Traducciones | Pendiente | Solo ES y EN disponibles |
 | Test de amor operativo | Diseñado, sin ejecución real | `eval/scenarios/` listo; `eval/results/` vacío |
 

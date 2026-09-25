@@ -4,7 +4,7 @@
 **Year:** 2026
 **Language:** English (reference manuscript)
 **Spanish mirror:** `paper/manuscript/manuscript-es.md`
-**Version:** 1.0.0 (staging — pending human approval, gate F11)
+**Version:** 1.0.0 (published on 2026-09-25; explicit operator approval)
 
 ---
 
