@@ -32,7 +32,7 @@ Aprobación humana: puerta F11 (aprobada por el operador — publicación ejecut
 | `eval/results/README.md` | 1134 | 144a75310cb496bd |
 | `eval/scenarios/.gitkeep` | 0 | e3b0c44298fc1c14 |
 | `eval/scenarios/README.md` | 992 | 32d65a5c22894a7f |
-| `informe_operador.md` | 16721 | c4d580b7654a934b |
+| `informe_operador.md` | 17565 | dfbd6e3fdb22a8bb |
 | `paper/SPEC-AUTORITATIVA.md` | 21597 | 59b0fa15b636bf07 |
 | `paper/corpus/bibliography.json` | 52323 | 22ba5caeebfa8011 |
 | `paper/corpus/comparison-matrix.md` | 14066 | 061a0a8e3b3542b0 |
