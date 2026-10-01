@@ -204,3 +204,27 @@ de §7.4 en orden (Pages, topics, release, issue de bienvenida, announcement).
 2. Verificar build de Pages en vivo (https://kasemaster.github.io/amor-operativo/) tras 1-2 min.
 3. Difusion externa (HN, Reddit, X, arXiv/Zenodo): NO ejecutada — requiere OK del operador por canal (ver diffusion-plan.md).
 4. Monitorizar issues/PRs del repo publico desde este run o un hijo dedicado.
+
+## 10. Heartbeat 2026-10-01 ~05:30Z (run 1c21f71f, Dr. Mateo Rivas) — verificacion de solo lectura
+
+Este run NO tiene identidad GitHub gestionada (el shim gh y git remotos responden
+"No managed GitHub identity is available for this run"; razon conocida: el grant
+activo es kind=organization y el resolver `git-credentials.ts:342` lo excluye sin
+delegaciones). Por tanto el paso pendiente 1 (commit de consolidacion de
+`paper/reports/` + seccion §9 a main) NO se ha ejecutado en este heartbeat; el
+staging local conserva los cambios sin push (`git -C repo/amor-operativo status -s`:
+18 ficheros modificados + sin tracking de paper/reports/ y paper/informe_operador.md).
+
+Verificado en vivo (solo lectura, sin token):
+- GitHub Pages: `curl -L https://kasemaster.github.io/amor-operativo/` -> HTTP 200,
+  62406 bytes, `<title>Amor Operativo`, 45 ocurrencias de "amor operativo" en el HTML.
+  Pendiente 2 de §9: RESUELTO (build de Pages activo).
+- Lectura de la API de GitHub (repo, release, issue #1, commits): BLOQUEADA por
+  rate limit no autenticado de la IP de salida (95.173.205.130,
+  "API rate limit exceeded"). Siguiente paso tecnico: repetir la readback con la
+  credencial gestionada desde un run con identidad GitHub activa, o desde el
+  navegador del operador.
+
+Siguiente accion explicita: commit de consolidacion + push a main por un run con
+credencial gestionada (owner: run con identidad GitHub / Editorial Director),
+cuando AMO-58 haya cerrado la re-auditoria de §7 para no pisar el canon.
