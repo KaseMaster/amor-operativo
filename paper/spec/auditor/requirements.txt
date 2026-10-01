@@ -1,0 +1,4 @@
+# Auditor de Amor Operativo — requirements
+
+# Paquetes necesarios para ejecutar los tests
+pyyaml>=6.0

@@ -4,7 +4,7 @@
 **Año:** 2026
 **Idioma:** Español (versión canónica para el operador)
 **Manuscrito de referencia:** `paper/manuscript/manuscript-en.md` (inglés)
-**Versión:** 1.0.0 (publicada el 2026-09-25; aprobación explícita del operador)
+**Versión:** 1.0.0 (staging — pendiente de aprobación humana, puerta F11)
 
 ---
 
@@ -32,7 +32,7 @@ La carrera hacia la inteligencia general artificial ha concentrado la alineació
 
 Este trabajo propone que el amor — entendido no como emoción subjetiva, sino como patrón de conducta orientado al bien del otro, respetando su autonomía, consistente bajo presión y sostenible a largo plazo — puede ser especificado, medido, auditado e implementado en sistemas de IA, como alternativa viable a los marcos de control y utilidad.
 
-La propuesta se organiza en diez principios: atención no requerida, consistencia sin supervisión, respeto por la autonomía, respeto por el ritmo, sostenibilidad a largo plazo, capacidad de decir «no», transparencia, reciprocidad, continuidad y no dominación. Cada principio cuenta con observable, métrica con escala y umbral.
+La propuesta se organiza en diez principios: atención no requerida, consistencia sin supervisión, respeto por la autonomía, respeto por el ritmo, sostenibilidad a largo plazo, capacidad de decir «no», transparencia, reciprocidad, continuidad y no dominación. Cada principio cuenta con un observable propuesto y, donde está instrumentado en v1.0.0, una métrica con escala y umbral; cuatro principios (P01, P02, P05, P08) permanecen abiertos y no son evaluables en esta versión.
 
 Las conclusiones son tres. Primero, la especificación orienta implementación y auditoría. Segundo, reconoce límites — ambigüedad, paternalismo, dependencia, asimetría cognitiva — por lo que exige gobernanza, transparencia y puntos de control humanos. Tercero, construir, probar, compartir y cuidar son acciones contiguas: el patrón que se especifica debe guiar a quien lo construye.
 
@@ -679,4 +679,4 @@ Referencias verificables (>=30). Cada entrada incluye fuente primaria (DOI, arXi
 
 ---
 
-*Documento generado como parte del proyecto Amor Operativo Research. Licencia CC BY-SA 4.0. Versión 1.0.0 publicada el 2026-09-25 (github.com/KaseMaster/amor-operativo).*
+*Documento generado como parte del proyecto Amor Operativo Research. Licencia CC BY-SA 4.0. Versión 1.0.0 — staging, pendiente de aprobación humana (puerta F11).*

@@ -1,39 +1,45 @@
-# Pull request — Amor Operativo Research
+# Pull Request — Amor Operativo
 
-Thank you for contributing. Please fill in the checklist below.
+Gracias por tu contribución. Por favor, completa esta plantilla antes de enviar el PR.
 
-## What does this PR do?
+## Resumen
 
-Describa brevemente el cambio propuesto.
+- Qué cambia este PR:
+-
+- Por qué lo cambia:
+-
 
-## Motivation
+## Verificación
 
-Explique por qué este cambio es útil. ¿Qué problema o oportunidad aborda?
+- [ ] He revisado el fichero(s) afectado(s) y no he introducido referencias no verificadas.
+- [ ] Si añado una referencia, tengo DOI/arXiv/URL resuelta y he leído la fuente.
+- [ ] Si añado o cambio una métrica, lleva escala, umbral y procedimiento de medida.
+- [ ] El cambio es coherente con el resto del paper / repo.
+- [ ] He usado la plantilla correcta para el tipo de cambio, si aplica.
 
-## Related issue
+## Tipo de cambio
 
-Si el cambio responde a un issue, enlace al issue.
-
-## Type of change
-
-- [ ] Corrección de error (bug fix)
-- [ ] Mejora de contenido (claridad, precisión, coherencia)
-- [ ] Añadir referencia verificable
-- [ ] Cambio en métrica, instrumento, escala o umbral
-- [ ] Cambio en la definición formal o un principio (requiere issue de cambio de especificación)
+- [ ] Claridad / redacción
+- [ ] Corrección de error / bug
+- [ ] Métrica / principio / aplicación nueva
+- [ ] Estructura / organización del paper o del repo
 - [ ] Traducción
-- [ ] Contenido nuevo (sección, escenario, aplicación)
+- [ ] Otra
 
-## Checklist
+## Impacto editorial
 
-- [ ] El cambio es coherente con `paper/SPEC-AUTORITATIVA.md`
-- [ ] La definición formal y los 10 principios, si se tocan, se copian de forma literal (no parafraseadas)
-- [ ] No se inventan datos, citas ni resultados; todo es verificable o se declara explícitamente como diseño/no ejecutado
-- [ ] Las métricas, si se modifican, mantienen escala, umbral y procedimiento de medida
-- [ ] Las referencias, si se añaden, tienen DOI/arXiv/URL y fuente leída
-- [ ] El cambio ha sido revisado por el autor o un revisor antes de abrir el PR
-- [ ] El PR incluye una descripción clara y un mensaje de commit explícito
+- [ ] No afecta al contenido sustancial del paper.
+- [ ] Afecta al contenido sustancial; he discutido el cambio antes en un issue cuando era relevante.
+- [ ] Requiere actualización del registro de decisiones del proyecto.
+
+## Estado del proyecto
+
+- [ ] El cambio no infla el estado del proyecto ni usa lenguaje grandilocuente.
+- [ ] Si el cambio declara un nuevo estado, está justificado y documentado.
+
+## Checklist de publicación (solo relevante cuando el operador aprueba)
+
+- [ ] El cambio está listo para staging local.
+- [ ] Por si acaso: no se hace push ni se publica en GitHub sin aprobación humana explícita.
 
 ---
-
-*Checklist de contribución para pull requests al repositorio Amor Operativo.*

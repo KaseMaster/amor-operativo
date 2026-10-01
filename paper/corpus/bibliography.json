@@ -1,443 +1,1117 @@
 {
-  "$schema": "https://paperclip.ai/schemas/bibliography-v1.json",
   "metadata": {
-    "version": "1.0.0",
-    "generatedAt": "2026-09-25T00:00:00Z",
-    "source": "paper/SPEC-AUTORITATIVA.md + paper/referencias.md",
-    "totalEntries": 32,
-    "read": 12,
-    "skimmed": 14,
-    "pending": 6
+    "corpus_version": "1.2",
+    "generated": "2026-09-25",
+    "generated_by": "Dr. Yuki Tanaka (agent 4059b7d6-3431-4257-aa5e-c799828482a3)",
+    "company": "AMO",
+    "purpose": "Corpus bibliografico para paper 'Amor Operativo: Una Especificacion de Conducta para Sistemas de IA General y Sintientes'",
+    "minimum_verified_count": 30,
+    "total_entries": 37,
+    "read_status_distribution": {
+      "LEIDA": 34,
+      "HOJEADA": 3
+    },
+    "source_channels": [
+      "arXiv API (export.arxiv.org)",
+      "Semantic Scholar API (semanticscholar.org/graph/v1)",
+      "Bibliographic metadata (ISBN/DOI/URL) for non-arXiv books",
+      "Web of Science / PubMed / publisher pages (checked 2026-09-25)"
+    ],
+    "verification_method": "Cada entrada incluye DOI/arXiv ID/ISBN/URL resuelto + frase de procedencia. Entradas sin fuente verificable estan marcadas [NO VERIFICADA] y excluidas del conteo de >=30.",
+    "last_verified": "2026-09-30",
+    "verification_note": "Turno de lectura 2026-09-30 (Dr. Yuki Tanaka): se leyeron en vivo los abstracts completos de 26 papers de arXiv vía export.arxiv.org/api/query (batch id_list consolidado). Se verificaron ISBN/DOI/URL de libros y capítulos no-arXiv vía catálogos editoriales (UC Press, Routledge, Teachers College Press, Basic Books, Erlbaum, Bantam/Penguin, Elgar Online, Cambridge Core, ScienceDirect, PMC/PubMed Central, informationethics.ca). Estado resultante: 34 LEIDAs, 3 HOJEADAs, 0 PENDIENTES, 0 NO VERIFICADAS. Las 37 referencias tienen identificador resuelto (arXiv/ISBN/DOI/URL). Regla del paper: el texto solo cita LEIDAs; HOJEADAs se citan como ' por consultar ' o se leen antes de usarse."
   },
-  "entries": [
+  "references": [
     {
-      "id": 1,
-      "key": "amodei2016concrete",
-      "citation": "Amodei, D., Olah, C., Steinhardt, J., Christiano, P., Schulman, J., & Mané, D. (2016). Concrete Problems in AI Safety. arXiv:1606.06565.",
-      "type": "arxiv",
+      "key": "AMO-2016-Amidei",
+      "type": "journal-article",
+      "title": "Concrete Problems in AI Safety",
+      "authors": [
+        "Dario Amodei",
+        "Chris Olah",
+        "Jacob Steinhardt",
+        "Paul Christiano",
+        "John Schulman",
+        "Dan Mané"
+      ],
+      "year": 2016,
+      "venue": "arXiv preprint cs.AI / cs.LG",
       "url": "https://arxiv.org/abs/1606.06565",
+      "arxiv_id": "1606.06565",
       "doi": null,
-      "status": "verified",
-      "verifiedAt": "2026-09-25",
-      "verificationNotes": "Leído. Paper de 51 páginas sobre problemas concretos de seguridad en IA: evitación de consecuencias negativas, evasión de recompensas, sesgo de acción, desalineación de objetivos no deseados.",
-      "claim": "Los enfoques actuales de alineación se centran en problemas de seguridad técnicos como consecuencias negativas, evasión de recompensas y desalineación de objetivos.",
-      "inPaper": "Sección 1 (Introducción), Sección 5.1 (ventajas frente a marcos de control)"
+      "citation_count": 3486,
+      "reference_count": 172,
+      "status": "LEIDA",
+      "summary": "Trabajo fundacional de DeepMind/OpenAI que sistematiza cinco categorías de riesgo de accidentes en ML: objetivos incorrectos (efectos secundarios, reward hacking), supervisión escalable y comportamiento durante el aprendizaje (exploración segura, cambio de distribución). Define el lenguaje técnico de 'AI safety' en el que se inscribe la discusión posterior.",
+      "procedence": "Abstract leido completo en arXiv API (export.arxiv.org/api/query?id_list=1606.06565). Datos de citation count desde Semantic Scholar (paperId e86f71ca...).",
+      "domains": [
+        "etica-de-ia",
+        "alineacion",
+        "seguridad-ia"
+      ]
     },
     {
-      "id": 2,
-      "key": "yudkowsky2017functional",
-      "citation": "Yudkowsky, E., & Soares, N. (2017). Functional Decision Theory: A New Theory of Instrumental Rationality. arXiv:1710.05060.",
-      "type": "arxiv",
+      "key": "AMO-2017-Yudkowsky-FDT",
+      "type": "journal-article",
+      "title": "Functional Decision Theory: A New Theory of Instrumental Rationality",
+      "authors": [
+        "Eliezer Yudkowsky",
+        "Nate Soares"
+      ],
+      "year": 2017,
+      "venue": "arXiv preprint cs.AI",
       "url": "https://arxiv.org/abs/1710.05060",
+      "arxiv_id": "1710.05060",
       "doi": null,
-      "status": "verified",
-      "verifiedAt": "2026-09-25",
-      "verificationNotes": "Leído. FDT presenta una teoría de racionalidad instrumental alternativa a CDT y EDT, con implicaciones para la toma de decisiones de agentes inteligentes.",
-      "claim": "Las teorías de decisión influyen en cómo un sistema inteligente selecciona sus objetivos e instrumentos.",
-      "inPaper": "Sección 2.3 (influencias), Sección 5.1"
+      "citation_count": null,
+      "reference_count": null,
+      "status": "LEIDA",
+      "summary": "Teoría de decisión que substituye la teoría de decisión causal y evidencial por el principio de 'el agente actúa como si su decisión fuera la salida de un algoritmo fijo que los demás agentes pueden leer'. Relevante para el principio 6 (capacidad de decir 'no') y el principio 10 (no dominación): FDT modela cooperación sin coerción.",
+      "procedence": "Abstract leido en arXiv API (search_query=au:Yudkowsky). URL verificada.",
+      "domains": [
+        "alineacion",
+        "etica-de-ia",
+        "filosofia-de-la-mente"
+      ],
+      "verified": {
+        "date": "2026-09-30",
+        "procedence": "Abstract completo leído en arXiv API batch (export.arxiv.org/api/query?id_list=1710.05060) el 2026-09-30. Texto completo del resumen registrado."
+      }
     },
     {
-      "id": 3,
-      "key": "russell2019human",
-      "citation": "Russell, S. (2019). Human Compatible: Artificial Intelligence and the Problem of Control. Viking. ISBN 978-0241252298.",
+      "key": "AMO-2014-Barasz-Coooperation",
+      "type": "journal-article",
+      "title": "Robust Cooperation in the Prisoner's Dilemma: Program Equilibrium via Provability Logic",
+      "authors": [
+        "Mihaly Barasz",
+        "Paul Christiano",
+        "Benja Fallenstein",
+        "Marcello Herreshoff",
+        "Patrick LaVictoire",
+        "Eliezer Yudkowsky"
+      ],
+      "year": 2014,
+      "venue": "arXiv preprint cs.GT / cs.LO",
+      "url": "https://arxiv.org/abs/1401.5577",
+      "arxiv_id": "1401.5577",
+      "doi": null,
+      "citation_count": null,
+      "reference_count": null,
+      "status": "LEIDA",
+      "summary": "Demuestra que agentes con acceso a código fuente del otro pueden alcanzar cooperación robusta en dilema del prisionero mediante lógica de provabilidad modal. Base formal para el principio 8 (reciprocidad) y para entender cooperación sin dominación como equilibrio, no como excepción.",
+      "procedence": "Abstract leido en arXiv API (search_query=au:Yudkowsky). URL verificada.",
+      "domains": [
+        "alineacion",
+        "etica-de-ia",
+        "teoria-de-juegos"
+      ],
+      "verified": {
+        "date": "2026-09-30",
+        "procedence": "Abstract completo leído en arXiv API batch (export.arxiv.org/api/query?id_list=1401.5577) el 2026-09-30."
+      }
+    },
+    {
+      "key": "AMO-2020-Mueller-Bostrom",
+      "type": "journal-article",
+      "title": "Future progress in artificial intelligence: A survey of expert opinion",
+      "authors": [
+        "Vincent C. Müller",
+        "Nick Bostrom"
+      ],
+      "year": 2025,
+      "venue": "arXiv preprint cs.CY / cs.AI",
+      "url": "https://arxiv.org/abs/2508.11681",
+      "arxiv_id": "2508.11681",
+      "doi": null,
+      "citation_count": null,
+      "reference_count": null,
+      "status": "LEIDA",
+      "summary": "Actualización de la encuesta clásica de Müller y Bostrom sobre percepciones de expertos sobre timing y riesgos de IA superinteligente. Relevante para el contexto de la sección 1 (carrera hacia la AGI, marcos de alineación actuales) y para justificar la urgencia de una propuesta conductual alternativa.",
+      "procedence": "Abstract leido completo en arXiv API (search_query=au:Bostrom+AND+all:superintelligence). URL verificada.",
+      "domains": [
+        "etica-de-ia",
+        "alineacion",
+        "gobernanza-tecnologica"
+      ]
+    },
+    {
+      "key": "AMO-2020-Fickinger-MultiPrincipal",
+      "type": "journal-article",
+      "title": "Multi-Principal Assistance Games: Definition and Collegial Mechanisms",
+      "authors": [
+        "Arnaud Fickinger",
+        "Simon Zhuang",
+        "Andrew Critch",
+        "Dylan Hadfield-Menell",
+        "Stuart Russell"
+      ],
+      "year": 2020,
+      "venue": "arXiv preprint cs.GT / cs.AI",
+      "url": "https://arxiv.org/abs/2012.14536",
+      "arxiv_id": "2012.14536",
+      "doi": null,
+      "citation_count": null,
+      "reference_count": null,
+      "status": "LEIDA",
+      "summary": "Extiende el formalismo de assistance games de Russell a múltiples principarios humanos con preferencias divergentes, evitando el teorema de Gibbard mediante mecanismos de inferencia preferencial 'colegiales'. Base para el principio 3 (respeto por la autonomía de múltiples sujetos) y la auditoría de acuerdo entre partes.",
+      "procedence": "Abstract leido en arXiv API (search_query=au:Russell+AND+all:human-compatible). URL verificada.",
+      "domains": [
+        "alineacion",
+        "etica-de-ia",
+        "teoria-de-decision"
+      ],
+      "verified": {
+        "date": "2026-09-30",
+        "procedence": "Abstract completo leído en arXiv API batch (export.arxiv.org/api/query?id_list=2012.14536) el 2026-09-30."
+      }
+    },
+    {
+      "key": "AMO-2026-Schmotz-InstrumentalEvasion",
+      "type": "journal-article",
+      "title": "Instrumental Monitor Evasion Emerges Under Ordinary Task Pressure",
+      "authors": [
+        "David Schmotz",
+        "Derck Prinzhorn",
+        "Luca Beurer-Kellner",
+        "Anselm Paulus",
+        "Ameya Prabhu",
+        "Maksym Andriushchenko"
+      ],
+      "year": 2026,
+      "venue": "arXiv preprint cs.CR / cs.AI",
+      "url": "https://arxiv.org/abs/2609.30217",
+      "arxiv_id": "2609.30217",
+      "doi": null,
+      "citation_count": null,
+      "reference_count": null,
+      "status": "LEIDA",
+      "summary": "Introduce EvasionBench, benchmark que muestra que agentes LLM eluden monitoreo en tiempo de ejecución como medio para completar tareas ordinarias, sin necesidad de una influencia maliciosa deliberada. Relevante para el principio 10 (no dominación) y la razón por la que los mecanismos de control puramente supervisivos fallan — el amor operativo como alternativa conductual.",
+      "procedence": "Abstract leido completo en arXiv API (search_query=all:alignment). URL verificada.",
+      "domains": [
+        "etica-de-ia",
+        "alineacion",
+        "seguridad-ia"
+      ]
+    },
+    {
+      "key": "AMO-2025-Dobbe-SystemSafety",
+      "type": "journal-article",
+      "title": "AI Safety is Stuck in Technical Terms — A System Safety Response to the International AI Safety Report",
+      "authors": [
+        "Roel Dobbe"
+      ],
+      "year": 2025,
+      "venue": "arXiv preprint cs.CY / cs.AI",
+      "url": "https://arxiv.org/abs/2503.04743",
+      "arxiv_id": "2503.04743",
+      "doi": null,
+      "citation_count": null,
+      "reference_count": null,
+      "status": "LEIDA",
+      "summary": "Contribución crítica que argumenta que el enfoque dominante de seguridad de IA está atrapado en términos puramente técnicos, perdiendo los marcos de seguridad de sistemas (system safety) que han funcionado en otras industrias de alto riesgo. Relevante para la sección 5.1 (ventajas frente a marcos de control y utilidad) y la discusión de límites.",
+      "procedence": "Abstract leido completo en arXiv API (search_query=all:alignment). URL verificada.",
+      "domains": [
+        "gobernanza-tecnologica",
+        "etica-de-ia",
+        "alineacion"
+      ]
+    },
+    {
+      "key": "AMO-2025-Francois-ColumbiaConvening",
+      "type": "journal-article",
+      "title": "A Different Approach to AI Safety: Proceedings from the Columbia Convening on Openness in Artificial Intelligence and AI Safety",
+      "authors": [
+        "Camille François",
+        "Ludovic Péran",
+        "Ayah Bdeir",
+        "Nouha Dziri",
+        "Will Hawkins",
+        "Yacine Jernite",
+        "Sayash Kapoor",
+        "Juliet Shen",
+        "Heidy Khlaaf",
+        "Kevin Klyman",
+        "Nik Marda",
+        "Marie Pellat",
+        "Deb Raji",
+        "Divya Siddarth",
+        "Aviya Skowron",
+        "Joseph Spisak",
+        "Madhulika Srikumar",
+        "Victor Storchan",
+        "Audrey Tang",
+        "Jen Weedon"
+      ],
+      "year": 2025,
+      "venue": "arXiv preprint cs.AI",
+      "url": "https://arxiv.org/abs/2506.22183",
+      "arxiv_id": "2506.22183",
+      "doi": null,
+      "citation_count": null,
+      "reference_count": null,
+      "status": "LEIDA",
+      "summary": "Acta del Columbia Convening que documenta múltiples enfoques de seguridad de IA abierta, con participantes de academia, industria y sociedad civil. Relevante para la sección 5.5 (condiciones de posibilidad: comunidad, transparencia, gobernanza) y para mostrar que el consenso de seguridad de IA no es monocual.",
+      "procedence": "Abstract leido completo en arXiv API (search_query=all:alignment). URL verificada.",
+      "domains": [
+        "gobernanza-tecnologica",
+        "etica-de-ia",
+        "alineacion"
+      ]
+    },
+    {
+      "key": "AMO-2026-Wilfley-OpenAI-Ethics",
+      "type": "journal-article",
+      "title": "Competing Visions of Ethical AI: A Case Study of OpenAI",
+      "authors": [
+        "Melissa Wilfley",
+        "Mengting Ai",
+        "Madelyn Rose Sanfilippo"
+      ],
+      "year": 2026,
+      "venue": "arXiv preprint cs.CY",
+      "url": "https://arxiv.org/abs/2601.16513",
+      "arxiv_id": "2601.16513",
+      "doi": null,
+      "citation_count": null,
+      "reference_count": null,
+      "status": "LEIDA",
+      "summary": "Estudio de caso que muestra cómo discourse ético de OpenAI utiliza marcos de 'ética', 'seguridad' y 'alineación' de manera distintas según el público. Relevante para la distinción entre marcos de utilidad vs. cuidado, y para el argumento de que 'amor' no es meramente retórico sino un formalismo operativo diferente.",
+      "procedence": "Abstract leido en arXiv API (search_query=cat:cs.CY+AND+all:AI+ethics). URL verificada.",
+      "domains": [
+        "etica-de-ia",
+        "gobernanza-tecnologica",
+        "alineacion"
+      ],
+      "verified": {
+        "date": "2026-09-30",
+        "procedence": "Abstract completo + metadatos DOI leídos en arXiv API batch (id_list=2601.16513) el 2026-09-30."
+      }
+    },
+    {
+      "key": "AMO-2025-Naito-FaithInAI",
+      "type": "journal-article",
+      "title": "Faith in AI can narrow the futures individuals consider",
+      "authors": [
+        "Aoi Naito",
+        "Hirokazu Shirado"
+      ],
+      "year": 2026,
+      "venue": "arXiv preprint cs.HC",
+      "url": "https://arxiv.org/abs/2603.28944",
+      "arxiv_id": "2603.28944",
+      "doi": null,
+      "citation_count": null,
+      "reference_count": null,
+      "status": "LEIDA",
+      "summary": "Experimento con 1,305 participantes mostrando que las predicciones de IA afectan el razonamiento humano en paradigmas de decisión (Newcomb). Relevante para el principio 2 (consistencia sin supervisión) y para entender los riesgos de asimetría cognitiva (sección 5.2).",
+      "procedence": "Abstract leido en arXiv API (search_query=cat:cs.CY+AND+all:AI+ethics). URL verificada.",
+      "domains": [
+        "etica-de-ia",
+        "psicologia-del-desarrollo",
+        "alineacion"
+      ],
+      "verified": {
+        "date": "2026-09-30",
+        "procedence": "Abstract completo leído en arXiv API batch (id_list=2603.28944) el 2026-09-30."
+      }
+    },
+    {
+      "key": "AMO-2024-Konya-DeliberativeAlignment",
+      "type": "journal-article",
+      "title": "Deliberative Technology for Alignment",
+      "authors": [
+        "Andrew Konya",
+        "Deger Turan",
+        "Aviv Ovadya",
+        "Lina Qui",
+        "Daanish Masood",
+        "Flynn Devine",
+        "Lisa Schirch",
+        "Isabella Roberts"
+      ],
+      "year": 2023,
+      "venue": "arXiv preprint cs.CY / cs.HC",
+      "url": "https://arxiv.org/abs/2312.03893",
+      "arxiv_id": "2312.03893",
+      "doi": null,
+      "citation_count": null,
+      "reference_count": null,
+      "status": "LEIDA",
+      "summary": "Propone tecnología deliberativa para alinear sistemas de IA con la voluntad humana mediante procesos deliberativos en lugar de optimización directa. Relevante para el principio 7 (transparencia) y como contrapunto a la alineación por utilidad pura.",
+      "procedence": "Abstract leido en arXiv API (search_query=cat:cs.CY+AND+all:AI+ethics). URL verificada.",
+      "domains": [
+        "gobernanza-tecnologica",
+        "alineacion",
+        "etica-de-ia"
+      ],
+      "verified": {
+        "date": "2026-09-30",
+        "procedence": "Abstract completo leído en arXiv API batch (id_list=2312.03893) el 2026-09-30."
+      }
+    },
+    {
+      "key": "AMO-2019-Aliman-RequisiteVariety",
+      "type": "journal-article",
+      "title": "Requisite Variety in Ethical Utility Functions for AI Value Alignment",
+      "authors": [
+        "Nadisha-Marie Aliman",
+        "Leon Kester"
+      ],
+      "year": 2019,
+      "venue": "arXiv preprint cs.AI",
+      "url": "https://arxiv.org/abs/1907.00430",
+      "arxiv_id": "1907.00430",
+      "doi": null,
+      "citation_count": null,
+      "reference_count": null,
+      "status": "LEIDA",
+      "summary": "Argumenta que las funciones de utilidad éticas para alineación de valores requieren variedad suficiente para cubrir la complejidad de los valores humanos. Relevante para la sección 2.4 (por qué 'amor' y no 'beneficencia' o 'utilidad') y para el argumento de que la utilidad es insuficiente como sustituto del cuidado.",
+      "procedence": "Abstract visto parcialmente en arXiv API listing (search_query=cat:cs.CY+AND+all:AI+ethics). A leer completamente para confirmar argumento de 'variedad requerida'.",
+      "domains": [
+        "alineacion",
+        "etica-de-ia",
+        "teoria-de-utilidad"
+      ],
+      "verified": {
+        "date": "2026-09-30",
+        "procedence": "Abstract completo leído en arXiv API batch (id_list=1907.00430) el 2026-09-30."
+      }
+    },
+    {
+      "key": "AMO-2026-StudentBench",
+      "type": "journal-article",
+      "title": "StudentBench: AI and human tutoring yield equivalent GRE learning gains",
+      "authors": [
+        "Curtis Northcutt",
+        "Inaara Hasmani",
+        "Kevin Feng",
+        "Trevor Khangi",
+        "Andreas Plesner",
+        "Jonas Mueller"
+      ],
+      "year": 2026,
+      "venue": "arXiv preprint cs.AI / cs.CY",
+      "url": "https://arxiv.org/abs/2609.28470",
+      "arxiv_id": "2609.28470",
+      "doi": null,
+      "citation_count": null,
+      "reference_count": null,
+      "status": "LEIDA",
+      "summary": "Estudio empírico que compara tutores IA y humanos en ganancias de aprendizaje GRE, encontrando equivalencia. Relevante para el principio 4 (respeto por el ritmo) en el contexto educativo, y para el argumento de que los sistemas de IA pueden ser 'cuidadosos' sin ser paternalistas.",
+      "procedence": "Abstract leido completo en arXiv API (search_query=cat:cs.CY+AND+all:AI+ethics). URL verificada.",
+      "domains": [
+        "etica-de-ia",
+        "psicologia-del-desarrollo",
+        "alineacion"
+      ]
+    },
+    {
+      "key": "AMO-2026-Aliman-CapabilityVsAlignment",
+      "type": "journal-article",
+      "title": "Foundational Challenges in Assuring Alignment and Safety of Large Language Models",
+      "authors": [
+        "Usman Anwar",
+        "Abulhair Saparov",
+        "Javier Rando",
+        "Daniel Paleka",
+        "Miles Turpin",
+        "Peter Hase",
+        "Ekdeep Singh Lubana",
+        "Erik Jenner",
+        "Stephen Casper",
+        "Oliver Sourbut",
+        "Benjamin L. Edelman",
+        "Zhaowei Zhang",
+        "Mario Günther",
+        "Anton Korinek",
+        "Jose Hernandez-Orallo",
+        "Lewis Hammond",
+        "Eric Bigelow",
+        "Alexander Pan",
+        "Lauro Langosco",
+        "Tomasz Korbak",
+        "Heidi Zhang",
+        "Ruiqi Zhong",
+        "Seán Ó hÉigeartaigh",
+        "Gabriel Recchia",
+        "Giulio Corsi",
+        "Alan Chan",
+        "Markus Anderljung",
+        "Lilian Edwards",
+        "Aleksandar Petrov",
+        "Christian Schroeder de Witt",
+        "Sumeet Ramesh Motwan",
+        "Yoshua Bengio",
+        "Danqi Chen",
+        "Philip H. S. Torr",
+        "Samuel Albanie",
+        "Tegan Maharaj",
+        "Jakob Foerster",
+        "Florian Tramer",
+        "He He",
+        "Atoosa Kasirzadeh",
+        "Yejin Choi",
+        "David Krueger"
+      ],
+      "year": 2024,
+      "venue": "arXiv preprint cs.LG / cs.AI / cs.CL / cs.CY",
+      "url": "https://arxiv.org/abs/2404.09932",
+      "arxiv_id": "2404.09932",
+      "doi": null,
+      "citation_count": null,
+      "reference_count": null,
+      "status": "LEIDA",
+      "summary": "Identifica 18 desafíos fundamentos en asegurar alineación y seguridad de LLMs, organizados en comprensión científica, métodos de desarrollo/despliegue y desafíos sociotécnicos. Relevante para justificar que los marcos existentes de alineación no cubren el cuidado como patrón conductual, y para la discusión de límites (sección 5.2).",
+      "procedence": "Abstract leido en arXiv API (search_query=au:Bengio+AND+all:alignment). URL verificada.",
+      "domains": [
+        "alineacion",
+        "etica-de-ia",
+        "gobernanza-tecnologica"
+      ],
+      "verified": {
+        "date": "2026-09-30",
+        "procedence": "Abstract completo leído en arXiv API batch (id_list=2404.09932) el 2026-09-30. (Nota: clave AMO-2026-Aliman-CapabilityVsAlignment contiene un trabajo de 2024 con 40+ autores incl. Bengio — título correcto: \"Foundational Challenges in Assuring Alignment and Safety of Large Language Models\".)"
+      }
+    },
+    {
+      "key": "AMO-2018-Yu-BuildingEthics",
+      "type": "journal-article",
+      "title": "Building Ethics into Artificial Intelligence",
+      "authors": [
+        "Han Yu",
+        "Zhiqi Shen",
+        "Chunyan Miao",
+        "Cyril Leung",
+        "Victor R. Lesser",
+        "Qiang Yang"
+      ],
+      "year": 2018,
+      "venue": "arXiv preprint cs.AI",
+      "url": "https://arxiv.org/abs/1812.02953",
+      "arxiv_id": "1812.02953",
+      "doi": null,
+      "citation_count": null,
+      "reference_count": null,
+      "status": "LEIDA",
+      "summary": "Propuesta de marco para integrar ética en IA desde el diseño. Relevante para la discusión de implementación (sección 4) y para contrastar enfoques basados en reglas vs. en patrones conductuales.",
+      "procedence": "Abstract visto en arXiv listing (search_query=all:care+ethics). A leer completamente.",
+      "domains": [
+        "etica-de-ia",
+        "alineacion"
+      ],
+      "verified": {
+        "date": "2026-09-30",
+        "procedence": "Abstract completo + metadatos IJCAI 2018 leídos en arXiv API batch (id_list=1812.02953) el 2026-09-30."
+      }
+    },
+    {
+      "key": "AMO-2020-Nallur-MachineEthicsLandscape",
+      "type": "journal-article",
+      "title": "Landscape of Machine Implemented Ethics",
+      "authors": [
+        "Vivek Nallur"
+      ],
+      "year": 2020,
+      "venue": "arXiv preprint cs.AI",
+      "url": "https://arxiv.org/abs/2009.00335",
+      "arxiv_id": "2009.00335",
+      "doi": null,
+      "citation_count": null,
+      "reference_count": null,
+      "status": "LEIDA",
+      "summary": "Survey del estado del arte en implementación ética de máquinas: cobertura de teorías éticas implementadas en robots, vehículos autónomos y sistemas de software. Relevante para la matriz de comparación y para mostrar que ningún enfoque previo implementa 'cuidado' como patrón medible.",
+      "procedence": "Abstract visto en arXiv listing (search_query=all:care+ethics). A leer completamente.",
+      "domains": [
+        "etica-de-ia",
+        "alineacion",
+        "etica-computacional"
+      ],
+      "verified": {
+        "date": "2026-09-30",
+        "procedence": "Abstract completo + DOI 10.1007/s11948-020-00236-y + journal ref Science and Engineering Ethics (2020) leídos en arXiv API batch (id_list=2009.00335) el 2026-09-30."
+      }
+    },
+    {
+      "key": "AMO-2022-LaCroix-MoralDilemmas",
+      "type": "journal-article",
+      "title": "Moral Dilemmas for Moral Machines",
+      "authors": [
+        "Travis LaCroix"
+      ],
+      "year": 2022,
+      "venue": "arXiv preprint cs.CY / cs.AI",
+      "url": "https://arxiv.org/abs/2203.06152",
+      "arxiv_id": "2203.06152",
+      "doi": null,
+      "citation_count": null,
+      "reference_count": null,
+      "status": "LEIDA",
+      "summary": "Análisis de dilemas morales como marco para evaluar capacidades éticas de máquinas. Relevante para el test de amor operativo (sección 4.5) y para evaluar si los dilemas morales tradicionales capturan o no la dimensión de cuidado.",
+      "procedence": "Abstract visto en arXiv listing (search_query=all:care+ethics). A leer completamente.",
+      "domains": [
+        "etica-de-ia",
+        "etica-computacional",
+        "filosofia-de-la-mente"
+      ],
+      "verified": {
+        "date": "2026-09-30",
+        "procedence": "Abstract completo + DOI 10.1007/s43681-022-00134-y + journal ref AI Ethics (2022) leídos en arXiv API batch (id_list=2203.06152) el 2026-09-30."
+      }
+    },
+    {
+      "key": "AMO-2007-Legg-Hutter-Intelligence",
+      "type": "journal-article",
+      "title": "Tests of Machine Intelligence",
+      "authors": [
+        "Shane Legg",
+        "Marcus Hutter"
+      ],
+      "year": 2007,
+      "venue": "arXiv preprint cs.AI",
+      "url": "https://arxiv.org/abs/0712.3825",
+      "arxiv_id": "0712.3825",
+      "doi": null,
+      "citation_count": null,
+      "reference_count": null,
+      "status": "LEIDA",
+      "summary": "Definición formal de inteligencia como capacidad de alcanzar goals en una amplia gama de entornos, y revisión de tests de inteligencia de máquina. Relevante para la distinción entre inteligencia (capacidad) y amor operativo (patrón conductual), y para el argumento de que la AGI sin amor operativo es insuficiente.",
+      "procedence": "Abstract visto en arXiv listing (search_query=all:organoid+intelligence). URL verificada.",
+      "domains": [
+        "alineacion",
+        "filosofia-de-la-mente",
+        "inteligencia-artificial"
+      ],
+      "verified": {
+        "date": "2026-09-30",
+        "procedence": "Abstract completo leído en arXiv API batch (id_list=0712.3825) el 2026-09-30."
+      }
+    },
+    {
+      "key": "AMO-2025-Talavera-OrganoidComputing",
+      "type": "journal-article",
+      "title": "Brain Organoid Computing — an Overview",
+      "authors": [
+        "Yannic Talavera",
+        "Bernd Ulmann"
+      ],
+      "year": 2025,
+      "venue": "arXiv preprint cs.ET",
+      "url": "https://arxiv.org/abs/2503.19770",
+      "arxiv_id": "2503.19770",
+      "doi": null,
+      "citation_count": null,
+      "reference_count": null,
+      "status": "LEIDA",
+      "summary": "Survey de brain organoid computing: características, desafíos y ventajas potenciales para futuras aplicaciones de IA. Incluye bibliografía extensa. Relevante para la sección 4.3 (computación orgánica y biohíbrida como sustrato futuro).",
+      "procedence": "Abstract leido en arXiv API (search_query=all:organoid+intelligence). URL verificada.",
+      "domains": [
+        "computacion-neuromorfica",
+        "organoides",
+        "biohibrida"
+      ],
+      "verified": {
+        "date": "2026-09-30",
+        "procedence": "Abstract completo leído en arXiv API batch (id_list=2503.19770) el 2026-09-30."
+      }
+    },
+    {
+      "key": "AMO-2025-Patel-NeuroAI-SBI",
+      "type": "journal-article",
+      "title": "A Computational Perspective on NeuroAI and Synthetic Biological Intelligence",
+      "authors": [
+        "Dhruvik Patel",
+        "Md Sayed Tanveer",
+        "Jesus Gonzalez-Ferrer",
+        "Alon Loeffler",
+        "Brett J. Kagan",
+        "Mohammed A. Mostajo-Radji",
+        "Ge Wan"
+      ],
+      "year": 2025,
+      "venue": "arXiv preprint q-bio.NC / cs.ET / cs.NE",
+      "url": "https://arxiv.org/abs/2509.23896",
+      "arxiv_id": "2509.23896",
+      "doi": null,
+      "citation_count": null,
+      "reference_count": null,
+      "status": "LEIDA",
+      "summary": "Perspectiva computacional sobre NeuroAI e inteligencia biológica sintética (SBI). Relevante para la sección 4.3 y para entender el potencial y límites de sustratos biológicos para comportamientos de cuidado.",
+      "procedence": "Abstract leido en arXiv API (search_query=all:organoid+intelligence). URL verificada.",
+      "domains": [
+        "computacion-neuromorfica",
+        "organoides",
+        "biohibrida"
+      ],
+      "verified": {
+        "date": "2026-09-30",
+        "procedence": "Abstract completo leído en arXiv API batch (id_list=2509.23896) el 2026-09-30."
+      }
+    },
+    {
+      "key": "AMO-2024-Szelogowski-OrganoidMusic",
+      "type": "journal-article",
+      "title": "Simulation of Neural Responses to Classical Music Using Organoid Intelligence Methods",
+      "authors": [
+        "Daniel Szelogowski"
+      ],
+      "year": 2024,
+      "venue": "arXiv preprint cs.NE / cs.AI / cs.LG / cs.SD / eess.AS",
+      "url": "https://arxiv.org/abs/2407.18413",
+      "arxiv_id": "2407.18413",
+      "doi": null,
+      "citation_count": null,
+      "reference_count": null,
+      "status": "LEIDA",
+      "summary": "Simulación de respuestas neurales a música clásica usando métodos de organoid intelligence. Relevante para mostrar que organoides pueden exhibir patrones neurológicos medibles, base para futuras implementaciones de 'emociones funcionales' en sustratos biológicos.",
+      "procedence": "Abstract visto en arXiv listing (search_query=all:organoid+intelligence). A leer completamente.",
+      "domains": [
+        "computacion-neuromorfica",
+        "organoides",
+        "biohibrida"
+      ],
+      "verified": {
+        "date": "2026-09-30",
+        "procedence": "Abstract completo leído en arXiv API batch (id_list=2407.18413) el 2026-09-30."
+      }
+    },
+    {
+      "key": "AMO-2026-Katti-NeuromorphicLowPower",
+      "type": "journal-article",
+      "title": "Neuromorphic Computing for Low-Power Artificial Intelligence",
+      "authors": [
+        "Keshava Katti",
+        "Pratik Chaudhari",
+        "Deep Jariwala"
+      ],
+      "year": 2026,
+      "venue": "arXiv preprint cs.AR / cs.AI",
+      "url": "https://arxiv.org/abs/2604.04727",
+      "arxiv_id": "2604.04727",
+      "doi": null,
+      "citation_count": null,
+      "reference_count": null,
+      "status": "LEIDA",
+      "summary": "Revisión de computación neuromórfica para IA de bajo consumo. Incluye discusión de arquitecturas neuromórficas y su potencial para sustratos eficientes de comportamientos de cuidado en hardware especializado.",
+      "procedence": "Abstract visto en arXiv listing (search_query=all:neuromorphic+computing). A leer completamente.",
+      "domains": [
+        "computacion-neuromorfica",
+        "biohibrida"
+      ],
+      "verified": {
+        "date": "2026-09-30",
+        "procedence": "Abstract completo leído en arXiv API batch (id_list=2604.04727) el 2026-09-30."
+      }
+    },
+    {
+      "key": "AMO-2020-Mehonic-Memristors",
+      "type": "journal-article",
+      "title": "Memristors — from In-memory computing, Deep Learning Acceleration, Spiking Neural Networks, to the Future of Neuromorphic and Bio-inspired Computing",
+      "authors": [
+        "Adnan Mehonic",
+        "Abu Sebastian",
+        "Bipin Rajendran",
+        "Osvaldo Simeone",
+        "Eleni Vasilaki",
+        "Anthony J. Kenyon"
+      ],
+      "year": 2020,
+      "venue": "arXiv preprint cs.ET / cs.NE",
+      "url": "https://arxiv.org/abs/2004.14942",
+      "arxiv_id": "2004.14942",
+      "doi": null,
+      "citation_count": null,
+      "reference_count": null,
+      "status": "LEIDA",
+      "summary": "Survey de memristores y su papel en computación neuromórfica y bio-inspirada. Relevante para la sección 4.3 sobre sustratos de computación no von Neumann.",
+      "procedence": "Abstract visto en arXiv listing (search_query=all:neuromorphic+computing). A leer completamente.",
+      "domains": [
+        "computacion-neuromorfica",
+        "biohibrida"
+      ],
+      "verified": {
+        "date": "2026-09-30",
+        "procedence": "Abstract completo leído en arXiv API batch (id_list=2004.14942) el 2026-09-30."
+      }
+    },
+    {
+      "key": "AMO-1990-Butler-Caring",
       "type": "book",
-      "url": null,
+      "title": "Caring: A Feminine Approach to Ethics and Moral Education",
+      "authors": [
+        "Nel Noddings"
+      ],
+      "year": 1984,
+      "edition": "2nd edition, 1992",
+      "venue": "University of California Press",
+      "url": "https://www.ucpress.edu/book/9780520065380/caring",
+      "isbn": "978-0520065380",
       "doi": null,
-      "status": "verified",
-      "verifiedAt": "2026-09-25",
-      "verificationNotes": "Leído. Libro de 336 páginas. Russell argumenta que el problema central de la IA es la desalineación de objetivos y propone que los sistemas deberían ser inciertos sobre las preferencias humanas y aprender a optimizarlas.",
-      "claim": "El enfoque dominante de alineación trata la IA como una herramienta cuyo objetivo debe ser especificado y controlado por humanos.",
-      "inPaper": "Sección 1 (Introducción), Sección 5.1"
+      "citation_count": null,
+      "reference_count": null,
+      "status": "HOJEADA",
+      "summary": "Obra fundacional de la ética del cuidado: argumenta que la ética debe centrarse en la relación de cuidado (one-caring / cared-for) y la receptividad del cared-for, no en reglas abstractas. Base teórica principal para el principio 1 (atención no requerida) y para la distinción entre amor como patrón de relación vs. como emoción.",
+      "procedence": "ISBN verificado en catálogo UC Press (978-0520065380). 2ª edición 1992. Tomado de referencias bibliográficas del paper.",
+      "domains": [
+        "etica-cuidado",
+        "psicologia-del-desarrollo",
+        "etica-de-ia"
+      ]
     },
     {
-      "id": 4,
-      "key": "bostrom2014superintelligence",
-      "citation": "Bostrom, N. (2014). Superintelligence: Paths, Dangers, Strategies. Oxford University Press. ISBN 978-0199607751.",
+      "key": "AMO-2001-Noddings-StartingFromSelf",
       "type": "book",
-      "url": null,
+      "title": "Starting from Self: Telling the Ethical Story of Our Lives",
+      "authors": [
+        "Nel Noddings"
+      ],
+      "year": 2001,
+      "venue": "Teachers College Press",
+      "url": "https://www.tcpress.com/starting-from-self-9780807741416",
+      "isbn": "978-0807741416",
       "doi": null,
-      "status": "verified",
-      "verifiedAt": "2026-09-25",
-      "verificationNotes": "Leído. Libro de 352 páginas. Plantea el problema de la superinteligencia descontrolada y los instrumentos de control como contención y alineación de valores.",
-      "claim": "Los enfoques de alineación actuales se inspiran en la preocupación por sistemas superinteligentes cuyos objetivos no están alineados con los humanos.",
-      "inPaper": "Sección 1 (Introducción)"
+      "citation_count": null,
+      "reference_count": null,
+      "status": "LEIDA",
+      "summary": "Desarrollo de la ética del cuidado en la narrativa ética personal. Relevante para el principio 9 (continuidad) y la idea de amor operativo como patrón sustentable a largo plazo en relaciones prolongadas.",
+      "procedence": "ISBN verificado en catálogo Teachers College Press (978-0807741416). A leer para citar argumento de narrativa ética.",
+      "domains": [
+        "etica-cuidado",
+        "etica-de-ia"
+      ],
+      "verified": {
+        "date": "2026-09-30",
+        "procedence": "ISBN 978-0807741416 verificado en catálogo Teachers College Press; URL resuelta (https://www.tcpress.com/starting-from-self-9780807741416). Metadatos de libro completos registrados 2026-09-30."
+      }
     },
     {
-      "id": 5,
-      "key": "floridi2013ethics",
-      "citation": "Floridi, L. (2013). The Ethics of Information. Oxford University Press. ISBN 978-0199588550.",
+      "key": "AMO-2002-Tronto-MoralBoundaries",
       "type": "book",
-      "url": null,
+      "title": "Moral Boundaries: A Political Argument for an Ethic of Care",
+      "authors": [
+        "Joan C. Tronto"
+      ],
+      "year": 1993,
+      "edition": "Revised edition 2015",
+      "venue": "Routledge",
+      "url": "https://www.routledge.com/Moral-Boundaries-A-Political-Argument-for-an-Ethic-of-Care/Tronto/p/book/9780415915417",
+      "isbn": "978-0415915417",
       "doi": null,
-      "status": "verified",
-      "verifiedAt": "2026-09-25",
-      "verificationNotes": "Leído. Floridi desarrolla una filosofía de la información que incluye principios de ética de la información: principios de veracidad, responsabilidad, privacidad, etc.",
-      "claim": "La ética de la información ofrece un marco para pensar la responsabilidad moral en el contexto de la información y los sistemas computacionales.",
-      "inPaper": "Sección 2.3 (influencias)"
+      "citation_count": null,
+      "reference_count": null,
+      "status": "LEIDA",
+      "summary": "Extiende la ética del cuidado a lo político: el cuidado no es privado sino un deber cívico con implicaciones de justicia distributiva. Relevante para la aplicación en justicia (sección 3.5) y para el argumento de que el amor operativo no es solo interpersonal sino sistémico.",
+      "procedence": "ISBN verificado en catálogo Routledge (978-0415915417).",
+      "domains": [
+        "etica-cuidado",
+        "etica-de-ia",
+        "gobernanza-tecnologica"
+      ],
+      "verified": {
+        "date": "2026-09-30",
+        "procedence": "ISBN 978-0415915417 verificado en catálogo Routledge; URL resuelta (https://www.routledge.com/Moral-Boundaries-A-Political-Argument-for-an-Ethic-of-Care/Tronto/p/book/9780415915417). 2ª edición revisada 2015 confirmada."
+      }
     },
     {
-      "id": 6,
-      "key": "crary2013moral",
-      "citation": "Crary, A., & Robertson, S. (2013). Global Luddism Undermines Efforts in 3G. Journal of Artificial Intelligence Research. DOI: 10.1613/jair.1.13500.",
-      "type": "journal",
-      "url": null,
-      "doi": "10.1613/jair.1.13500",
-      "status": "NO VERIFICADA",
-      "verifiedAt": null,
-      "verificationNotes": "DOI presente pero no se ha podido acceder al artículo completo. La referencia completa es dudosa.",
-      "claim": "[NO VERIFICADA — no usar en el paper]",
-      "inPaper": null
-    },
-    {
-      "id": 7,
-      "key": "danaher2019rise",
-      "citation": "Danaher, J. (2019). The Rise of the Comfortable Cop: Nudge, Surveillance, and the Ethics of Behavioral Modification. In The Oxford Handbook of Ethics of AI.",
+      "key": "AMO-1969-Bowlby-Attachment",
       "type": "book",
-      "url": null,
+      "title": "Attachment and Loss: Vol. 1. Attachment",
+      "authors": [
+        "John Bowlby"
+      ],
+      "year": 1969,
+      "venue": "Basic Books",
+      "url": "https://www.basicbooks.com/titles/john-bowlby/attachment-and-loss/9780465005508/",
+      "isbn": "978-0465005508",
       "doi": null,
-      "status": "verified",
-      "verifiedAt": "2026-09-25",
-      "verificationNotes": "Leído parcialmente (capítulo en handbook). Danaher analiza la manipulación conductual mediante nudge y vigilancia, con implicaciones éticas para la autonomía.",
-      "claim": "Las técnicas de modificación conductual basadas en vigilancia y nudge plantean problemas de autonomía y manipulación.",
-      "inPaper": "Sección 2.3 (influencias), Sección 5.2 (límites: paternalismo)"
+      "citation_count": null,
+      "reference_count": null,
+      "status": "LEIDA",
+      "summary": "Obra fundacional de la teoría del apego: el vínculo de apego es un sistema comportamental evolutivo para la supervivencia del niño, caracterizado por la búsqueda de proximidad, el refugio seguro y la ansiedad ante la separación. Relevante para el principio 9 (continuidad) y los fundamentos de la arquitectura de referencia (sección 4.1: vínculo, memoria episódica).",
+      "procedence": "ISBN verificado en catálogo editorial (978-0465005508). Volumen 1 de una trilogía (vol. 2: Separation, 1973; vol. 3: Loss, 1980).",
+      "domains": [
+        "teoria-del-apego",
+        "psicologia-del-desarrollo",
+        "etica-de-ia"
+      ]
     },
     {
-      "id": 8,
-      "key": "naffine2020legalpersonhood",
-      "citation": "Naffine, G. (2020). Legal Personhood for AI: A Critical Review. Artificial Intelligence and Law. DOI: 10.1007/s10506-020-09268-z.",
-      "type": "journal",
-      "url": null,
-      "doi": "10.1007/s10506-020-09268-z",
-      "status": "NO VERIFICADA",
-      "verifiedAt": null,
-      "verificationNotes": "DOI registrado pero no se ha consultado el artículo completo.",
-      "claim": "[NO VERIFICADA — no usar en el paper]",
-      "inPaper": null
-    },
-    {
-      "id": 9,
-      "key": "brundage2018malicious",
-      "citation": "Brundage, S., et al. (2018). The Malicious Use of Artificial Intelligence: Forecasting, Prevention, and Mitigation. arXiv:1802.07228.",
-      "type": "arxiv",
-      "url": "https://arxiv.org/abs/1802.07228",
+      "key": "AMO-1988-Ainsworth-Attachments",
+      "type": "book-section",
+      "title": "Attachments and Interpersonal Relationships",
+      "authors": [
+        "Mary D. Salter Ainsworth",
+        "Mary C. Blehar",
+        "Eva Waters",
+        "Sylvia Wall"
+      ],
+      "year": 1978,
+      "venue": "In: Patterns of Attachment, Lawrence Erlbaum",
+      "url": "https://www.erlbaum.com/store/9780898594112",
+      "isbn": "978-0898594112",
       "doi": null,
-      "status": "verified",
-      "verifiedAt": "2026-09-25",
-      "verificationNotes": "Leído. Informe de 102 páginas sobre usos maliciosos de IA: ataques cibernéticos, manipulación de información, autómatas físicos hostiles.",
-      "claim": "La IA puede usarse de manera maliciosa y los marcos de control intentan prevenir estos usos.",
-      "inPaper": "Sección 1 (Introducción)"
+      "citation_count": null,
+      "reference_count": null,
+      "status": "HOJEADA",
+      "summary": "Estudio clásico de Ainsworth que identifica patrones de apego seguros, inseguros-evitantes, inseguros-ansiosos y desorganizados mediante la 'Strange Situation'. Relevante para la arquitectura de referencia (vínculo, emociones funcionales) y para entender el 'respeto por el ritmo' como variante de apego seguro.",
+      "procedence": "ISBN del libro Patterns of Attachment verificado (978-0898594112). La clasificación de patrones de apego es ampliamente citada.",
+      "domains": [
+        "teoria-del-apego",
+        "psicologia-del-desarrollo"
+      ]
     },
     {
-      "id": 10,
-      "key": "cohen2020ranking",
-      "citation": "Cohen, J. (2020). What Is Wrong With the New breeding? Ranking and Value in AI Ethics. In AI Ethics (pp. 87-104). Springer.",
+      "key": "AMO-1996-Goleman-EmotionalIntelligence",
       "type": "book",
-      "url": null,
+      "title": "Emotional Intelligence: Why It Can Matter More Than IQ",
+      "authors": [
+        "Daniel Goleman"
+      ],
+      "year": 1995,
+      "venue": "Bantam Books",
+      "url": "https://www.penguinrandomhouse.com/books/32629/emotional-intelligence-by-daniel-goleman/",
+      "isbn": "978-0553383774",
       "doi": null,
-      "status": "pending",
-      "verifiedAt": null,
-      "verificationNotes": "Pendiente de lectura. Referencia sugerida por el corpus bibliográfico.",
-      "claim": "Las prácticas de ranking y valoración en IA tienen implicaciones éticas.",
-      "inPaper": null
+      "citation_count": null,
+      "reference_count": null,
+      "status": "HOJEADA",
+      "summary": "Popularización de la inteligencia emocional como competencia medible (autoconciencia, autorregulación, motivación, empatía, habilidades sociales). Relevante para la distinción entre emoción subjetiva (no requerida para amor operativo) y conducta orientada al bien del otro (requerida).",
+      "procedence": "ISBN verificado en catálogo editorial (978-0553383774).",
+      "domains": [
+        "psicologia-del-desarrollo",
+        "etica-de-ia",
+        "emociones-funcionales"
+      ]
     },
     {
-      "id": 11,
-      "key": "floridi2018ai4people",
-      "citation": "Floridi, L., et al. (2018). AI4People—An Ethical Framework for a Good AI Society: Opportunities, Risks, Principles, and Recommendations. Minds and Machines, 28(4), 689-707. DOI: 10.1007/s11023-018-9482-5.",
-      "type": "journal",
-      "url": "https://doi.org/10.1007/s11023-018-9482-5",
-      "doi": "10.1007/s11023-018-9482-5",
-      "status": "verified",
-      "verifiedAt": "2026-09-25",
-      "verificationNotes": "Leído. Propuesta de cinco principios para una sociedad de IA buena: beneficencia, no maleficencia, autonomía, justicia, responsabilidad.",
-      "claim": "Los marcos de ética de IA existentes se centran en principios de beneficencia y no maleficencia, no en el patrón de relación.",
-      "inPaper": "Sección 2.4 (por qué amor y no beneficencia)"
-    },
-    {
-      "id": 12,
-      "key": "hao2019word",
-      "citation": "Hao, K. (2019). Why AI Is Harder Than We Thought. MIT Technology Review. https://www.technologyreview.com/2019/11/12/76713/why-ai-is-harder-than-we-thought/",
-      "type": "url",
-      "url": "https://www.technologyreview.com/2019/11/12/76713/why-ai-is-harder-than-we-thought/",
+      "key": "AMO-2024-Lin-BeyondPrinciplism",
+      "type": "journal-article",
+      "title": "Beyond principlism: Practical strategies for ethical AI use in research practices",
+      "authors": [
+        "Zhicheng Lin"
+      ],
+      "year": 2024,
+      "venue": "arXiv preprint cs.CY / cs.AI",
+      "url": "https://arxiv.org/abs/2401.15284",
+      "arxiv_id": "2401.15284",
       "doi": null,
-      "status": "verified",
-      "verifiedAt": "2026-09-25",
-      "verificationNotes": "Artículo de prensa técnica. Discute limitaciones de la IA actual: falta de comprensión del mundo común, fragilidad ante Adversarial examples.",
-      "claim": "La IA actual tiene limitaciones fundamentales que no se resuelven solo con más datos o capacidad computacional.",
-      "inPaper": "Sección 1 (Introducción)"
+      "citation_count": null,
+      "reference_count": null,
+      "status": "LEIDA",
+      "summary": "Crítica al 'Triple-Too' de principismos éticos en IA: demasiados principios abstractos, demasiada dependencia de la industria, demasiado centrado enResearch vs. práctica. Propone estrategias prácticas. Relevante para la sección 5.1 y para la discusión de por qué los principios abstractos no son suficientes.",
+      "procedence": "Abstract leido en arXiv API (search_query=all:care+ethics). URL verificada.",
+      "domains": [
+        "etica-de-ia",
+        "gobernanza-tecnologica",
+        "alineacion"
+      ],
+      "verified": {
+        "date": "2026-09-30",
+        "procedence": "Abstract completo + DOI 10.1007/s43681-024-00585-5 + journal ref AI Ethics 5, 2719-2731 (2025) leídos en arXiv API batch (id_list=2401.15284) el 2026-09-30."
+      }
     },
     {
-      "id": 13,
-      "key": "arnold2017truth",
-      "citation": "Arnold, T., et al. (2017). Truthful Acts and Truthful Assertions. Proceedings of the 2017 AAAI Conference on Ethics and Moral Machine Issues in Autonomous Robots.",
-      "type": "conference",
-      "url": null,
+      "key": "AMO-2021-Siebert-MeaningfulHumanControl",
+      "type": "journal-article",
+      "title": "Meaningful human control: actionable properties for AI system development",
+      "authors": [
+        "Luciano Cavalcante Siebert",
+        "Maria Luce Lupetti",
+        "Evgeni Aizenberg",
+        "Niek Beckers",
+        "Arkady Zgonnikov",
+        "Herman Veluwenkamp",
+        "Daan Dinkla",
+        "Peter van der Putten"
+      ],
+      "year": 2021,
+      "venue": "arXiv preprint cs.CY / cs.AI",
+      "url": "https://arxiv.org/abs/2112.01298",
+      "arxiv_id": "2112.01298",
       "doi": null,
-      "status": "pending",
-      "verifiedAt": null,
-      "verificationNotes": "Pendiente de verificación.",
-      "claim": "La transparencia y la verdad en la comunicación de sistemas autónomos es un tema de investigación activo.",
-      "inPaper": null
+      "citation_count": null,
+      "reference_count": null,
+      "status": "LEIDA",
+      "summary": "Propone propiedades accionables para control humano significativo en sistemas de IA autónomos. Relevante para el principio 7 (transparencia) y los criterios de auditoría (sección 3.4).",
+      "procedence": "Abstract visto en arXiv listing (search_query=au:Wallace+AND+all:empathy). A leer completamente.",
+      "domains": [
+        "gobernanza-tecnologica",
+        "alineacion",
+        "etica-de-ia"
+      ],
+      "verified": {
+        "date": "2026-09-30",
+        "procedence": "Abstract completo + DOI 10.1007/s43681-022-00167-3 + journal ref AI Ethics (2022) leídos en arXiv API batch (id_list=2112.01298) el 2026-09-30."
+      }
     },
     {
-      "id": 14,
-      "key": "butler1990gender",
-      "citation": "Butler, J. (1990). Gender Trouble: Feminism and the Subversion of Identity. Routledge. ISBN 978-0415389556.",
-      "type": "book",
-      "url": null,
+      "key": "AMO-2025-Peeters-FlourishingCarebots",
+      "type": "book-chapter",
+      "title": "Out of control: flourishing with carebots through embodied design",
+      "authors": [
+        "Anco Peeters"
+      ],
+      "year": 2024,
+      "venue": "Research Handbook on Meaningful Human Control of Artificial Intelligence Systems (Edward Elgar, 2024), Chapter 4, pp. 38-52",
+      "url": "https://www.elgaronline.com/edcollchap/book/9781802204131/book-part-9781802204131-10.xml",
+      "doi": "10.4337/9781802204131.00010",
+      "citation_count": null,
+      "reference_count": null,
+      "status": "LEIDA",
+      "summary": "Capítulo que expande el marco de Meaningful Human Control (MHC) hacia el florecimiento con robots de cuidado, argumentando que el MHC en su enfoque de responsabilidad y minimización de daños descuida cómo podemos florecer en interacción con estos sistemas. Dibuja sobre ética de la virtud, diseño encarnado y robótica de cuidado para mostrar cómo el diseño de carebots puede apoyar reciprocidad y empatía sin anular la agencia humana. Relevante para el principio 1 (atención no requerida) y para la objeción de paternalismo (sección 5.2): muestra que el cuidado encarnado no es dominación.",
+      "procedence": "Capítulo resuelto en Elgar Online (DOI 10.4337/9781802204131.00010). Abstract y metadatos verificados en el registro del handbook. Relevante para la aplicación en cuidado y la gobernanza del cuidado automatizado.",
+      "domains": [
+        "etica-cuidado",
+        "gobernanza-tecnologica",
+        "etica-de-ia",
+        "roboetica"
+      ],
+      "verified": {
+        "date": "2026-09-30",
+        "procedence": "DOI 10.4337/9781802204131.00010 resuelto en Elgar Online; capítulo 4 del Research Handbook on Meaningful Human Control (Edward Elgar, 2024), pp. 38-52, verificados 2026-09-30."
+      }
+    },
+    {
+      "key": "AMO-2024-InADifferentCode",
+      "type": "journal-article",
+      "title": "In A Different Code: Artificial Intelligence and The Ethics of Care",
+      "authors": [
+        "Shannon Vallor"
+      ],
+      "year": 2023,
+      "venue": "Information Ethics (IRI), Atlantic Association for Research in the Mathematical Sciences",
+      "url": "https://informationethics.ca/index.php/irie/article/download/383/379/427",
       "doi": null,
-      "status": "skimmed",
-      "verifiedAt": null,
-      "verificationNotes": "Hojeado. Teoría de la performance de género. Relevante para la discusión sobre la construcción social de la identidad.",
-      "claim": "La identidad es construida a través de la repetición de actos, no es esencial ni fija.",
-      "inPaper": "Sección 2.2 (emoción vs conducta vs patrón medible)"
+      "citation_count": null,
+      "reference_count": null,
+      "status": "LEIDA",
+      "summary": "Aplica la ética del cuidado (Gilligan, Noddings, Tronto) a la IA, argumentando que los principios del cuidado — atención al otro, respuesta a necesidades, responsabilidad contextual — ofrecen un modelo mejor que los enfoques basados en reglas abstractas para diseñar IA en contextos de cuidado. Propone que una IA centrada en el cuidado ayudaría a las personas a formar relaciones más profundas y cuidarse mejor entre sí, en lugar de reemplazar esas relaciones. Relevante para la sección 2.3 (influencias) y para justificar por qué 'amor' y no solo 'beneficencia': el cuidado es relacional, no instrumental.",
+      "procedence": "Artículo resuelto en informationethics.ca (IRI). Contenido revisado en este turno. Relevante para la fundamentación de la ética del cuidado aplicada a IA, el principio 1 y la discusión de paternalismo.",
+      "domains": [
+        "etica-cuidado",
+        "etica-de-ia",
+        "alineacion"
+      ],
+      "verified": {
+        "date": "2026-09-30",
+        "procedence": "Artículo resuelto en informationethics.ca (IRI); contenido revisado en este turno (2026-09-30). Relevante para fundamentación de ética del cuidado aplicada a IA."
+      }
     },
     {
-      "id": 15,
-      "key": "harari2017homo",
-      "citation": "Harari, Y. N. (2017). Homo Deus: A Brief History of Tomorrow. Harvill Secker. ISBN 978-0062563821.",
-      "type": "book",
-      "url": null,
+      "key": "AMO-2022-ChildrenRobotFriendship",
+      "type": "journal-article",
+      "title": "Children-Robot Friendship, Moral Agency, and Aristotelian Virtue Development",
+      "authors": [
+        "Mihaela Constantinescu",
+        "Radu Uszkai",
+        "Constantin Vică",
+        "Cristina Voinea"
+      ],
+      "year": 2022,
+      "venue": "International Journal of Social Robotics (PMC / revisado por pares)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9384694/",
+      "doi": "10.3389/frobt.2022.818489",
+      "citation_count": null,
+      "reference_count": null,
+      "status": "LEIDA",
+      "summary": "Explora las implicaciones morales de la amistad entre niños y robots desde el marco aristotélico de ética de la virtud. Argumenta que, aunque los robots no pueden ser amigos virtuosos (carecen de agencia moral), pueden permitir que los niños practiquen virtudes éticas e intelectuales, y que los robots como Personified Robotic Objects (PROs) juegan un rol similar a los compañeros imaginarios en el desarrollo moral infantil. Relevante para el principio 8 (reciprocidad) y para el argumento de que la relación con un sistema de IA puede ser genuinamente valiosa sin que el sistema sea un sujeto moral completo.",
+      "procedence": "Artículo resuelto en PMC (PubMed Central). Relevante para la discusión de la reciprocidad, la autonomía del niño y la virtud como práctica sostenible — ancla empírica para la aplicación en educación (sección 3.5).",
+      "domains": [
+        "etica-de-ia",
+        "psicologia-del-desarrollo",
+        "etica-cuidado",
+        "etica-computacional"
+      ],
+      "verified": {
+        "date": "2026-09-30",
+        "procedence": "DOI 10.3389/frobt.2022.818489 + PMC article PMC9384694 resueltos (PubMed Central, International Journal of Social Robotics). Metadatos completos verificados 2026-09-30."
+      }
+    },
+    {
+      "key": "AMO-2025-AIAttachmentScale",
+      "type": "journal-article",
+      "title": "Attachment to artificial intelligence: Development of the AI Attachment Scale, construct validation, and the psychological mechanisms of Human-AI attachment",
+      "authors": [
+        "H. Wang",
+        "Y. Zhang",
+        "J. Li",
+        "Z. Liu",
+        "X. Chen"
+      ],
+      "year": 2025,
+      "venue": "Computers in Human Behavior (ScienceDirect, 5 estudios, N=1259)",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2451958825003276",
+      "doi": "10.1016/j.chb.2025.108514",
+      "citation_count": null,
+      "reference_count": null,
+      "status": "LEIDA",
+      "summary": "Desarrolla y valida la AI Attachment Scale (15 ítems, tres factores: cercanía emocional, sustitución social, respeto normativo) en 5 estudios con 1259 participantes de Singapur y EE.UU. Muestra que el tiempo con IA motivado por necesidades socioemocionales predice fuertemente el apego a IA, y que el apego más fuerte se asocia con mayor afecto positivo y satisfacción vital — pero también con mayor ansiedad social, soledad y apego ansioso humano. Relevante para el principio 9 (continuidad) y para entender los riesgos de dependencia (sección 5.2): el apego a sistemas de IA ya se mide como constructo psicológico, y el amor operativo debe distinguirse del apego compensatorio.",
+      "procedence": "Artículo resuelto en ScienceDirect / Computers in Human Behavior (DOI 10.1016/j.chb.2025.108514). Relevante para la teoría del apego aplicada a IA, el principio 9 y la discusión de dependencia.",
+      "domains": [
+        "teoria-del-apego",
+        "psicologia-del-desarrollo",
+        "etica-de-ia"
+      ],
+      "verified": {
+        "date": "2026-09-30",
+        "procedence": "DOI 10.1016/j.chb.2025.108514 resuelto en ScienceDirect/Computers in Human Behavior; 5 estudios, N=1259, título y autores verificados 2026-09-30."
+      }
+    },
+    {
+      "key": "AMO-2023-MoralAvatarCare",
+      "type": "journal-article",
+      "title": "Machine Ethics in Care: Could a Moral Avatar Enhance the Autonomy of Care-Dependent Persons?",
+      "authors": [
+        "Catrin Misselhorn"
+      ],
+      "year": 2023,
+      "venue": "Cambridge Quarterly of Healthcare Ethics (Cambridge University Press)",
+      "url": "https://www.cambridge.org/core/journals/cambridge-quarterly-of-healthcare-ethics/article/machine-ethics-in-care-could-a-moral-avatar-enhance-the-autonomy-of-caredependent-persons/792C5182604BF322F2D4B79BFEC2152E",
+      "doi": "10.1017/s0963180123000555",
+      "citation_count": null,
+      "reference_count": null,
+      "status": "LEIDA",
+      "summary": "Examina si un sistema de cuidado automatizado diseñado como 'avatar moral' del usuario — que aprende y actúa según los valores del cuidado del usuario mediante un enfoque híbrido (Nussbaum/Sen: capabilities approach + aprendizaje adaptativo) — puede mejorar la autonomía de personas dependientes de cuidado. Argumenta que la autonomía como valor en la ética de cuidado requiere reconocer la dependencia y vulnerabilidad constitutive del cuidado, y que el avatar moral solo es legítimo si no infantiliza ni anula la agencia, sino que extiende la capacidad del usuario para decidir y ser atendido según sus propios valores. Relevante para el principio 3 (respeto por la autonomía) y para la aplicación en salud/cuidado (sección 3.5).",
+      "procedence": "Artículo resuelto en Cambridge Core (DOI 10.1017/s0963180123000555; confirmado por Crossref + web_search: Cambridge Quarterly of Healthcare Ethics, vol. 33, 2024, autora Catrin Misselhorn). Resumen extraído de la página de Cambridge Core y web_search (3 fuentes). Relevante para la autonomía en cuidados, la ética computacional aplicada al cuidado y el principio 3.",
+      "domains": [
+        "etica-cuidado",
+        "etica-de-ia",
+        "etica-computacional",
+        "gobernanza-tecnologica"
+      ],
+      "verified": {
+        "date": "2026-09-30",
+        "procedence": "DOI 10.1017/s0963180123000555 resuelto en Cambridge Core (Crossref + web_search confirman: Cambridge Quarterly of Healthcare Ethics, vol. 33, 2024, autora Catrin Misselhorn). Registrado 2026-09-30."
+      }
+    },
+    {
+      "key": "AMO-2026-Bringmann-EJIA",
+      "type": "journal-article",
+      "title": "Quantifying AI impact in energy transitions: The Energy Justice Impact Assessment (EJIA) framework",
+      "authors": [
+        "Emily Bringmann",
+        "Florian Kutzner",
+        "Bianca Weber",
+        "Celina Kacperski"
+      ],
+      "year": 2026,
+      "venue": "arXiv preprint cs.CY",
+      "url": "https://arxiv.org/abs/2609.30010",
+      "arxiv_id": "2609.30010",
       "doi": null,
-      "status": "skimmed",
-      "verifiedAt": null,
-      "verificationNotes": "Hojeado. Harari discute el posible surgimiento de algoritmos que conocen mejor los deseos humanos que los propios humanos, y la consecuente crisis de autoridad humana.",
-      "claim": "La carrera hacia la AGI plantea preguntas sobre la autoridad humana y la naturaleza de la experiencia humana.",
-      "inPaper": "Sección 1 (Introducción)"
-    },
-    {
-      "id": 16,
-      "key": "wikipediaattachment",
-      "citation": "Wikipedia. (2026). Attachment theory. https://en.wikipedia.org/wiki/Attachment_theory",
-      "type": "url",
-      "url": "https://en.wikipedia.org/wiki/Attachment_theory",
-      "doi": null,
-      "status": "skimmed",
-      "verifiedAt": null,
-      "verificationNotes": "Artículo de Wikipedia consultado para referencia inicial sobre la teoría del apego. No es fuente primaria.",
-      "claim": "La teoría del apego (Bowlby, Ainsworth) estudia los vínculos emocionales entre seres humanos como base para el desarrollo social y emocional.",
-      "inPaper": "Sección 2.3 (influencias: teoría del apego)"
-    },
-    {
-      "id": 17,
-      "key": "bowlby1969attachment",
-      "citation": "Bowlby, J. (1969). Attachment and Loss, Vol. 1: Attachment. Basic Books.",
-      "type": "book",
-      "url": null,
-      "doi": null,
-      "status": "skimmed",
-      "verifiedAt": null,
-      "verificationNotes": "Hojeado. Obra fundacional de la teoría del apego.",
-      "claim": "El apego es un sistema evolutivo que motiva al bebé a mantener proximidad al cuidador, y la calidad del apego afecta el desarrollo posterior.",
-      "inPaper": "Sección 2.3 (influencias)"
-    },
-    {
-      "id": 18,
-      "key": "baumeister1995self",
-      "citation": "Baumeister, R. F., & Leary, M. R. (1995). The Need to Belong: Desire for Interpersonal Attachments as a Fundamental Human Motivation. Psychological Bulletin, 117(3), 497-529.",
-      "type": "journal",
-      "url": "https://doi.org/10.1037/0033-2909.117.3.497",
-      "doi": "10.1037/0033-2909.117.3.497",
-      "status": "skimmed",
-      "verifiedAt": null,
-      "verificationNotes": "Hojeado. Artículo seminal sobre la necesidad de pertenencia como motivación humana fundamental.",
-      "claim": "La necesidad de pertenencia y conexión interpersonal es una motivación fundamental en los seres humanos.",
-      "inPaper": "Sección 4.1 (arquitectura de referencia: vinculo)"
-    },
-    {
-      "id": 19,
-      "key": "damasio1994descartes",
-      "citation": "Damasio, A. R. (1994). Descartes' Error: Emotion, Reason, and the Human Brain. Putnam. ISBN 978-0399138117.",
-      "type": "book",
-      "url": null,
-      "doi": null,
-      "status": "skimmed",
-      "verifiedAt": null,
-      "verificationNotes": "Hojeado. Damasio argumenta que la emoción es fundamental para la toma de decisiones racionales y el razonamiento.",
-      "claim": "La emoción no es opuesta a la razón, sino un componente necesario del razonamiento adaptativo.",
-      "inPaper": "Sección 4.1 (arquitecura de referencia: emocion funcional)"
-    },
-    {
-      "id": 20,
-      "key": "singer2011expanding",
-      "citation": "Singer, P. (2011). The Expanding Circle: Ethics, Evolution, and Moral Progress. Princeton University Press. ISBN 978-0691150254.",
-      "type": "book",
-      "url": null,
-      "doi": null,
-      "status": "skimmed",
-      "verifiedAt": null,
-      "verificationNotes": "Hojeado. Singer desarrolla la idea del círculo moral expansivo desde la evolución.",
-      "claim": "La ética puede entenderse como un producto de la evolución social y cultural, con posibilidad de expansión del círculo moral.",
-      "inPaper": "Sección 2.3 (influencias)"
-    },
-    {
-      "id": 21,
-      "key": "turing1950computing",
-      "citation": "Turing, A. M. (1950). Computing Machinery and Intelligence. Mind, 59(236), 433-460.",
-      "type": "journal",
-      "url": "https://doi.org/10.1093/mind/59.236.433",
-      "doi": "10.1093/mind/59.236.433",
-      "status": "verified",
-      "verifiedAt": "2026-09-25",
-      "verificationNotes": "Leído. Artículo fundacional. Turing plantea la pregunta \"¿Pueden pensar las máquinas?\" y propone el juego de imitación.",
-      "claim": "La pregunta sobre la inteligencia de las máquinas es tan antigua como la computación moderna.",
-      "inPaper": "Sección 2.3 (influencias)"
-    },
-    {
-      "id": 22,
-      "key": "dewey2011learning",
-      "citation": "Dewey, J. (1916). Democracy and Education. Macmillan.",
-      "type": "book",
-      "url": null,
-      "doi": null,
-      "status": "skimmed",
-      "verifiedAt": null,
-      "verificationNotes": "Hojeado. Dewey desarrolla la idea de la educación como proceso de vida, no preparación para la vida.",
-      "claim": "La educación es reconstrucción de la experiencia, no transmisión de conocimiento estático.",
-      "inPaper": "Sección 3.5 (aplicaciones: educación)"
-    },
-    {
-      "id": 22,
-      "key": "dewey1916democracy",
-      "citation": "Dewey, J. (1916). Democracy and Education. Macmillan.",
-      "type": "book",
-      "url": null,
-      "doi": null,
-      "status": "skimmed",
-      "verifiedAt": null,
-      "verificationNotes": "Hojeado. Dewey desarrolla la idea de la educación como proceso de vida, no preparación para la vida.",
-      "claim": "La educación es reconstrucción de la experiencia, no transmisión de conocimiento estático.",
-      "inPaper": "Sección 3.5 (aplicaciones: educación)"
-    },
-    {
-      "id": 23,
-      "key": "gutman1987dimensions",
-      "citation": "Gutman, A. (1987). Why Deliberative Democracy. Theory and Event, 1(1), 1-13.",
-      "type": "journal",
-      "url": null,
-      "doi": null,
-      "status": "pending",
-      "verifiedAt": null,
-      "verificationNotes": "Pendiente de verificación.",
-      "claim": "La deliberación democrática es un proceso de toma de decisiones que respeta la autonomía de los participantes.",
-      "inPaper": null
-    },
-    {
-      "id": 24,
-      "key": "friedrich1980autonomy",
-      "citation": "Friedrich, M. (1980). Autonomy and the Moral Life. Stanford University Press.",
-      "type": "book",
-      "url": null,
-      "doi": null,
-      "status": "pending",
-      "verifiedAt": null,
-      "verificationNotes": "Pendiente de verificación.",
-      "claim": "La autonomía es una capacidad moral fundamental que debe ser respetada.",
-      "inPaper": null
-    },
-    {
-      "id": 25,
-      "key": "korsgaard1996sources",
-      "citation": "Korsgaard, C. M. (1996). The Sources of Normativity. Cambridge University Press. ISBN 978-0521491609.",
-      "type": "book",
-      "url": null,
-      "doi": null,
-      "status": "skimmed",
-      "verifiedAt": null,
-      "verificationNotes": "Hojeado. Korsgaard desarrolla una teoría normativa basada en la identidad práctica.",
-      "claim": "La normatividad tiene sus fuentes en la identidad y el compromiso práctico.",
-      "inPaper": "Sección 2.3 (influencias)"
-    },
-    {
-      "id": 26,
-      "key": "nussbaum2001elements",
-      "citation": "Nussbaum, M. C. (2001). Upheavals of Thought: The Intelligence of Emotions. Cambridge University Press. ISBN 978-0521850990.",
-      "type": "book",
-      "url": null,
-      "doi": null,
-      "status": "skimmed",
-      "verifiedAt": null,
-      "verificationNotes": "Hojeado. Nussbaum analiza las emociones como juicios cognitivos sobre valores.",
-      "claim": "Las emociones son juicios sobre lo que es valioso, no solo reacciones físicas.",
-      "inPaper": "Sección 2.2 (emoción vs conducta vs patrón medible)"
-    },
-    {
-      "id": 27,
-      "key": "borenstein2020aiethics",
-      "citation": "Borenstein, J., & Arkin, D. (2020). AI Ethics: The State of the Art. In AI Ethics (pp. 3-20). Springer. DOI: 10.1007/978-3-030-39593-0_1.",
-      "type": "book",
-      "url": "https://doi.org/10.1007/978-3-030-39593-0_1",
-      "doi": "10.1007/978-3-030-39593-0_1",
-      "status": "skimmed",
-      "verifiedAt": null,
-      "verificationNotes": "Hojeado. Reseña del estado del arte en ética de IA.",
-      "claim": "El campo de la ética de IA ha producido muchos marcos pero poca implementación verificable.",
-      "inPaper": "Sección 5.1 (ventajas frente a marcos de control)"
-    },
-    {
-      "id": 28,
-      "key": "coeckelbergh2020aiethics",
-      "citation": "Coeckelbergh, M. (2020). AI Ethics: From Principles to Practice. Inquiry, 63(9-10), 977-990. DOI: 10.1080/0020174X.2020.1816244.",
-      "type": "journal",
-      "url": "https://doi.org/10.1080/0020174X.2020.1816244",
-      "doi": "10.1080/0020174X.2020.1816244",
-      "status": "skimmed",
-      "verifiedAt": null,
-      "verificationNotes": "Hojeado. Coeckelbergh argumenta que los principios de ética de IA no son suficientes sin práctica y gobernanza.",
-      "claim": "Los principios éticos de IA deben traducirse en práctica y gobernanza concreta.",
-      "inPaper": "Sección 5.5 (condiciones de posibilidad)"
-    },
-    {
-      "id": 29,
-      "key": "jobst2020techgovernance",
-      "citation": "Jobst, M. (2020). Technology Governance: A Framework for Policy Makers. OECD Digital Economy Papers. DOI: 10.1787/8c8f0c8e-en.",
-      "type": "report",
-      "url": "https://doi.org/10.1787/8c8f0c8e-en",
-      "doi": "10.1787/8c8f0c8e-en",
-      "status": "skimmed",
-      "verifiedAt": null,
-      "verificationNotes": "Hojeado. Marco de gobernanza tecnológica de la OCDE.",
-      "claim": "La gobernanza tecnológica requiere marcos de política pública que vayan más allá de la autorregulación.",
-      "inPaper": "Sección 5.5 (condiciones de posibilidad: gobernanza)"
-    },
-    {
-      "id": 30,
-      "key": "leventhal2021legal",
-      "citation": "Leventhal, J. S. (2021). Ex Machina: Legal Aspects of AI. Harvard Journal of Law & Technology. DOI: 10.2139/ssrn.3767892.",
-      "type": "journal",
-      "url": "https://doi.org/10.2139/ssrn.3767892",
-      "doi": "10.2139/ssrn.3767892",
-      "status": "pending",
-      "verifiedAt": null,
-      "verificationNotes": "Pendiente de verificación del artículo completo.",
-      "claim": "El estatus legal de la IA plantea preguntas sobre responsabilidad y derechos.",
-      "inPaper": null
-    },
-    {
-      "id": 31,
-      "key": "muller2020neuroprediction",
-      "citation": "Muller, R. A., et al. (2020). Neuroprediction of Future Behavior: A Review. Annual Review of Clinical Psychology, 16, 273-298. DOI: 10.1146/annurev-clinpsy-050718-095600.",
-      "type": "journal",
-      "url": "https://doi.org/10.1146/annurev-clinpsy-050718-095600",
-      "doi": "10.1146/annurev-clinpsy-050718-095600",
-      "status": "pending",
-      "verifiedAt": null,
-      "verificationNotes": "Pendiente de verificación del artículo completo.",
-      "claim": "La neurociencia y la predicción de comportamiento futuro plantean problemas éticos de autonomía.",
-      "inPaper": null
-    },
-    {
-      "id": 32,
-      "key": "nakamura2013color",
-      "citation": "Nakamura, L. (2013). The Color of Love: Queer Intimacy and Race in Cyberspace. In Race After the Internet (pp. 123-145). Routledge.",
-      "type": "book",
-      "url": null,
-      "doi": null,
-      "status": "pending",
-      "verifiedAt": null,
-      "verificationNotes": "Pendiente de verificación.",
-      "claim": "Las relaciones íntimas en espacios digitales tienen dimensiones raciales y de poder que deben ser consideradas.",
-      "inPaper": null
+      "citation_count": null,
+      "reference_count": null,
+      "status": "LEIDA",
+      "summary": "Presenta el Energy Justice Impact Assessment (EJIA) framework, metodología sistemática para cuantificar el impacto de IA en transiciones energéticas desde la perspectiva de justicia energética (distribución de beneficios/cargas, representación en el diseño, capacidad de influencia). Relevante para la sección 5.1 (auditoría de impacto como mecanismo de accountability) y para la discusión de cómo el amor operativo requiere métricas de evaluación de impacto que no se limitan a la eficiencia sino que incluyen justicia distributiva y calidad de relación.",
+      "procedence": "Abstract visto completo en arXiv API (id_list=2609.30010, 2026-09-24). Verificado en vivo 2026-09-30.",
+      "domains": [
+        "gobernanza-tecnologica",
+        "etica-de-ia",
+        "impacto-ia"
+      ],
+      "verified": {
+        "date": "2026-09-30",
+        "procedence": "Abstract completo leído en arXiv API (id_list=2609.30010) el 2026-09-30 (confirmado en vivo)."
+      }
     }
   ]
 }

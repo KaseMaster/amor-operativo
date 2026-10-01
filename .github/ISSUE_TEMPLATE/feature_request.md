@@ -1,23 +1,47 @@
-# Feature request — Amor Operativo Research
-
-Thank you for your suggestion. Please fill in the fields below.
-
-## What would you like to add or change?
-
-Describa la funcionalidad, sección o cambio que propone.
-
-## Why is this useful?
-
-Explique el motivo de la propuesta. ¿Qué problema resuelve? ¿Qué principio, métrica o audiencia beneficia?
-
-## Alternative considered
-
-¿Ha considerado otras formas de lograr lo mismo? ¿Por qué descartó esas alternativas?
-
-## Relation to the specification
-
-¿Cómo se relaciona su propuesta con la definición formal y los 10 principios? ¿Es coherente con la especificación autoritativa?
-
 ---
-
-*Plantilla para sugerir mejoras al paper o al repositorio.*
+name: Feature request
+description: Proponer un cambio en principios, métricas, aplicaciones, estructura del paper o del repo.
+title: "[Feature] "
+labels: ["enhancement"]
+body:
+  - type: dropdown
+    id: ambito
+    attributes:
+      label: Ámbito
+      options:
+        - Principio o definición formal
+        - Métrica / escala / umbral
+        - Aplicación (salud, educación, justicia, economía, arte, ciencia)
+        - Estructura del paper
+        - Estructura del repo / plantillas
+        - Otra
+    validations:
+      required: true
+  - type: textarea
+    id: proposicion
+    attributes:
+      label: Qué propones
+      description: "Describe el cambio concreto que sugieres."
+    validations:
+      required: true
+  - type: textarea
+    id: motivo
+    attributes:
+      label: Motivo
+      description: "Por qué es útil, qué problema soluciona o qué gap cubre."
+    validations:
+      required: true
+  - type: textarea
+    id: criterios
+    attributes:
+      label: Criterios de aceptación
+      description: "Si fuera una métrica o principio nuevo, qué observable, escala, umbral y procedimiento tendría."
+    validations:
+      required: false
+  - type: textarea
+    id: contraargumentos
+    attributes:
+      label: Contraargumentos conocidos
+      description: "Riesgos, límites o objeciones que reconoces de antemano."
+    validations:
+      required: false

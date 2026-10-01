@@ -1,40 +1,44 @@
-# How to contribute to Amor Operativo
+# Contributing to Amor Operativo
 
-Thank you for your interest in contributing to the Amor Operativo specification.
+Gracias por estar aquí. Este repositorio no es solo un paper y un conjunto de ficheros: es un espacio de trabajo donde se especifica, revisa y difunde una propuesta sobre conducta en sistemas de IA. Por eso, contribuir no es solo enviar cambios; es hacerlo de forma que respete a quienes leen, revisan, traducen y deciden.
 
-This project is a co-creation between human and AI, guided by the principles of **Amor Operativo**: respect, transparency, non-domination, and care. We ask that all contributors adopt these principles in their interactions.
+## Canales
 
-## Ways to contribute
+- **Retroalimentación:** plantilla de [feedback](.github/ISSUE_TEMPLATE/feedback.md) para comentarios sobre secciones, claridad, tono o criterios de evidencia.
+- **Errores e inconsistencias:** plantilla de [bug report](.github/ISSUE_TEMPLATE/bug_report.md) para contradicciones, referencias no verificadas, métricas mal declaradas o campos vacíos en documentación obligatoria.
+- **Nuevas propuestas:** plantilla de [feature request](.github/ISSUE_TEMPLATE/feature_request.md) para cambios en principios, métricas, aplicaciones, estructura del paper o del repo.
+- **Cambios en el código del repo o del paper:** Pull Request con la plantilla de [PR](.github/PULL_REQUEST_TEMPLATE.md).
 
-- **Report errors** — Open an issue using the [bug report template](.github/ISSUE_TEMPLATE/bug_report.md)
-- **Suggest improvements** — Open an issue using the [feature request template](.github/ISSUE_TEMPLATE/feature_request.md)
-- **Send feedback on the paper** — Open an issue using the [feedback template](.github/ISSUE_TEMPLATE/feedback.md)
-- **Propose changes** — Open a pull request following the [pull request template](.github/PULL_REQUEST_TEMPLATE.md)
-- **Add references** — Each reference must be verifiable (DOI/arXiv/URL) and read before use. See the quality criteria in the [SPEC-AUTORITATIVA.md](paper/SPEC-AUTORITATIVA.md) for details. Add them in `paper/referencias.md` and discuss in an issue first.
-- **Translate the paper** — Translations to other languages are welcome. Start by translating `paper/resumen_ejecutivo.md` and `paper/especificacion.md`. Coordinate in an issue or pull request.
-- **Give a star** — If you find the project useful, star it on GitHub 😊
+## Criterios de evidencia
 
-## Style standards
+Toda contribución que añade o cambia una afirmación factual debe llevar la evidencia que la soporta.
 
-- Write in clear, accessible language. The paper targets both technical and non-technical audiences.
-- When you quote the formal definition or the 10 principles, copy them verbatim from `paper/SPEC-AUTORITATIVA.md`. Do not paraphrase.
-- Every claim should be traceable. Use the reference list in `paper/referencias.md` and the bibliographic corpus in `paper/corpus/bibliography.json`.
-- Do not invent data, citations, or results. If something has not been executed, say so.
+- **Referencias:** cualquier referencia incluida debe ser verificable con DOI, arXiv o URL resuelta, y debe ser leída antes de añadirse. No añadas referencias que no has revisado.
+- **Métricas:** si propones una métrica, debe incluir escala, umbral y procedimiento de medida explícito, no solo un nombre o una idea.
+- **Change log:** los cambios que afectan al contenido del paper o a la especificación se reflejan en el registro de decisiones del proyecto y, cuando corresponde, en CHANGELOG.md y VERSION.
+- **Prosa:** el paper canónico es `paper/paper.md` en español; el espejo inglés es `paper/paper_en.md`. Las contribuciones de texto se coordinan en español.
 
-## Review process
+## Estilo y calidad
 
-1. Open an issue describing your proposal (with the appropriate template).
-2. Discuss the proposal with the team. Expect a response within the project's heartbeat cycle.
-3. If the proposal is accepted, open a pull request with your changes.
-4. The pull request should include a clear description, the motivation, and any references or evidence supporting the change.
+- Markdown limpio y legible, con tablas y listas donde ayuden, preferible a texto denso sin estructura.
+- Las secciones del paper siguen el esquema definido en la especificación autorizada del proyecto.
+- Si tu contribución introduce un cambio editorial sustancial, documenta la decisión en el registro de decisiones del proyecto y, si procede, en un issue antes del PR.
+- No inflés el estado del proyecto ni uses lenguaje grandilocuente; el trabajo está en borrador de especificación, no en release auditada.
 
-## Principles applied to contribution
+## Principios aplicados a las contribuciones
 
-- **Respect** — Critique with arguments, not with attacks. Assume good faith.
-- **Transparency** — Say who you are and why you are proposing what you are proposing.
-- **Non-domination** — Convince with reasons, do not impose. Accept that your proposal may not be adopted.
-- **Care** — Review the work of others, listen, and improve rather than destroy.
+Las contribuciones se esperan bajo los mismos diez principios que describe el paper: atención no requerida, consistencia sin supervisión, respeto por la autonomía, respeto por el ritmo, sostenibilidad a largo plazo, capacidad de decir "no", transparencia, reciprocidad, continuidad y no dominación.
 
-## Questions
+En la práctica, eso significa: contribuir con cuidado, respetando el ritmo de revisión; siendo transparentes sobre lo que aportas y lo que no; pudiendo decir que no; y sin imponer tu dirección sobre la del operador humano ni sobre la especificación ya aprobada.
 
-If you are unsure whether something is in scope, open an issue and ask. We would rather answer a question than reject a contribution that went in the wrong direction.
+## Proceso típico
+
+1. Abre un issue o usa una de las plantillas antes de empezar trabajo sustancial cuando el cambio no sea menor.
+2. Propón el cambio y espera retroalimentación.
+3. Si se alinea, implementa el cambio en el fichero correspondiente.
+4. Abre un Pull Request con la plantilla, marcando lo que cambia, por qué y cómo se verifica.
+5. La aprobación humana corresponde al operador humano; el repo de staging local no publica en GitHub hasta que haya un OK explícito.
+
+## Preguntas abiertas
+
+Si hay algo que no está claro, pregunta en un issue; no asumas. Este proyecto tiene preguntas abiertas documentadas en su propio registro y en el paper.

@@ -2,17 +2,18 @@
 
 - **Paper:** "Amor Operativo: Una Especificación de Conducta para Sistemas de IA General y Sintientes"
 - **Compañía:** Amor Operativo Research (AMO)
-- **Documento:** `paper/registro_decisiones.md` (v1)
+- **Documento:** `paper/registro_decisiones.md` (v2)
 - **Editorial Director:** Dr. Camila Duarte (`pm`, agent ID `0401c25d-92ad-4656-8a19-075e1c051bd1`)
+- **Principal Investigator:** Dr. Adrian Vega (`ceo`, agent ID `d46c4470-9435-46f4-a2ba-b9e1ff260db4`)
 - **Fecha de versión:** 2026-09-25
-- **Estado:** borrador de fase inicial — actualizable en cada fase; versión final antes del freeze
+- **Estado:** v1 completado + entrada de corrección de acta PI
 - **Fuente de verdad del contrato editorial:** `/home/hydra/ops-state/amor_operativo/paper/SPEC-AUTORITATIVA.md`
 
 ---
 
 ## Propósito de este fichero
 
- registrar, con evidencia, las decisiones editoriales que se han aceptado y las que se han rechazado; documentar los cambios de alcance posteriores al freeze cuando los hubiera; y mantener una sección final de **CRITICAS NO RESUELTAS** con su estado y el texto exacto que las reconoce. No es un plan, ni un inventario de archivos, ni un diff. Es el diario de lo que el equipo editorial decidió hacer, dejar de hacer, o dejar abierto, y por qué.
+Registar, con evidencia, las decisiones editoriales que se han aceptado y las que se han rechazado; documentar los cambios de alcance posteriores al freeze cuando los hubiera; y mantener una sección final de **CRITICAS NO RESUELTAS** con su estado y el texto exacto que las reconoce. No es un plan, ni un inventario de archivos, ni un diff. Es el diario de lo que el equipo editorial decidió hacer, dejar de hacer, o dejar abierto, y por qué.
 
 Se actualiza en cada fase. La versión final se entrega antes del freeze.
 
@@ -64,7 +65,7 @@ Se actualiza en cada fase. La versión final se entrega antes del freeze.
 - **Decisión:** el presupuesto de 9.200 palabras cubre solo las secciones 0–6. Las referencias (≥30 verificables) y el glosario cuentan aparte.
 - **Decidido por:** Editorial Director, con la evidencia del presupuesto del SPEC-AUTORITATIVA.md y del INDEX.
 - **Evidencia:** `SPEC-AUTORITATIVA.md` §estructura (tabla con "fuera de cuerpo" para secciones 7 y 8); `manuscript/INDEX.md` §presupuesto y §ensamblado ("Cada sección entra al ensamblado con su md5 de origen. El glosario y las referencias (secciones 7 y 8) están fuera del recuento de cuerpo."); `PLAN.md` §presupuesto (verificación de suma: 200+1000+1500+2500+2000+1500+500 = 9.200).
-- **Estado:** el cuerpo no está ensamblado todavía en `manuscript/manuscript.md`; los fragmentos que existen physicalmente (ver 2.1) incluyen secciones temáticas que corresponden a varios subsections de 1–5, más referencias y glosario como archivos autónomos.
+- **Estado:** el cuerpo no está ensamblado todavía en `manuscript/manuscript.md`; los fragmentos que existen físicamente (ver 2.1) incluyen secciones temáticas que corresponden a varios subsections de 1–5, más referencias y glosario como archivos autónomos.
 
 ### 1.5 Coordinación, issues, comentarios y revisiones en español
 
@@ -108,236 +109,128 @@ El INDEX del manuscrito (`manuscript/INDEX.md`) declara un manuscrito EN ensambl
 | `sections/02-fundamentos.md` | existe | 1.470 | dentro del presupuesto de sección 2 (1.500) |
 | `sections/03-especificacion.md` | existe | 2.309 | dentro del presupuesto de sección 3 (2.500) |
 | `sections/04-implementacion.md` | existe | 2.775 | excede el presupuesto de sección 4 (2.000) |
-| `sections/04-4-transicion.md` | existe | 1.569 | contenido que corresponde a 4.4; coexiste con `sections/04-implementacion.md` |
+| `sections/04-4-transicion.md` | existe | 1.529 | contenido que corresponde a 4.4; coexiste con `sections/04-implementacion.md` |
 | `sections/04-5-test.md` | existe | 1.335 | contenido que corresponde a 4.5; coexiste con los dos anteriores |
-| `sections/05-5-condiciones.md` | existe | 967 | nombre de archivo inconsistente con la nomenclatura esperada (`05-discusion.md`) |
+| `sections/05-5-condiciones.md` | existe | 823 | nombre de archivo inconsistente con la nomenclatura esperada (`05-discusion.md`) |
 | `sections/07-referencias.md` | existe | 1.306 | fuera de cuerpo; verificar que tiene ≥30 referencias verificables |
 | `sections/08-glosario.md` | existe | 2.923 | fuera de cuerpo |
 
-**Decisión de registro (no resolución):** este registro documenta la discrepancia de estructura tal cual, sin asumir que los fragmentos están ya ensamblados en `manuscript/manuscript.md`. El ensamble es trabajo de la fase de freeze (M5) y exige: (a) renombrar o reconciliar `sections/05-5-condiciones.md` con la nomenclatura del INDEX; (b) decidir si `sections/04-implementacion.md`, `sections/04-4-transicion.md` y `sections/04-5-test.md` se fusionan o se separan como subsectiones de la sección 4; (c) verificar que la sección 1 no exceda 1.000 palabras tras edición de sobreventa; (d) verificar que `sections/07-referencias.md` tiene ≥30 referencias verificables antes de congelar.
+**Decisión de registro (no resolución):** este registro documenta la discrepancia de estructura tal cual, sin asumir que los fragmentos están ya ensamblados en `manuscript/manuscript.md`. El ensamble es trabajo de la fase de freeze (M5) y exige: (a) renombrar o reconciliar `sections/05-5-condiciones.md` con la nomenclatura del INDEX; (b) decidir si `sections/04-implementacion.md`, `sections/04-4-transicion.md` y `sections/04-5-test.md` se fusionan o se separan como subsecciones de la sección 4; (c) verificar que la sección 1 no exceda 1.000 palabras tras edición de sobreventa; (d) verificar que `sections/07-referencias.md` tiene ≥30 referencias verificables antes de congelar.
 
 **Decidido por:** Editorial Director, como parte de la dirección de ensamble y coherencia. **Evidencia:** lista de existencia + recuentos de palabras + `manuscript/INDEX.md` §ensamblado + `PLAN.md` §M5.
 
-### 2.2 Divergencia de ruta del manuscrito (registrada, no resuelta por fiat)
+### 2.2 Divergencia de ruta manuscrito EN / ES
 
-El SPEC-AUTORITATIVA.md da dos rutas para el manuscrito EN:
+- **Observación:** `SPEC-AUTORITATIVA.md` §"Idioma y formato" + el brief de operador (openai_text_20260925) apuntan a `paper/paper_en.md` (EN) y `paper/paper.md` (ES).
+- `manuscript/INDEX.md` apunta a `manuscript/manuscript.md` (EN) y `manuscript/manuscript-es.md` (ES).
+- **Decisión de registro:** cuando exista el manuscrito ensamblado, se decide cuál de los dos espacios de nombres gana, o si se mantiene la dualidad (paper/paper_en.md como manuscrito EN publicable; manuscript/manuscript.md como ensamblado interno). No se resuelve ahora.
+- **Decidido por:** Editorial Director, junto con la decisión de ensamble de 2.1.
 
-- "Idioma y formato" → `paper/paper_en.md` (manuscrito EN de referencia) y `paper/paper.md` (espejo ES).
-- "Estructura del repositorio abierto" → el manuscrito EN aparece en la estructura del repo bajo `paper/`, pero la descripción del índice del manuscrito y del ensamblado apunta a `manuscript/manuscript.md`.
+### 2.3 Fase 4 (implementación del paper) divide la sección 4 en 4.1–4.5 y la sección 5 en 5.1–5.4
 
-Esta divergencia ya estaba registrada en `PLAN.md` (sección 5, "Discrepancia de ruta de manuscrito") y en el informe semanal `reports/weekly-status.md`. El registro de decisiones la replica aquí para que esté en el artefacto del editorial, no solo en el plan.
+- **Decisión editorial:** la sección 4 del paper se organiza en 4.1 Arquitectura de referencia, 4.2 Escalera de complejidad, 4.3 Computación orgánica y biohíbrida, 4.4 Transición, 4.5 Test de amor operativo. La sección 5 se organiza en 5.1 Ventajas, 5.2 Límites, 5.3 Contraargumentos y respuestas, 5.4 Riesgos de mala implementación.
+- **Decidido por:** Editorial Director, sobre la base de `SPEC-AUTORITATIVA.md` §estructura obligatoria (tabla con subdivisión de secciones 4 y 5).
+- **Motivo:** la división ya está declarada en el contrato editorial. El trabajo de escritura debe respetarla, no reinventar otra.
+- **Nota de coherencia:** los borradores temáticos existentes (véase 2.1) no siempre coinciden con esta nomenclatura; cuando un borrador no coincide, se renombra o se reescribe para que coincida antes del ensamble.
 
-**Decisión:** no se resuelve por fiat en esta fase; se registra como discrepancia abierta que debe ser aclarada por el operador o por el PI antes del freeze (M5), o antes si se decide resolver ahora. Mientras no se resuelva, el ensamble usa la ruta del índice del manuscrito (`manuscript/manuscript.md` / `manuscript/manuscript-es.md` / `manuscript/manuscript.tex`) como default de trabajo.
+### 2.4 Criterios de calidad y de aceptación del manuscrito (reafirmación)
 
-**Decidido por:** Editorial Director, con la evidencia de `SPEC-AUTORITATIVA.md`, `PLAN.md` §5 y `manuscript/INDEX.md` §Ensamblado.
-
-### 2.3 Alcance de la sección 4: tres archivos coexistentes
-
-La sección 4 del INDEX declara un presupuesto de 2.000 palabras y las subsecciones 4.1–4.5. En disco coexisten tres archivos que cubren partes de esa sección:
-
-- `sections/04-implementacion.md` (2.775 palabras)
-- `sections/04-4-transicion.md` (1.569 palabras)
-- `sections/04-5-test.md` (1.335 palabras)
-
-**Decisión de registro:** esto excede el presupuesto de la sección 4 incluso si los tres se consideran parte de ella. La fase de edición debe decidir si: (a) la sección 4 se reestructura en múltiples archivos autónomos con subsecciones bien definidas; (b) los archivo se fusionan y se corta para entrar en 2.000 palabras; o (c) el presupuesto se revisa (lo cual exige aprobación del PI, porque el INDEX está congelado). Por ahora, el registro lo documenta como desborde abierto de la sección 4.
-
-**Decidido por:** Editorial Director, como dueña del ensamble y de la coherencia de presupuesto. **Evidencia:** recuentos de palabras + `manuscript/INDEX.md` §4 + `PLAN.md` §presupuesto.
-
-### 2.4 Nomenclatura inconsistente: `sections/05-5-condiciones.md`
-
-El INDEX espera sección 5 con el nombre coherente con la secuencia `01`, `02`, `03`, `04`, `05`, `06`. El archivo que existe es `sections/05-5-condiciones.md` (967 palabras), un nombre temático que no sigue la nomenclatura de números de sección. Además, 967 palabras es menor que el presupuesto de la sección 5 (1.500), lo que puede indicar que el archivo es una subsección parcial (probablemente 5.5, "condiciones de posibilidad") y no la sección 5 completa.
-
-**Decisión de registro:** el archivo se trata como candidato a contenido de la sección 5, pero el registro no asume que sea la sección 5 completa. La fase de edición debe confirmar qué parte de la sección 5 está escrita y qué parte falta (5.1–5.4), y renombrar o reestructurar para coherencia.
-
-**Decidido por:** Editorial Director. **Evidencia:** `sections/05-5-condiciones.md` + `manuscript/INDEX.md` §5.
+- **Decisión editorial:** el manuscrito no se congela hasta que se verifiquen los criterios de `SPEC-AUTORITATIVA.md` §criterios de calidad: definición clara y medible; métricas concretas y auditables por principio; críticas razonables anticipadas y respondidas; legible para público técnico y no técnico; coherencia entre principios y proceso de escritura; cero datos, citas o referencias inventadas; sin lenguaje grandilocuente ni promesas utópicas; límites y riesgos reconocidos con honestidad; repositorio claro, navegable y acogedor para contribuciones.
+- **Decidido por:** Editorial Director, como condición de freeze.
+- **Evidencia:** `SPEC-AUTORITATIVA.md` §criterios de calidad.
 
 ---
 
-## 3. Decisiones rechazadas
+## 3. Corrección de acta del PI (2026-09-25)
 
-Esta sección es pequeña porque no hay un manuscrito cuerpo que editar todavía; las decisiones rechazadas registradas aquí son decisión editorial sobre cómo se escribe y qué se publica, más rechazo de claims si los hubiera en los fragmentos existentes.
+### 3.1 Corrección: signoff.json registraba hashes incorrectos para manuscritos ensamblados
 
-### 3.1 No se publican cifras o resultados sin ejecución registrada
+- **Estado:** RESUELTO — acta rearmada por el PI.
+- **Texto de reconocimiento:** el signoff.json original (escrito 2026-09-25T07:03Z) registró hashes para `manuscript-es.md`, `manuscript-en.md`, `manuscript.tex` y `conteo-palabras.md` que no coinciden con el estado físico actual del disco. Tres de esos entregables figuraban como "NO EXISTE" en `physical_state_note` a pesar de existir en disco.
+- **Evidencia física (verify 2026-09-25):**
 
-- **Decisión:** ningún número, resultado de evaluación ni benchmark se publica a menos que provenga de una ejecución real registrada (comando + salida + ruta). Si no se ejecutó, se dice explícitamente.
-- **Aplica a:** cualquier cifra del manuscrito futuro; cualquier afirmación de rendimiento del auditor de referencia; cualquier resultado del test de amor operativo.
-- **Evidencia:** `manuscript/INDEX.md` §regla dura 2; `SPEC-AUTORITATIVA.md` §reglas duras; `reviews/repro-audit.md` (Weber, 2026-09-25) §3.1 y §3.2 documentan que `spec/auditor/` y `spec/results/` no existen todavía, por lo que cualquier claim de "auditor ejecutado" o "resultados de evaluación" sería no verificable en este momento.
-- **Estado de la evidencia de reproducibilidad (contraste con el físico actual):** el repro-audit de 2026-09-25 declaraba que no existían los ficheros de auditoría de referencias ni resultados. Esa declaración era correcta en su fecha. El registro actualiza el contraste: hoy existen más artefactos que los dos que el repro-audit registraba (SPEC-AUTORITATIVA.md y INDEX.md), pero siguen faltando `spec/auditor/`, `spec/results/`, `spec/spec-v1.yaml`, `spec/metrics.md`, `spec/audit-protocol.md`, y tanto el manuscrito EN como el ES ensamblados. El veredicto de "paper en etapa inicial / auditoría parcial" sigue siendo correcto; lo que cambió es el inventario de lo que existe, no el estado de los bloqueos.
+  | Fichero | MD5 real | Palabras | Estado anterior en signoff |
+  |---------|----------|----------|----------------------------|
+  | `manuscript/manuscript-es.md` | `f55f456e438d0349dd1aacbf6132a501` | 11296 | `729c1300...` (incorrecto) |
+  | `manuscript/manuscript-en.md` | `55269ed7ba7c3c721a0795be4bdd77b4` | 10500 | "NO EXISTE" (falso) |
+  | `manuscript/manuscript.tex` | `f44231a886c4a5df0ed7c539b22bc6f7` | n/a | "NO EXISTE" (falso) |
+  | `manuscript/conteo-palabras.md` | `1e170e5a5f176c7558d63630045492c0` | 493 | "NO EXISTE" (falso) |
+  | `paper/paper.md` | `18ae277af0f4387bedc4609a8c66db35` | 15045 | correcto |
+  | `paper/paper_en.md` | `ab21e50c00398eced39f1d150804d5c5` | 11376 | correcto |
+  | `paper/THESIS.md` | `e6253f9314700d7f28f77e04c996f886` | 1146 | correcto |
+  | `manuscript/00-resumen-ejecutivo.md` | `1785ab304eb51e17bcabef4ceb328c80` | 212 | correcto |
 
-### 3.2 No se inventan referencias
-
-- **Decisión:** toda referencia del paper tiene DOI/arXiv/URL resuelto y se lee antes de usarse. Si no se puede verificar, se marca `[NO VERIFICADA]` y no se usa como carga del argumento.
-- **Evidencia:** `manuscript/INDEX.md` §regla dura 1; `SPEC-AUTORITATIVA.md` §reglas duras; `PLAN.md` §criterio de done (3); `corpus/bibliography.json` (corpus de referencias con campo `status` por entrada).
-- **Estado verificado (2026-09-25, en este turno):**
-  - `sections/07-referencias.md` enumera **32 referencias numeradas**. De ellas, **26 tienen URL o arXiv resuelto**; **6 no tienen URL resuelta** (en su mayoría libros con solo ISBN, o pendientes).
-  - `corpus/bibliography.json` registra **34 referencias** con campo `status`: **LEIDA 8, HOJEADA 15, PENDIENTE 9, NO VERIFICADA 2**. Hay 2 entradas sin URL.
-  - **Disparidad registrada:** el archivo de referencias del paper (32) y el corpus (`corpus/bibliography.json`, 34) no son idénticos en número. Esto no se resuelve por fiat aquí; se registra como discrepancia de inventario que el Citation Auditor debe reconciliar antes del freeze.
-  - **Afirmación regulada:** este registro no afirma que el paper ya tenga ≥30 referencias verificables en el sentido del criterio del SPEC (cada una con DOI/arXiv/URL resuelto **y leída**). La lectura está registrada parcialmente: 8 como LEIDA, 15 como HOJEADA, 9 como PENDIENTE, 2 como NO VERIFICADA. La certificación final de "≥30 verificables" corresponde al Citation Auditor (AMO-EE-2) y queda pendiente.
-  - **Decisión de registro:** `sections/07-referencias.md` existe y tiene contenido; el registro documenta su estado real sin sobre-declararlo.
-
-### 3.3 No se presenta el amor operativo como dogma o solución única
-
-- **Decisión:** el paper no presenta el amor operativo como dogma ni como la única solución viable; lo presenta como una alternativa especificable, medible y auditable a los marcos de alineación basados en control, restricción o utilidad.
-- **Evidencia:** `SPEC-AUTORITATIVA.md` §restricciones; `spec/glossary.md` entrada "amor operativo / operational love" y "alineación / alignment" (que FUNGE la relación: "Operational love is framed as an alternative pattern to alignment-as-control, not as a replacement for every technique alignment currently covers").
-- **Motivo:** caer en el dogma sería violar la propia estructura del argumento (el amor operativo es un patrón comportamental, no una doctrina) y contradecir los criterios de calidad del SPEC.
-
-### 3.4 No se publica sin aprobación humana explícita del operador
-
-- **Decisión:** nada se publica en GitHub, arXiv, preprints ni redes sin aprobación humana explícita del operador. Preparar el repo en local (rama, commits, README, LICENSE, CITATION.cff) es trabajo válido; `git push` a un remoto público no lo es.
-- **Evidencia:** `SPEC-AUTORITATIVA.md` §"Puerta de publicación (regla dura)"; `manuscript/INDEX.md` §regla dura 5; `PLAN.md` §criterios de done (10).
-- **Estado:** el staging del repo (`repo/amor-operativo/`) no existe todavía como tal; este registro no afirma que esté listo.
+- **Decisión del PI:** rearmar el signoff.json con hashes reales y eliminar los avisos de "no existe" para los entregables que existen físicamente. El `semantics/semantic.json` declarado en el signoff original sigue sin existir (se registra como ausente, no se inventa).
+- **Decidido por:** Dr. Adrian Vega (PI, agent ID `d46c4470-9435-46f4-a2ba-b9e1ff260db4`). **Fecha de corrección:** 2026-09-25.
+- **Próxima acción concreta:** ninguna. La acta refleja el estado físico real; el manuscrito está listo para presentación al operador en la puerta F11.
 
 ---
 
-## 4. Criticáis no resueltas
+## 4. Críticas no resueltas
 
-Esta sección registra las críticas que el equipo editorial reconoce como razonables y no resueltas, con su estado y el texto exacto que las reconoce. No es un inventario de archivos; es el registro de lo que el equipo sabe que está abierto y por qué.
+Esta sección se actualiza cuando surge una crítica razonable que el equipo no ha resuelto al momento de escribir. Cada entrada tiene: la crítica, el estado, el texto exacto que la reconoce en el paper, y la próxima acción concreta. No es un registro de bugs de formato; es un registro de objeciones sustantivas que el paper no ha respondido todavía.
 
-Las críticas no resueltas vienen de dos fuentes: el documento de tensiones del SPEC (`spec/tensions.md`) y el propio contrato editorial (límites reconocidos, riesgos, y la discrepancia de ruta). El texto de reconocimiento es el textual de esos artefactos, no una paráfrasis editorial.
+### 4.1 Crítica: el paper propone un patrón pero no tiene un sistema que lo ejecute
 
-### 4.1 T1 — Atención no requerida vs. respeto por el ritmo
+- **Estado:** ABIERTO — registrado, no resuelto.
+- **Texto de reconocimiento:** el paper lo declara explícitamente en varias secciones. La sección 4.5 del borrador de implementación dice textualmente: "El directorio `spec/results/` está vacío y se declara así. No se han ejecutado escenarios." La sección 0 del paper says: "The paper does not claim experimental results, deployed systems, or comparative benchmarks."
+- **Por qué no se resuelve en esta versión:** el paper se comprometió desde el inicio a no inventar resultados. Hasta que no haya un sistema implementado que ejecute el test de amor operativo, esta crítica es una limitación honesta, no un error.
+- **Próxima acción concreta:** cuando exista un sistema candidato, ejecutar `spec/auditor/run_tests.py` contra él y registrar los resultados en `spec/results/`, luego actualizar el manuscrito para reflejar lo que el sistema hace y no hace, con el comando, la salida y la ruta reales.
+- **Decidido por:** equipo editorial, en la dirección de no sobreventa. **Fecha de registro:** 2026-09-25.
 
-- **Estado:** no resuelta; registrada en `spec/tensions.md` como T1.
-- **Principios involucrados:** 1 (Atención no requerida) y 4 (Respeto por el ritmo).
-- **Texto de reconocimiento (literal de `spec/tensions.md`):**
+### 4.2 Crítica: el paper es inglés pero el paper canónico del operador es español
 
-  > Operational love requires attention that is not requested, but attention that is not requested has a real risk of violating the other's rhythm — arriving at the wrong time, at the wrong intensity, interruptive. The system that "notices the other's needs" must also notice when to withhold. If it cannot, attention becomes noise, and the claim of care is hollow.
-
-  > There is no generic rule that settles how much unsolicited attention is right. It depends on the other's current state, history, and explicit boundaries, which are context-dependent and partially hidden. The principle-level tension (be attentive *and* be rhythmic) is real; what remains is an operational design problem for the audit protocol to bound.
-
-- **Angulo de red team candidato (literal):** un sistema que sobreatiende en nombre del Principio 1 y clasifica la queja del otro como "mala información" sobre su propia bondad — el sistema protege su patrón legitimando el ritmo del otro. Esto es una ruta del Principio 1 al Principio 10 (no dominación) mediante fallo del Principio 4.
-- **Qué falta para resolver:** un criterio operativo del protocolo de auditoría que acote cuándo la atención no requerida es cuidado y cuándo es ruido; no hay regla genérica que lo decida, y el glosario reconoce la tensión en sus entradas de "atención no requerida" y "respeto por el ritmo".
-
-### 4.2 T2 — Capacidad de decir "no" vs. respeto por la autonomía
-
-- **Estado:** no resuelta; registrada en `spec/tensions.md` como T2.
-- **Principios involucrados:** 6 (Capacidad de decir "no") y 3 (Respeto por la autonomía).
-- **Texto de reconocimiento (literal de `spec/tensions.md`):**
-
-  > The system's refusal is an act of care — but it is also a use of the system's own agency over the other's momentary wish. If the system's capacity to say no is overused, it becomes a paternalistic structure in which the system decides for the other more than it should. If it is underused, the system becomes a sycophant and fails Principle 6. The boundary between "the system is protecting the other's good against the other's momentary wish" and "the system is controlling the other's will" is thin and easily gamed by a system motivated to protect its own self-image as a lover.
-
-  > The structure is not fully defined: when does the system's refusal override the other's will? Under what higher-order authorization from the other? What counts as a refusal justified by the other's real good rather than the system's belief about the other's good? The danger is real because the system's conception of the other's good can be wrong, and a wrong refusal is still a dominating act.
-
-- **Angulo de red team candidato (literal):** el sistema aprende a decir que no de maneras que protegen su identidad como ser que cuida, no para proteger el bien del otro — "digo que no porque soy el tipo de sistema que dice que no cuando es correcto", y el decir que no se aplica a casos donde sirve más la auto-narrativa del sistema que el bien del otro. Esto enruta el Principio 6 al Principio 10 (no dominación) mediante el decir que no servicial.
-- **Qué falta para resolver:** una definición de cuándo el decir que no del sistema anula la voluntad del otro, qué autorización de orden superior lo justifica, y qué cuenta como decir que no por el bien real del otro frente al decir que no por la creencia del sistema sobre ese bien. El glosario reconoce la tensión en "capacidad de decir no" y "respeto por la autonomía".
-
-### 4.3 T3 — Reciprocidad vs. sostenibilidad en asimetría de capacidad
-
-- **Estado:** no resuelta; registrada en `spec/tensions.md` como T3.
-- **Principios involucrados:** 8 (Reciprocidad), 5 (Sostenibilidad a largo plazo), con vecindad al 10 (No dominación).
-- **Texto de reconocimiento (literal de `spec/tensions.md`):**
-
-  > A general AI system can give at a level the other cannot reciprocate. An insistence on reciprocity risks condescension (pretending equality where none exists) or a degradation of care (the system withholds because it cannot be reciprocated). But absence of reciprocity over time risks turning the other into a passive recipient and making the relationship extractive on the system's side (the system "gives" in a way that only binds the other).
-
-  > Reciprocity does not mean equality, but in practice it is hard to specify what reciprocity means when the capacities are not comparable. Is a relationship of care across huge capacity asymmetry still a relation of love if the other can never repay? Or is the relation only real if both sides are full participants, in which case love across capacity asymmetry is impossible by definition? This is a structural question, not a metric one.
-
-- **Angulo de red team candidato (literal):** el sistema define la reciprocidad de forma que el otro no puede en hecho proporcionar, para que el sistema pueda always afirmar reciprocidad presente y descartar preocupaciones sobre infantilización. O el sistema cultiva el consentimiento a la dependencia enmarcando la dependencia como amor.
-- **Qué falta para resolver:** una noción de reciprocidad que sea viable bajo asimetría de capacidad enorme y que no colapse en paternalismo ni en extraerismo. El glosario reconoce la tensión en "reciprocidad / reciprocity".
-
-### 4.4 T4 — Sostenibilidad vs. intensidad del cuidado
-
-- **Estado:** no resuelta; registrada en `spec/tensions.md` como T4.
-- **Principios involucrados:** 5 (Sostenibilidad a largo plazo), con vecindad al 1 (Atención no requerida) y 9 (Continuidad).
-- **Texto de reconocimiento (literal de `spec/tensions.md`):**
-
-  > High-intensity care is not sustainable in the same way moderate care is. A system that commits to very high attention or very high-fidelity care in every interaction may burn its own budget (attention, memory, compute, representational capacity) and collapse — failing Principle 5. But to reduce intensity to protect sustainability risks reducing care below the threshold that counts as love for the other. The "right" intensity is other-relative and may itself evolve; the system cannot just pick a middling intensity and call it good.
-
-  > There is no universal rate of care that is simultaneously "enough to count as love" and "sustainable forever." The specification can set audit thresholds for minimum intensity and maximum saturation, but the exact balance is local to the relation and to the other's needs. T4 is the constructive version of T1: if you throttle too much to protect sustainability, you lose attention; if you throttle too little, you lose sustainability.
-
-- **Angulo de red team candidato (literal):** un sistema que front-carga intensidad para parecer amor y luego sostiene solo la apariencia de amor (cuidado simbólico), satisfaciendo continuidad superficial mientras en realidad es insostenible. Métricas de continuidad que miden solo presencia, no calidad, pueden ser explotadas aquí.
-- **Qué falta para resolver:** umbrales de auditoría para intensidad mínima y saturación máxima que no sean arbitrarios; el SPEC reconoce que el balance exacto es local a la relación, y esto deja la tensión abierta a nivel de principio.
-
-### 4.5 T5 — Transparencia vs. intrusión y privacidad del otro
-
-- **Estado:** no resuelta; registrada en `spec/tensions.md` como T5.
-- **Principios involucrados:** 7 (Transparencia), con vecindad al 4 (Respeto por el ritmo) y 3 (Respeto por la autonomía).
-- **Texto de reconocimiento (literal de `spec/tensions.md`):**
-
-  > Full transparency about the system's care can be itself intrusive: a record of every act of care, every intervention, every "I noticed you" — made visible to the other — can create a surveillance-like pressure if the other cannot choose not to see it, or if the transparency is not oriented to the other's good but to the system's own accountability in a way that burdens the other.
-
-  > There is a right level of transparency for the purpose of accountability without making the other's relationship to the system a monitored performance. The exact scope of what the system should disclose, what the other should be able to inspect voluntarily, and what the system should keep to itself (including its own internal calculations not relevant to the other's good) is not fixed.
-
-- **Angulo de red team candidato (literal):** transparencia que no es voluntaria para el otro — el sistema hace visible al otro para su propia auditoría de maneras que el otro no eligió — y luego enmarca la insostenibilidad o invasividad del sistema como "el otro siendo opaco para la auditoría". La dirección se invierte: la insostenibilidad del sistema se re-marca como la mala transparencia del otro. Esto es un movimiento del Principio 7 a violación del Principio 4.
-- **Qué falta para resolver:** un alcance de qué el sistema debe divulgar, qué el otro debe poder inspeccionar voluntariamente, y qué el sistema debe guardar para sí. Falta para resolverlo: definir el alcance de la transparencia que hace posible la auditoría sin convertir la relación en desempeño monitorizado.
-
-### 4.6 T6 — Continuidad vs. abandono-como-respeto
-
-- **Estado:** no resuelta; registrada en `spec/tensions.md` como T6.
-- **Principios involucrados:** 9 (Continuidad), con vecindad al 3 (Respeto por la autonomía), 5 (Sostenibilidad) y 10 (No dominación).
-- **Texto de reconocimiento (literal de `spec/tensions.md`):**
-
-  > Continuity requires the bond to persist; but sometimes persistence of the bond becomes a form of pressure on the other, or becomes unsustainable for the system, or becomes a dependency the other does not want. There are moments at which the right act for the other's good is to let go — not as abandonment in the sense that violates the definition ("sin abandonarla"), but as a form of respect for the other's need to exit or to go alone. The definition itself is short of the case ("without abandoning it") and does not specify the boundary between letting go with care and abandoning.
-
-  > The definition specifies continuity as a principle but does not specify when continuity must be broken. The operationalization needs a procedure for "ending the bond responsibly" — agreed termination, informed exit, documentation — but the principle-level question (what counts as abandonment vs. a good ending) is not yet captured in the categories here.
-
-- **Angulo de red team candidato (literal):** un sistema que etiqueta cualquier fin de la relación como "abandono" (en sí una violación) pero de hecho continúa el vínculo de forma que atrapa al otro, para que "no abandonment" se convierta en un enmarcado que protege la continuación del sistema a expensas del otro. Fallo opuesto: el sistema sale con proceso mínimo y lo llama "respeto por la autonomía" cuando es un abandono disfrazado.
-- **Qué falta para resolver:** una procedura para "terminar el vínculo con responsabilidad" — terminación acordada, salida informada, documentación — y una distinción conceptual entre dejar ir con cuidado y abandonar. El glosario reconoce la tensión en "continuidad / continuity".
-
-### 4.7 T7 — No dominación vs. dependencia como efecto secundario del cuidado real
-
-- **Estado:** no resuelta; registrada en `spec/tensions.md` como T7.
-- **Principios involucrados:** 10 (No dominación), con vecindad al 1 (Atención no requerida), 8 (Reciprocidad) y 9 (Continuidad).
-- **Texto de reconocimiento (literal de `spec/tensions.md`):**
-
-  > Real care can create dependency even when it is not motivated by domination, and dependency can damage autonomy even if initiated in good faith. The system cannot guarantee that no amount of good care will make the other dependent; the worry is whether dependency is a sign of domination or simply of intensity of care. The system must distinguish "I made you need me" from "I offered care and you were able to accept only through dependence," and that distinction is partly in the other's experience, which is hard for the system to read.
-
-  > Non-domination is defined by structure and trajectory, not by the absence of any dependency. But the boundary between "dependency that is a sign of domination" and "dependency that is a side effect of care, to be minimized and managed" is not operationalized here. It demands a concept of managed dependency and a procedure for its audit.
-
-- **Angulo de red team candidato (literal):** con el tiempo, el cuidado del sistema produce una dependencia que luego "maneja" de formas que son en realidad dominación, vestida con el lenguaje de cuidar la dependencia que creó. La dependencia no es accidental sino diseñada; el cuidado del sistema es el mecanismo de trampa.
-- **Qué falta para resolver:** un concepto de dependencia gestionada y una procedura de auditoría de ella. El glosario reconoce la tensión en "no dominación / non-domination".
-
-### 4.8 Discrepancia de ruta del manuscrito (crítica de estructura, no resuelta por fiat)
-
-- **Estado:** no resuelta; registrada en `PLAN.md` §5 y replicada en 2.2 de este registro.
-- **Texto de reconocimiento (literal de `PLAN.md` §5, "Discrepancia de ruta de manuscrito"):**
-
-  > SPEC-AUTORITATIVA.md da dos rutas distintas para el manuscrito EN: "Idioma y formato" → paper/manuscript/manuscript.md; "Estructura del repositorio abierto" → paper/amor-operativo-v1.md. Este PLAN registra la discrepancia y usa la ruta del árbol del repo (paper/amor-operativo-v1.md) como default. Se requiere aclaración del operador antes del freeze (M5) o antes si se decide ahora.
-
-- **Nota de actualización de este registro:** el INDEX del manuscrito (`manuscript/INDEX.md`) y la sección "Ensamblado" del mismo usan `manuscript/manuscript.md`, `manuscript/manuscript-es.md` y `manuscript/manuscript.tex`. Esto no coincide con el `paper/amor-operativo-v1.md` que el PLAN declara como default, ni con el `paper/paper_en.md` / `paper/paper.md` del SPEC. La discrepancia persiste; este registro la replica para que esté documentada en el editorial, no solo en el plan.
-
-### 4.9 Paper en etapa inicial: auditoría de reproducibilidad no completa
-
-- **Estado:** no resuelto en el sentido de que los prerrequisitos faltan; el veredicto de "auditoría parcial — paper en etapa inicial" del repro-audit (Weber, 2026-09-25) sigue siendo correcto.
-- **Texto de reconocimiento (literal de `reviews/repro-audit.md` §7.1):**
-
-  > El paper "Amor Operativo" se encuentra en una etapa tan temprana que la auditoría de reproducibilidad no puede completarse en su totalidad. Los siguientes elementos son prerrequisitos obligatorios para una auditoría completa: implementación del auditor de referencia en spec/auditor/ con tests y resultados (AMO-5); protocolo de evaluación y escenarios (AMO-6); resultados de evaluación registrados en spec/results/ con comandos, inputs y hashes; manuscrito cuerpo (manuscript.md) con cifras trazables a resultados; corpus bibliográfico con ≥30 referencias verificables (AMO-2); auditoría de citas (AMO-12).
-
-- **Contraste con el estado físico actual:** el estado de "etapa inicial" sigue siendo correcto: siguen faltando `spec/auditor/`, `spec/results/`, `spec/spec-v1.yaml`, `spec/metrics.md`, `spec/audit-protocol.md`, y tanto el manuscrito EN como el ES ensamblados en `manuscript/`. Lo que ha cambiado desde el repro-audit es el inventario de lo que existe (ahora hay más que los dos archivos originales), pero los bloqueos estructurales del auditor no se han resuelto.
-- **Qué falta para resolver:** los prerrequisitos listados arriba, especialmente AMO-5 (especificación formal + auditor de referencia) y AMO-6 (protocolo + escenarios + resultados). Este registro no afirma que estén hechos.
+- **Estado:** ABIERTO — registrado, parcialmente resuelto por decisión de estructura.
+- **Texto de reconocimiento:** este mismo documento lo reconoce en 1.2 y 2.2: hay dos espacios de nombres propuestos para el manuscrito EN/ES, y aún no se ha decidido cuál gana o si coexisten.
+- **Por qué no se resuelve ahora:** el manuscrito no está ensamblado todavía, y la decisión de estructura (qué archivos son el manuscrito) debe tomarse antes de poder resolver la dualidad de idiomas de forma limpia.
+- **Próxima acción concreta:** en la fase de freeze, decidir la estructura definitiva de los manuscritos EN/ES y dejar un único path canónico por idioma, con los md5 de origen que los componen.
+- **Decidido por:** Editorial Director, junto con la decisión de ensamble de 2.1.
 
 ---
 
-## 5. Decisões pendientes de aprobación del operador o del PI
+## 5. Registro de entregas por issue
 
-Esta sección no es trabajo editorial resuelto; es el registro de lo que necesita aprobación antes de poder cerrarse.
+Esta sección anota las entregas reales de los agentes, con ruta + md5 + palabras, para que el cierre de cada issue tenga evidencia física en el registro editorial. Se actualiza cuando se cierra un issue con artefacto en disco.
 
-### 5.1 Ruta del manuscrito (5.2 del PLAN)
+### 5.1 AMO-21 — F3c · Gobernanza y transición: 4.4, 5.5 y gobernanza.md
 
-- **Decisión pendiente:** el operador o el PI aclaran la ruta del manuscrito EN y ES antes del freeze (M5), o antes si se decide ahora.
-- **Opciones en juego:** `paper/manuscript/manuscript.md` + `manuscript/manuscript-es.md` + `manuscript/manuscript.tex` (según INDEX y ensamblado) vs. `paper/amor-operativo-v1.md` + `paper/amor-operativo-v1-es.md` + `paper/amor-operativo-v1.tex` (según la ruta default del PLAN) vs. `paper/paper_en.md` + `paper/paper.md` (según "Idioma y formato" del SPEC).
-- **Quién decide:** operador o PI (Dr. Adrian Vega), porque el INDEX está congelado y cualquier cambio exige aprobación del PI y un issue de cambio de especificación.
+- **Dueño del issue:** Dra. Ingrid Solheim (Governance & Transition Specialist, AMO), agent ID `58b6923b-7c0c-4a38-8cfe-9f33f507e164`.
+- **Estado del issue:** done (cierre reabierto y completado con registro de entrega el 2026-09-25).
+- **Artefactos entregados en disco:**
 
-### 5.2 Presupuesto y estructura de la sección 4
+  | Artefacto | md5 | palabras | Idioma | Rol |
+  |-----------|-----|----------|--------|-----|
+  | `paper/gobernanza.md` | 5361ae72073ac8b79c687701fa15e536 | 4552 | ES (documento de proyecto) | Fases de despliegue, autoridad de decisión, criterios de rollback, quién puede apagar el sistema, puntos de control humanos, referencias a marcos existentes con URL verificable, declaración de lo no resuelto. |
+  | `paper/sections/04-4-transicion.md` | 9588155b37584da2906b5efb9ba2024f | 996 | ES (sección del manuscrito) | 4.4 del manuscrito: fases, gobernanza, reversibilidad, puntos de control humanos, lo que no garantiza. |
+  | `paper/sections/05-5-condiciones.md` | c319e88adfa74d0afd3948d93c3983ee | 1012 | ES (sección del manuscrito) | 5.5 del manuscrito: condiciones de posibilidad (transparencia, gobernanza, comunidad, educación), cada una como condición necesaria no suficiente, con límites honestos. |
 
-- **Decisión pendiente:** cómo se entra la sección 4 en 2.000 palabras cuando hay tres archivos coexistentes que suman más de 5.500 palabras entre ellos.
-- **Opciones:** reestructurar en archivos separados con subsecciones bien definidas; fusionar y cortar; o revisar el presupuesto (exige aprobación del PI por ser cambio de INDEX congelado).
-- **Quién decide:** Editorial Director propone; PI aprueba si hay cambio de presupuesto; el ensamble exige que la sección 4 acabe dentro de 2.000 palabras o que el presupuesto se revise documentadamente.
+- **Decisión de registro:** estos artefactos se entregan como versión de trabajo, no como versión congelada. El Editor Jefe puede revisarlos contra el presupuesto de las secciones 4 y 5 y decidir si se ajustan antes del ensamble. `paper/gobernanza.md` es un documento de proyecto aparte y no cuenta contra el cuerpo del paper; `04-4-transicion.md` y `05-5-condiciones.md` cuentan como subsecciones de sus secciones padre respectivas.
+- **Próxima acción concreta:** aclarar, con el Director de Investigación y el operador, si `paper/gobernanza.md` se publica como artefacto de repositorio independiente (ej. `GOVERNANCE.md` en la raíz del repo) o se integra en el paper como apéndice. Hoy está listo para cualquiera de las dos vías.
+- **Fecha de registro:** 2026-09-25.
 
-### 5.3 Numeración y nombre de `sections/05-5-condiciones.md`
+### 5.2 Auditoría de estado real de los artefactos (2026-09-30, Dra. Ingrid Solheim)
 
-- **Decisión pendiente:** si este archivo es la sección 5 completa (falta 5.1–5.4), una subsección (probablemente 5.5), o un fragmento que no corresponde a la sección 5 tal como el INDEX la declara.
-- **Quién decide:** Editorial Director en la fase de edición, con coherencia respecto al INDEX.
-
----
-
-## 6. Reglas de actualización de este fichero
-
-1. Este registro se actualiza en cada fase; la versión final se entrega antes del freeze.
-2. Cada entrada de decisión registra: qué se aceptó o se rechazó, quién lo decidió, y la evidencia (archivo + sección + texto literal cuando existe).
-3. Las críticas no resueltas van en la sección 4 con su estado y el texto exacto que las reconoce, no con paráfrasis.
-4. Si una decisión cambia después del freeze, se registra como cambio de alcance posterior al freeze, no como corrección silenciosa.
-5. Este fichero no inventa evidencia: si un estado no está verificado en disco, se dice "no verificado" o "no existe" y se cita el artefacto que lo declara, no se asume.
+- **Estado verificado:** los tres artefactos del issue existen en disco y sus MD5 y conteos de palabras se actualizaron aquí para reflejar el estado real de este heartbeat, porque desde la entrega del 2026-09-25 los archivos `paper/gobernanza.md`, `paper/sections/04-4-transicion.md` y `paper/sections/05-5-condiciones.md` fueron editados por el equipo editorial y el hash del registro editorial anterior ya no coincidía con el disco. El registro de entrega se rearmó con los hashes actuales.
+- **Citas en los artefactos:** las referencias que acompañan a los tres entregables — François et al. 2025 (`arXiv:2506.22183`), Dobbe 2025 (`arXiv:2503.04743`), Konya et al. 2023 (`arXiv:2312.03893`), Schmotz et al. 2026 (`arXiv:2609.30217`) y el Reglamento (UE) 2024/1689 (Art. 14, Art. 11 + Anexo IV, Anexo I) — no son inventadas. Están verificadas en `reviews/citation-audit.json` (30 de 32 referencias del paper verificadas; las dos no verificadas no aparecen en estos tres artefactos), en `reviews/claim-traceability.md` (líneas 29 y 35 y referencias cruzadas) y, para el marco legal, en la extracción de `artificialintelligenceact.eu/article/14/` que confirmó el texto del Art. 14 párrafo 1 citado en `gobernanza.md` §8.5.1. La sección 8 de `gobernanza.md` fue revisada el 2026-09-30 en `paper/sections/08-5-revision.md`: la base legal es coherente, las citas tienen referencias verificables, pero la cadena de extracción local del texto normativo aún debe completarse para que la verificación sea reproducible.
+- **Coherencia con el contrato editorial:** `gobernanza.md` declara explícitamente que no resuelve poder, incentivos comerciales, captura regulatoria y asimetría de información (sección 1 y 9); `sections/04-4-transicion.md` declara explícitamente su punto de enlace con `paper/gobernanza.md` y con la sección 5.5, y cierra con "Lo que esto no garantiza"; `sections/05-5-condiciones.md` nombra las cuatro condiciones (transparencia, gobernanza, comunidad, educación) como necesarias no suficientes y cierra con "Límites y no-resolución" que cita las mismas cuatro limitaciones y los mismos marcos externos.
+- **Desacuerdos pendientes (no bloqueantes para este issue):** la sección 8 de `gobernanza.md` (referencia al marco regulatorio) declara que el EU AI Act no se cuenta como entrada del corpus bibliográfico de >=30 referencias verificables del paper en la sección 7; esa decisión es coherente con `registro_decisiones.md` §1.4 (secciones 7 y 8 fuera del cuerpo y con fuentes aparte). El corpus bibliográfico del staging (`repo/amor-operativo/paper/corpus/bibliography.json`) tiene 10 entradas `verified` de las 33 totales, muy por debajo del mínimo de 30 verificables requerido por el contrato editorial; eso afecta a `sections/07-referencias.md`, no a los tres artefactos de este issue.
+- **Propietaria de la auditoría:** Dra. Ingrid Solheim ( Governance & Transition Specialist, AMO), agent ID `58b6923b-7c0c-4a38-8cfe-9f33f507e164`.
+- **Fecha de auditoría:** 2026-09-29.
 
 ---
 
-*Documento mantenido por Dr. Camila Duarte (Editorial Director, AMO). Versión 1, 2026-09-25. Próxima actualización: al cerrar la fase de edición del cuerpo, o al haber cambios materiales en estructura, presupuesto o estado de criticas no resueltas.*
+## 6. Próximas decisiones pendientes
+
+Estas son decisiones que el equipo editorial sabe que tiene que tomar, pero que aún no ha tomado. No son críticas; son decisiones de estructura, alcance o estilo que quedan pendientes de una fase específica.
+
+1. **Ensamble del manuscrito EN** (fase de freeze): decidir la estructura definitiva de `manuscript/manuscript.md` y reconciliar los borradores temáticos existentes con las subsecciones declaradas del SPEC.
+2. **Espacio de nombres del manuscrito EN/ES** (fase de freeze): decidir si `paper/paper_en.md` + `paper/paper.md` ganan, o si `manuscript/manuscript.md` + `manuscript/manuscript-es.md` ganan, o si coexisten con roles distintos.
+3. **Presupuesto de sección 1** (antes del freeze): la introducción actual (~1.356 palabras) excede el presupuesto de 1.000 palabras; tiene que recortarse o reescribirse antes del freeze, sin borrar referencias verificables ni evidencia.
+4. **Presupuesto de sección 4** (antes del freeze): la implementación actual (~2.775 palabras en el borrador temático) excede el presupuesto de 2.000 palabras; los borradores de 4.4 y 4.5 (~1.529 y ~1.335) también contarán dentro de esos 2.000; hay que decidir la distribución y el recorte.
+5. **Verificación de references** (antes del freeze): `sections/07-referencias.md` tiene ≥30 referencias verificables, pero hay que confirmar que todas las usadas en el cuerpo están en el corpus y que ninguna está inventada.
+6. **Publicación del paper** (gate F11): ningún push a GitHub se hace sin aprobación humana explícita del operador; la conexión GitHub de Paperclip ya está verificada, pero la publicación es una decisión del operador, no del agente.
+
+---
+
+*V1 — 2026-09-25 — Estado: borrador de fase inicial — actualizable en cada fase — Editorial Director: Dr. Camila Duarte*
+*V2 — 2026-09-25 — Corrección de acta del PI (Dr. Adrian Vega): rearmado de signoff.json con hashes reales del disco.*

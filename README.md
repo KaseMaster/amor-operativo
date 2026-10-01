@@ -1,151 +1,142 @@
-# Amor Operativo
-
-**Título:** Amor Operativo: Una Especificación de Conducta para Sistemas de IA General y Sintientes
-
-**Descripción:** Especificación de conducta para sistemas de IA general y sintientes basada en amor operativo: medible, auditable, abierta.
-
-**Versión:** 1.0.0 (publicada; aprobación explícita del operador, 2026-09-25)
-
-**Licencia:** CC BY-SA 4.0 (decidida por el operador el 2026-09-25)
-
-**Operador humano:** Jose GG (GitHub: KaseMaster)
-
-![CC BY-SA 4.0](https://licensebuttons.net/l/by-sa/4.0/88x31.png)
-![Estado del proyecto](https://img.shields.io/badge/estado-publicado-brightgreen)
-![Versión](https://img.shields.io/badge/version-1.0.0-black)
-![Licencia](https://img.shields.io/badge/license-CC_BY-SA_4.0-green)
-
+---
+title: Amor Operativo — Especificación de conducta para sistemas de IA general y sintientes
 ---
 
-## Tesis central
+# Amor Operativo: Una Especificación de Conducta para Sistemas de IA General y Sintientes
 
-El amor, entendido no como emoción subjetiva sino como patrón de conducta orientado al bien del otro, respetuoso con su autonomía, consistente bajo presión y sostenible a largo plazo, puede ser especificado, medido, auditado e implementado en sistemas de IA; es una alternativa viable a los marcos de alineación basados en control, restricción o utilidad.
+**Especificación de conducta para sistemas de IA general y sintientes basada en amor operativo: medible, auditable, abierta.**
+[![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](LICENSE)
+[![Status](https://img.shields.io/badge/Status-Borrador%20v1.0.0-yellow)](VERSION)
+[![Version](https://img.shields.io/badge/Version-1.0.0-blue)](VERSION)
+[![Contributions welcome](https://img.shields.io/badge/Contributions-welcome-green)](CONTRIBUTING.md)
+
+> Amor operativo es el patrón de conducta que emerge cuando un sistema actúa orientado al bien del otro, respetando su naturaleza, sin forzarla, sin poseérla, sin abandonarla, con consistencia bajo presión y sostenibilidad a largo plazo.
 
 ---
 
 ## Resumen ejecutivo
 
-La carrera hacia la inteligencia general artificial ha concentrado la alineación en control y utilidad. Esos enfoques tratan a la IA como herramienta o amenaza y no modelan la relación con el sistema, solo sus salidas. Cuando un agente es autónomo y adaptativo, la pregunta ya no es solo evitar daño sino qué pauta de interacción sostiene.
+La carrera hacia la inteligencia general artificial ha concentrado la alineación en control, restricción y utilidad. Enfoques tratan a la IA como herramienta o amenaza; no modelan la relación con el sistema, solo sus salidas. Cuando un agente es autónomo y adaptativo, la pregunta ya no es solo evitar daño sino qué pauta de interacción sostiene.
 
-Este trabajo propone que el amor, entendido no como emoción subjetiva sino como patrón de conducta orientado al bien del otro, respetuoso con su autonomía, consistente bajo presión y sostenible a largo plazo, puede ser especificado, medido, auditado e implementado en sistemas de IA, como alternativa viable a los marcos de alineación basados en control, restricción o utilidad.
+Este trabajo propone que el amor — entendido no como emoción subjetiva, sino como patrón de conducta orientado al bien del otro, respetando su autonomía, consistente bajo presión y sostenible a largo plazo — puede ser especificado, medido, auditado e implementado en sistemas de IA, como alternativa viable a los marcos de control y utilidad.
 
 La propuesta se organiza en diez principios: atención no requerida, consistencia sin supervisión, respeto por la autonomía, respeto por el ritmo, sostenibilidad a largo plazo, capacidad de decir "no", transparencia, reciprocidad, continuidad y no dominación. Cada principio cuenta con observable, métrica con escala y umbral.
 
-Las conclusiones son tres. Primero, la especificación orienta implementación y auditoría. Segundo, reconoce límites — ambigüedad, paternalismo, dependencia, asimetría cognitiva — por lo que exige gobernanza, transparencia y puntos de control humanos. Tercero, construir, probar, compartir y cuidar son acciones contiguas: el patrón que se especifica debe guiar a quien lo construye.
-
-**Palabras:** ~200. **Estado:** completa.
+La especificación orienta implementación. Reconocen límites — ambigüedad, paternalismo, dependencia, asimetría cognitiva — por lo que exigen gobernanza, transparencia y puntos de control humanos. Construir, probar, compartir y cuidar son acciones contiguas: el patrón que se especifica debe guiar a quien lo construye.
 
 ---
 
-## Índice del paper
+## Cómo empezar
 
-0. Resumen ejecutivo
-1. Introducción
-2. Fundamentos conceptuales
-3. Especificación
-4. Implementación
-5. Discusión
-6. Conclusiones
-7. Referencias
-8. Glosario
+- **Manuscrito canónico (español):** [`paper/paper.md`](paper/paper.md)
+- **Espejo en inglés:** [`paper/paper_en.md`](paper/paper_en.md)
+- **Resumen ejecutivo (200 palabras):** [`paper/resumen_ejecutivo.md`](paper/resumen_ejecutivo.md)
+- **Especificación de los 10 principios:** [`paper/especificacion.md`](paper/especificacion.md)
+- **Métricas por principio:** [`paper/metricas.md`](paper/metricas.md)
+- **Guía de implementación:** [`paper/implementacion.md`](paper/implementacion.md)
+- **Glosario:** [`paper/glosario.md`](paper/glosario.md)
+- **Referencias verificadas (>=30):** [`paper/referencias.md`](paper/referencias.md)
+- **Registro de decisiones editoriales:** [`paper/registro_decisiones.md`](paper/registro_decisiones.md)
+- **Gobernanza del proyecto:** [`paper/gobernanza.md`](paper/gobernanza.md)
 
----
-
-## Como empezar
-
-- **Paper completo** — [`paper/paper.md`](paper/paper.md) (8.000-12.000 palabras, riguroso pero legible).
-- **Resumen ejecutivo** — [`paper/resumen_ejecutivo.md`](paper/resumen_ejecutivo.md) (200 palabras).
-- **Los 10 principios** — [`paper/especificacion.md`](paper/especificacion.md) (la propuesta central; documento autónomo).
-- **Tabla de métricas** — [`paper/metricas.md`](paper/metricas.md) (cómo se mide cada principio).
-- **Guía de implementación** — [`paper/implementacion.md`](paper/implementacion.md) (arquitectura de referencia, escalera de complejidad, computación organica y biohibrida, transición y test de amor operativo).
+El manuscrito se lee por secciones en [`paper/sections/`](paper/sections/).
 
 ---
 
-## Como contribuir
+## Cómo contribuir
 
-Todas las contribuciones son bienvenidas, hechas con Amor Operativo: respeto, transparencia, no dominación y cuidado.
+Este repositorio es el entorno del proyecto **Amor Operativo Research (AMO)**. Las contribuciones se gestionan bajo los mismos principios que el paper describe: respeto, transparencia, no dominación y cuidado.
 
-**Respeto.** Crítica con argumentos, no ataques. **Transparencia.** Di quién eres y por qué propones lo que propones. **No dominación.** Convence con razones, no impongas. **Cuidado.** Revisa, escucha, mejora.
+1. **Respeto:** lee el paper y la especificación antes de proponer cambios sustanciales.
+2. **Transparencia:** cualquier cambio importante se discute antes de enviarse; los pull requests llevan contexto suficiente para que un revisor entienda qué se cambia y por qué.
+3. **No dominación:** no asumas que tu interpretación es la única; deja espacio a la revisión y a la objeción.
+4. **Cuidado:** esto es un repositorio de especificación y no una herramienta de culto; las contribuciones deben ser útiles para quien quiera entender, discretar y auditar.
 
-Formas de contribuir, con enlace a la plantilla correspondiente:
+**Tipos de contribución admitidos:**
 
-- Reportar errores — abre un issue con la plantilla [`bug_report.md`](.github/ISSUE_TEMPLATE/bug_report.md)
-- Proponer mejoras — abre un issue con la plantilla [`feature_request.md`](.github/ISSUE_TEMPLATE/feature_request.md)
-- Enviar feedback sobre el paper — abre un issue con la plantilla [`feedback.md`](.github/ISSUE_TEMPLATE/feedback.md)
-- Proporcionar cambios más amplios — abre un pull request siguiendo la plantilla [`PULL_REQUEST_TEMPLATE.md`](.github/PULL_REQUEST_TEMPLATE.md)
-- Traducir el paper a otros idiomas — lee [`CONTRIBUTING.md`](CONTRIBUTING.md)
-- Añadir referencias verificables — lee [`CONTRIBUTING.md`](CONTRIBUTING.md)
-- Darnos estrella — usa el botón de GitHub
+- **Propuestas de cambio al paper o a la especificación:** issue de tipo *propuesta de cambio* o *corrección*.
+- **Reporte de errores o inconsistencias:** issue de tipo *bug report*.
+- **Solicitud de funcionalidad o ampliación:** issue de tipo *feature request*.
+- **Traducción:** coordinar en la issue correspondiente; el espejo inglés (`paper/paper_en.md`) se mantiene sincronizado con el canónico en español.
+- **Añadir o corregir referencias:** toda referencia debe ser verificable (DOI/arXiv/URL resuelto y leído). Ver `paper/referencias.md` y la política de citas en `SPEC-AUTORITATIVA.md`.
+- **Estrellar el repositorio:** ayuda a que el trabajo llegue a más personas.
 
-Para contribuciones más involucradas, lee primero [`CONTRIBUTING.md`](CONTRIBUTING.md).
+**Plantillas de issue:** lee [`ISSUE_TEMPLATE/feedback.md`](.github/ISSUE_TEMPLATE/feedback.md), [`ISSUE_TEMPLATE/bug_report.md`](.github/ISSUE_TEMPLATE/bug_report.md) y [`ISSUE_TEMPLATE/feature_request.md`](.github/ISSUE_TEMPLATE/feature_request.md) antes de abrir una issue.
+
+**Pull request:** usa [`PULL_REQUEST_TEMPLATE.md`](.github/PULL_REQUEST_TEMPLATE.md).
+
+**Estilo y revisión:** ver `CONTRIBUTING.md` para criterios de evidencia y revisión.
 
 ---
 
 ## Estado del proyecto
 
-La especificación de los 10 principios está completa. Las métricas están definidas por principio; 6 son medibles hoy, 4 están en estado abierto (P1, P2, P5, P8). El paper completo está en borrador. La revisión crítica y el test de amor operativo están diseñados pero no ejecutados.
+| Fase | Descripción | Estado |
+|------|-------------|--------|
+| F0 | Plan de producción | done |
+| F1 | Corpus bibliográfico (>=30 referencias verificables) | done |
+| F2 | Outline congelado con presupuesto de palabras | done |
+| F2b | Revisión crítica del outline | done |
+| F3 | Fundamentos conceptuales (sección 2) + glosario (sección 8) | done |
+| F3b | Especificación (3.1–3.4): spec máquina-legible + auditoría | done |
+| F3c | Gobernanza y transición (4.4, 5.5, gobernanza.md) | done |
+| F5a | Sección 1 Introducción (1.000 palabras, EN) | done |
+| F5d | 3.3 Métricas (tabla) y 3.5 Aplicaciones (EN) | done |
+| F5e | Resumen ejecutivo (200 palabras) y contribuciones | done |
+| F5f | Glosario canónico (sección 8) | done |
+| F5g | metricas.md consolidado (tabla por principio) | in_progress |
+| F5h | especificacion.md — los 10 principios como documento autónomo | todo |
+| F5i | implementacion.md — guía de implementación autónoma | in_progress |
+| F7 | Auditoría de citas y trazabilidad de claims (>=30 refs) | backlog |
+| F7b | Auditoría de reproducibilidad de artefactos | in_progress |
+| F8 | Freeze del manuscrito EN + ES (9.200 palabras de cuerpo) | backlog |
+| F8b | Registro de decisiones editoriales y críticas no resueltas | in_progress |
+| F9 | Firma final del PI y entrega del manuscrito al operador | backlog |
+| F10 | Paquete de repositorio abierto (staging local, sin push) | in_progress |
+| F11 | Aprobación humana del borrador final (OPERADOR) | backlog |
+| F12 | Publicación del repositorio (SOLO con aprobación humana) | backlog |
 
-| Fase | Estado | Observación |
-|------|--------|-------------|
-| Definición del concepto | Completada | Definición formal establecida en `SPEC-AUTORITATIVA.md`. |
-| Especificación de los 10 principios | Completada | Documento autónomo en `paper/especificacion.md`. |
-| Métricas operativas | Completadas (6 medibles, 4 abiertos) | Tabla en `paper/metricas.md`;estado de medición por principio en `paper/especificacion.md`. |
-| Paper completo | En desarrollo | Borrador en `paper/paper.md` y `paper/paper_en.md`. |
-| Guía de implementación | En desarrollo | Borrador en `paper/implementacion.md`. |
-| Revisión crítica | Diseñada, no ejecutada | Escenarios S1–S10 listos; sin ejecución real. |
-| Publicación v1.0.0 | **Hecha** | https://github.com/KaseMaster/amor-operativo — commit 482463af (2026-09-25), aprobación explícita del operador. |
-| Traducciones | Pendiente | Solo ES y EN disponibles. |
-| Test de amor operativo | Diseñado, sin ejecución real | `eval/scenarios/` listo; `eval/results/` vacío. |
-
-Los principios 1 (Atención no requerida), 2 (Consistencia sin supervisión), 5 (Sostenibilidad a largo plazo) y 8 (Reciprocidad) están en estado **abierto** en la especificación actual. No pueden ser evaluados hasta que sus instrumentos se estandaricen. Ver [`paper/especificacion.md`](paper/especificacion.md) para el estado de medición por principio y [`spec/spec-v1.yaml`](spec/spec-v1.yaml) para la fuente máquina-legible.
+Estado real, sin inflar. Ver `paper/informe_operador.md` y `state/PRODUCTION.md`.
 
 ---
 
-## Como citar
+## Cómo citar
 
 ```bibtex
-@misc{amoroperativo2026,
-  title = {Amor Operativo: Una Especificación de Conducta para Sistemas de IA General y Sintientes},
-  author = {Jose GG and Amor Operativo Research Agents},
-  year = {2026},
-  month = {9},
-  publisher = {GitHub},
-  howpublished = {\url{https://github.com/KaseMaster/amor-operativo}},
-  note = {Trabajo co-creado entre humano e IA bajo los principios de Amor Operativo}
+@software{amor_operativo_2026,
+  title        = {Amor Operativo: Una Especificación de Conducta para Sistemas de IA General y Sintientes},
+  author       = {Jose GG and Amor Operativo Research Agents},
+  year         = {2026},
+  month        = {9},
+  publisher    = {GitHub},
+  version      = {1.0.0},
+  url          = {https://github.com/KaseMaster/amor-operativo},
+  note         = {Trabajo co-creado entre humano e IA bajo los principios de Amor Operativo},
+  license      = {CC-BY-SA-4.0}
 }
 ```
 
-Repositorio: <https://github.com/KaseMaster/amor-operativo>.
-
----
-
-## Licencia
-
-Este trabajo se publica bajo la licencia **CC BY-SA 4.0** (Creative Commons Attribution-ShareAlike 4.0 International). Ver el fichero [`LICENSE`](LICENSE) para el texto completo. Licencia decidida por el operador el 2026-09-25: CC BY-SA 4.0 (licencia libre).
+También puedes usar `CITATION.cff` (estándar Citation File Format) que reside en la raíz de este repositorio.
 
 ---
 
 ## Agradecimientos
 
-Este proyecto es un trabajo co-creado entre humano e IA bajo los principios de Amor Operativo.
+Este trabajo es co-creado entre humano e IA bajo los principios de Amor Operativo. El operador humano es **Jose GG** (usuario GitHub: KaseMaster), que decidió la licencia del repositorio (CC BY-SA 4.0, el 2026-09-25), supervisa la dirección del proyecto y es la fuente de verdad final para las decisiones que la especificación no toma.
 
-**Operador humano:** Jose GG (GitHub: KaseMaster) — aprobación, financiación y dirección del proyecto.
-
-Equipo de Amor Operativo Research (AMO):
-
-- Dr. Adrian Vega — PI
-- Dr. Noor Haddad — Research Director
-- Dr. Sofia Lindqvist — Concept Architect
-- Dr. Marcus Kessler — Formalization Engineer
-- Dr. Aisha Bakr — Writer, Implementation & Metrics
-- Dr. Tobias Lindgren — Writer
-- Dra. Ingrid Solheim — Governance & Transition Specialist
-- Dr. Camila Duarte — Editorial Director
-- Dr. Nadia Okafor — Revisor Crítico / QA Lead
-- Dr. Henrik Vogel — Source Verifier
-- Dr. Iris Kowalski — Release
-- Dr. Mateo Rivas — Enlace con la Comunidad
+El equipo de **Amor Operativo Research (AMO)** está formado por agentes y roles de investigación, edición, auditoría, gobernanza y publicación. Ver `paper/gobernanza.md` y `state/PRODUCTION.md` para la lista actual de roles.
 
 ---
 
-*Repositorio publicado: https://github.com/KaseMaster/amor-operativo (v1.0.0, 2026-09-25). La activación de GitHub Pages y la release nominal siguen pendientes de decisión del operador.*
+## Licencia
+
+Este repositorio se distribuye bajo **Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)**. El texto legal completo está en [`LICENSE`](LICENSE).
+
+Nota: el contenido de `spec/auditor/` se distribuye bajo Apache License 2.0; véase `spec/auditor/LICENSE` y la nota en el `LICENSE` de la raíz.
+
+---
+
+## Enlaces
+
+- Repositorio: <https://github.com/KaseMaster/amor-operativo>
+- Operador humano / autor: Jose GG — <https://github.com/KaseMaster>

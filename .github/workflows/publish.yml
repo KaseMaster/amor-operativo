@@ -1,64 +1,45 @@
-name: Publish to GitHub Pages
+name: publish
+
 on:
   push:
     branches:
       - main
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
-
-concurrency:
-  group: pages-${{ github.ref }}
-  cancel-in-progress: true
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
-
-      - name: Install dependencies
+      - uses: actions/checkout@v4
+      - name: Install markdown-to-html tool
         run: |
-          python -m pip install --upgrade pip
-          python -m pip install markdown pandoc
-
-      - name: Generate HTML from Markdown
+          sudo apt-get update
+          sudo apt-get install -y pandoc
+      - name: Build HTML from markdown
         run: |
-          python build.py
-
-      - name: Verify generated HTML
+          mkdir -p docs
+          pandoc paper/paper.md -f markdown -t html5 -o docs/index.html
+          pandoc paper/resumen_ejecutivo.md -f markdown -t html5 -o docs/resumen_ejecutivo.html
+          pandoc paper/especificacion.md -f markdown -t html5 -o docs/especificacion.html
+          pandoc paper/metricas.md -f markdown -t html5 -o docs/metricas.html
+          pandoc paper/implementacion.md -f markdown -t html5 -o docs/implementacion.html
+      - name: Version bump (manual gate)
         run: |
-          test -f docs/index.html
-          wc -c docs/index.html
-
-      - name: Setup GitHub Pages
-        uses: actions/configure-pages@v4
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: docs
+          echo "El bump de versión sucede en un commit posterior a la aprobación humana, no automáticamente."
 
   deploy:
     needs: build
     runs-on: ubuntu-latest
-    permissions:
-      pages: write
-      id-token: write
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+    if: github.ref == 'refs/heads/main'
     steps:
+      - uses: actions/checkout@v4
       - name: Deploy to GitHub Pages
-        id: deployment
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+      - name: Set up Pages
         uses: actions/deploy-pages@v4

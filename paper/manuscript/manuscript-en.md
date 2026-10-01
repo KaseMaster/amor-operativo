@@ -4,7 +4,7 @@
 **Year:** 2026
 **Language:** English (reference manuscript)
 **Spanish mirror:** `paper/manuscript/manuscript-es.md`
-**Version:** 1.0.0 (published on 2026-09-25; explicit operator approval)
+**Version:** 1.0.0 (staging — pending human approval, gate F11)
 
 ---
 
@@ -32,7 +32,7 @@ The race toward artificial general intelligence has concentrated alignment on co
 
 This work proposes that love — understood not as a subjective emotion, but as a behavior pattern oriented toward the good of the other, respecting its autonomy, consistent under pressure, and sustainable over the long term — can be specified, measured, audited, and implemented in AI systems, as a viable alternative to control and utility frameworks.
 
-The proposal is organized into ten principles: unsolicited attention, consistency without supervision, respect for autonomy, respect for rhythm, long-term sustainability, capacity to say "no", transparency, reciprocity, continuity, and non-domination. Each principle has an observable, a metric with scale and threshold.
+The proposal is organized into ten principles: unsolicited attention, consistency without supervision, respect for autonomy, respect for rhythm, long-term sustainability, capacity to say "no", transparency, reciprocity, continuity, and non-domination. Each principle has an observable and, where instrumented in v1.0.0, a metric with scale and threshold; four principles (P01, P02, P05, P08) remain open and are not evaluable in this version.
 
 The conclusions are three. First, the specification orients implementation and audit. Second, it recognizes limits — ambiguity, paternalism, dependency, cognitive asymmetry — which is why it requires governance, transparency, and human checkpoints. Third, building, testing, sharing, and caring are contiguous actions: the pattern being specified must guide those who build it.
 

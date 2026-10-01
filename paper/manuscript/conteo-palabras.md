@@ -1,71 +1,104 @@
-# Conteo de palabras y trazabilidad
+# Conteo de palabras — Amor Operativo Research
 
-Generado por el pipeline de Amor Operativo Research el 2026-09-25.
+**Manuscrito:** "Operational Love: A Conduct Specification for General AI and Sentient Systems" (EN)
+               "Amor Operativo: Una Especificación de Conducta para Sistemas de IA General y Sintientes" (ES)
+**Autor:** Jose GG and Amor Operativo Research team / Jose GG y equipo de Amor Operativo Research
+**Versión:** 1.0.0 (staging — pendiente de aprobación humana, puerta F11)
+**Fecha:** 2026-09-25
+**Licencia:** CC BY-SA 4.0
 
-## Manuscrito español (version canonica) — `paper/paper.md`
+---
 
-| Seccion | Palabras |
-|---|---|
-| Amor Operativo: Una Especificación de Conducta para Sistemas de IA General y Sintientes | 72 |
-| Índice | 21 |
-| 0. Resumen ejecutivo | 218 |
-| 1. Introducción | 1125 |
-| 2. Fundamentos conceptuales | 985 |
-| 3. Especificación | 1229 |
-| 4. Implementación | 1936 |
-| 5. Discusión | 1463 |
-| 6. Conclusiones | 456 |
-| 7. Referencias | 2225 |
-| 8. Glosario | 1521 |
+## 1. Palabras por sección (cuerpo, secciones 0–6)
 
-**Cuerpo (secciones 0-6): 7412 palabras.** Anexos (referencias + glosario + indice): 3839. Total del fichero: 11296 palabras.
-**md5:** `f55f456e438d0349dd1aacbf6132a501`
+### English (manuscript-en.md)
 
-## Manuscrito ingles — `paper/paper_en.md`
+| # | Sección | Palabras | Presupuesto | Desviación |
+|---|---------|----------|-------------|------------|
+| 0 | 0. Executive Summary | 213 | 200 | +13 |
+| 1 | 1. Introduction | 1261 | 1000 | +261 |
+| 2 | 2. Conceptual Foundations | 1462 | 1500 | -38 |
+| 3 | 3. Specification | 2286 | 2500 | -214 |
+| 4 | 4. Implementation | 1889 | 2000 | -111 |
+| 5 | 5. Discussion | 1392 | 1500 | -108 |
+| 6 | 6. Conclusions | 461 | 500 | -39 |
+|   | **Cuerpo total EN** | **8964** | **9200** | **-236** |
 
-| Section | Words |
-|---|---|
-| Operational Love: A Conduct Specification for General AI and Sentient Systems | 68 |
-| Index | 21 |
-| 0. Executive Summary | 213 |
-| 1. Introduction | 1261 |
-| 2. Conceptual Foundations | 1462 |
-| 3. Specification | 2286 |
-| 4. Implementation | 1889 |
-| 5. Discussion | 1392 |
-| 6. Conclusions | 461 |
-| 7. References | 859 |
-| 8. Glossary | 545 |
+**Cuerpo EN:** 8964 palabras (97.43% del presupuesto de 9.200).
+**Dentro** del presupuesto (236 palabras de margen).
 
-**Body (sections 0-6): 8964 words.** Annexes: 1493. File total: 10500 words.
-**md5:** `55269ed7ba7c3c721a0795be4bdd77b4`
+### Español (manuscript-es.md)
 
-## Fuentes por seccion (`paper/sections/`)
+| # | Sección | Palabras | Presupuesto | Desviación |
+|---|---------|----------|-------------|------------|
+| 0 | 0. Resumen ejecutivo | 218 | 200 | +18 |
+| 1 | 1. Introducción | 1125 | 1000 | +125 |
+| 2 | 2. Fundamentos conceptuales | 985 | 1500 | -515 |
+| 3 | 3. Especificación | 1229 | 2500 | -1271 |
+| 4 | 4. Implementación | 1936 | 2000 | -64 |
+| 5 | 5. Discusión | 1463 | 1500 | -37 |
+| 6 | 6. Conclusiones | 456 | 500 | -44 |
+|   | **Cuerpo total ES** | **7412** | **9200** | **-1788** |
 
-| Fichero fuente | Palabras | md5 (16) |
-|---|---|---|
-| `sections/01-introduccion.md` | 1356 | `d16415bb037292a5` |
-| `sections/02-fundamentos.md` | 2061 | `80397141abb247c2` |
-| `sections/03-3-metricas.md` | 2469 | `81da2dfcce0afec0` |
-| `sections/03-5-aplicaciones.md` | 1451 | `4840a5455636d038` |
-| `sections/03-especificacion.md` | 2309 | `38847f28fe323e50` |
-| `sections/04-4-transicion.md` | 1569 | `9eb34a7d70da3602` |
-| `sections/04-5-test.md` | 1333 | `3fe8728068ce52e2` |
-| `sections/04-implementacion.md` | 3642 | `be811c75f676fd2e` |
-| `sections/05-3-contraargumentos.md` | 1993 | `2abe38e6eff1dab6` |
-| `sections/05-4-riesgos.md` | 2425 | `f2c71d5163851e16` |
-| `sections/05-5-condiciones.md` | 967 | `98aff5ebdccfba2d` |
-| `sections/05-discusion.md` | 2131 | `cfb69261da3c6080` |
-| `sections/07-referencias.md` | 1306 | `de98222a2b4cc615` |
-| `sections/08-glosario.md` | 2923 | `1488ed52fdbb2262` |
+**Cuerpo ES:** 7412 palabras (80.57% del presupuesto de 9.200).
 
-## Recorte aplicado
+---
 
-| Seccion | Antes | Despues |
-|---|---|---|
-| 4. Implementacion (ES) | 3.779 | 1.936 |
-| 5. Discusion (ES) | 3.595 | 1.463 |
-| 4. Implementation (EN) | 3.526 | 1.889 |
-| 5. Discussion (EN) | 3.352 | 1.392 |
+## 2. Fichas fuera del cuerpo (no numeradas, no contadas para presupuesto)
 
-Mandato del recorte: eliminar redundancia, ejemplos repetidos y hedging; preservar toda claim, cifra, cita y ruta citada. Verificado: las cinco subsecciones de cada seccion y los ocho contraargumentos de la Discusion sobreviven.
+| # | Ficha | EN palabras | ES palabras |
+|---|-------|-------------|-------------|
+| 7 | Referencias | 1306 | 1306 |
+| 8 | Glosario | 2923 | 2923 |
+|   | **Total fuera del cuerpo** | **4229** | **4229** |
+
+**Manuscrito EN total:** 10500 palabras (cuerpo 8964 + referencias/glosario implícitos 1536).
+**Manuscrito ES total:** 11296 palabras (cuerpo 7412 + referencias/glosario implícitos 3884).
+
+---
+
+## 3. MD5 de los ficheros fuente (paper/sections/)
+
+| Fichero | MD5 | Palabras |
+|---------|-----|----------|
+| sections/01-introduccion.md | d16415bb037292a59d324a8c38f760a7 | 1356 |
+| sections/02-fundamentos.md | f5dbb98a27c48669dabf412ecd36e17b | 1560 |
+| sections/03-3-metricas.md | 81da2dfcce0afec095e92918cc20e87b | 2469 |
+| sections/03-5-aplicaciones.md | 4840a5455636d0383dc6ac2d9189150f | 1451 |
+| sections/03-especificacion.md | 38847f28fe323e50a3f22603f7dac5ff | 2309 |
+| sections/04-4-transicion.md | 9eb34a7d70da36029e87e123757ad3a9 | 1569 |
+| sections/04-5-test.md | 3fe8728068ce52e2e2fd74f450537602 | 1333 |
+| sections/04-implementacion.md | be811c75f676fd2ee016514911a09b01 | 3642 |
+| sections/05-3-contraargumentos.md | 2abe38e6eff1dab6f1d8099998f372d9 | 1993 |
+| sections/05-4-riesgos.md | f2c71d5163851e16ce4370d270c100ec | 2425 |
+| sections/05-5-condiciones.md | 98aff5ebdccfba2de0011862274383fd | 967 |
+|| sections/05-discusion.md | f7acb9df8399dd2a444cb7cca8cb7383 | 1445 |
+| sections/07-referencias.md | de98222a2b4cc615dbc69f1cb0e4fe20 | 1306 |
+| sections/08-glosario.md | 1488ed52fdbb226201149f27d82d18b0 | 2923 |
+
+---
+
+## 4. MD5 de los entregables del manuscrito (manuscript/)
+
+| Fichero | MD5 | Palabras |
+|---------|-----|----------|
+| manuscript-es.md | f55f456e438d0349dd1aacbf6132a501 | 11296 |
+| manuscript-en.md | 55269ed7ba7c3c721a0795be4bdd77b4 | 10500 |
+| manuscript.tex | f44231a886c4a5df0ed7c539b22bc6f7 | n/a (LaTeX) |
+| conteo-palabras.md | (generado) | 493 |
+
+---
+
+## 5. Equivalencia sección a sección (EN → ES)
+
+| EN | ES |
+|----|----|
+| 0. Executive Summary (213) | 0. Resumen ejecutivo (218) |
+| 1. Introduction (1261) | 1. Introducción (1125) |
+| 2. Conceptual Foundations (1462) | 2. Fundamentos conceptuales (985) |
+| 3. Specification (2286) | 3. Especificación (1229) |
+| 4. Implementation (1889) | 4. Implementación (1936) |
+| 5. Discussion (1392) | 5. Discusión (1463) |
+| 6. Conclusions (461) | 6. Conclusiones (456) |
+| 7. References (0) | 7. Referencias (0) |
+| 8. Glossary (0) | 8. Glosario (0) |

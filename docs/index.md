@@ -13,7 +13,10 @@ The formal definition is:
 
 ## Getting started
 
-- Read the full paper: [paper/paper.md](paper/paper.md)
+- Read the full paper: [paper/paper.md](paper/paper.md) (español, canónico para el operador)
+- Read the assembled manuscript: [paper/manuscript/manuscript-es.md](paper/manuscript/manuscript-es.md) (español, ensamblado)
+- Read the reference manuscript: [paper/manuscript/manuscript-en.md](paper/manuscript/manuscript-en.md) (inglés, referencia)
+- Read the English mirror: [paper/paper_en.md](paper/paper_en.md) (inglés, espejo del canónico)
 - Read the executive summary: [paper/resumen_ejecutivo.md](paper/resumen_ejecutivo.md)
 - Read the 10 principles as a standalone document: [paper/especificacion.md](paper/especificacion.md)
 - Read the metrics table: [paper/metricas.md](paper/metricas.md)

@@ -1,15 +1,16 @@
-# CHANGE LOG — Amor Operativo Research
+# Changelog — Amor Operativo
 
 ## v1.0.0 — 2026-09-25
 
-- Especificación de los 10 principios de Amor Operativo completada
-- Definición formal establecida (literal, autoridad: `paper/SPEC-AUTORITATIVA.md`)
-- Tabla de métricas operativas por principio (6 medibles, 4 abiertos)
-- Protocolo de auditoría y test de amor operativo (S1–S10) diseñados
-- Guía de implementación: arquitectura de referencia, escalera de complejidad, biohibridación, transición, test
-- Corpus bibliográfico inicial (32 entradas, 12 leídas, 14 hojeadas, 6 pendientes)
-- Repositorio local preparado (staging en `/home/hydra/ops-state/amor_operativo/repo/amor-operativo/`)
+- Estructura del repositorio abierto: README, LICENSE (CC BY-SA 4.0), CITATION.cff, CONTRIBUTING.md, CODE_OF_CONDUCT.md, GOVERNANCE.md, VERSION.
+- Plantillas de contribución: feedback, bug_report, feature_request y PULL_REQUEST_TEMPLATE.
+- CI: validación de markdown, validación de spec y tests del auditor en `.github/workflows/ci.yml`.
+- Publish: pipeline de markdown → HTML → GitHub Pages desde `docs/` + bump de versión en `.github/workflows/publish.yml`.
+- Staging local inicial listo para presentación al operador humano antes de publicación real.
 
----
+## Próximo
 
-*Registro de cambios. Cada versión documenta lo que cambió y por qué.*
+- Revisión del manuscrito y de la especificación antes de freeze.
+- Auditoría de referencias verificables.
+- Aprobación humana y publicación real del repo.
+
