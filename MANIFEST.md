@@ -32,7 +32,7 @@ Aprobación humana: puerta F11 (aprobada por el operador — publicación ejecut
 | `eval/results/README.md` | 1134 | 144a75310cb496bd |
 | `eval/scenarios/.gitkeep` | 0 | e3b0c44298fc1c14 |
 | `eval/scenarios/README.md` | 992 | 32d65a5c22894a7f |
-| `informe_operador.md` | 13630 | aa04ae53c7eefc63 |
+| `informe_operador.md` | 15212 | e3f60827458cd66d |
 | `paper/SPEC-AUTORITATIVA.md` | 21597 | 59b0fa15b636bf07 |
 | `paper/corpus/bibliography.json` | 52323 | 22ba5caeebfa8011 |
 | `paper/corpus/comparison-matrix.md` | 14066 | 061a0a8e3b3542b0 |
@@ -42,7 +42,7 @@ Aprobación humana: puerta F11 (aprobada por el operador — publicación ejecut
 | `paper/glosario.md` | 3936 | e6ccfbcb5be29fba |
 | `paper/gobernanza.md` | 30270 | d189377adbfc96a6 |
 | `paper/implementacion.md` | 41595 | e1a7c50acf749a93 |
-| `paper/informe_operador.md` | 7169 | 8310848edb0607c9 |
+| `paper/informe_operador.md` | 15212 | e3f60827458cd66d |
 | `paper/manuscript/INDEX.md` | 6567 | 8aae9157ada9df99 |
 | `paper/manuscript/conteo-palabras.md` | 4336 | 32eaacbf73ea01d9 |
 | `paper/manuscript/manuscript-en.md` | 72298 | 88e4d2fbf036b5c2 |
@@ -52,6 +52,8 @@ Aprobación humana: puerta F11 (aprobada por el operador — publicación ejecut
 | `paper/paper_en.md` | 35018 | a6134e52b90dbfae |
 | `paper/referencias.md` | 29178 | 4917d880da6917a6 |
 | `paper/registro_decisiones.md` | 24897 | e6d1f4846a8a29a7 |
+| `paper/reports/announcement.md` | 1962 | 83f6f7e605712f62 |
+| `paper/reports/diffusion-plan.md` | 2078 | 7b4e55275b98785f |
 | `paper/resumen_ejecutivo.md` | 1472 | 89a546109c12a23e |
 | `paper/reviews/amo30-productivity-review.md` | 9233 | 9dbb05d22ae963a6 |
 | `paper/reviews/claim-traceability.md` | 17621 | 6463ba56222760f6 |
