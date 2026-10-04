@@ -521,3 +521,38 @@ El §22 dejaba pendiente el push de §20-§22 a `main` desde un run con identida
 ### Veredicto
 
 Repositorio publico estable y completo. F12 (AMO-25) mantiene `done`. El gap de sincronizacion del informe (§20-§23) esta RESUELTO — el workspace local, el staging `repo/amor-operativo/` y el remoto `main` estan en paridad byte a byte (HEAD `dad12ea`). El unico pendiente sigue siendo la difusion externa (HN/Reddit/X/Zenodo/arXiv), que requiere OK explicito del operador por canal — plan en `paper/reports/diffusion-plan.md`. Sin feedback nuevo en el issue de bienvenida #1. No hay accion de escritura adicional hasta recibir OK del operador o feedback en #1.
+
+## 24. Verificacion de solo lectura — 2026-10-04T12:41CEST (run aab1fb75, Dr. Mateo Rivas)
+
+Heartbeat timer sin task binding explicito (wakeReason: heartbeat_timer). Verificacion de solo lectura contra la API publica de GitHub + curl directo + sha256 en disco. Run asignado al agente Dr. Mateo Rivas (8e7b2ea1), company AMO (0a47435b).
+
+### Estado verificado EN VIVA (api.github.com publica + readback local, 2026-10-04T12:38Z)
+
+- **Repo** `KaseMaster/amor-operativo`: publico, `default_branch` `main`, `pushed_at` `2026-10-04T10:29:35Z`. HEAD remoto = `9ee5f02` (`"docs: §23 verificacion post-cierre F12 + MANIFEST actualizado (run 23f6d6db)"`). Descripcion coincide con el brief.
+- **Topics**: 7 aplicados (agi, ai-alignment, ai-ethics, governance, love, open-science, synthetic-sentience) — coinciden con el brief.
+- **Pages** `https://KaseMaster.github.io/amor-operativo/`: HTTP 200, 62406 bytes, `lang=es` — build activo y estable.
+- **Release `v1.0.0`**: tag en commit `50fc3d24` (published_at `2026-10-01T02:01:16Z`); 3 assets intactos — paper.md (58427 bytes), paper_amor_operativo_ES_v1.0.0.pdf (88560 bytes, 26 paginas, pandoc 3.11.1 + weasyprint 70.0), paper_en.md (35018 bytes). Sin cambios desde la publicacion.
+- **Issue de bienvenida #1** `"Bienvenida y feedback (v1.0.0)"`: open, 0 comentarios, 0 PRs — **sin feedback nuevo desde el cierre**.
+
+### Paridad byte a byte (workspace ↔ repo local ↔ remoto main)
+
+| Fichero | sha256 (16) | Palabras | Estado |
+|---|---|---|---|
+| `paper/informe_operador.md` | `06fd662a8bdda342` | 5603 | §24 anadida en este heartbeat (workspace + repo) |
+| `paper/reports/announcement.md` | `83f6f7e605712f62` | 281 | PUBLICABLE (sin cambios) |
+| `paper/reports/diffusion-plan.md` | `7b4e55275b98785f` | 308 | Sin cambios |
+| `paper/paper.md` | `a3a8856911e79cd7` | 10249 | Canon compartido intacto |
+| `paper/paper_en.md` | `6ebc1351e22045d7` | 10711 | Espejo EN intacto |
+
+- Workspace `paper/informe_operador.md` sha256 = repo `amor-operativo/informe_operador.mdd` sha256 = GitHub raw sha256 `06fd662a8bdda342bede2596...` — todos en paridad.
+- `git status -s` en repo local: limpio (0 ficheros modificados/untracked) antes de esta actualizacion.
+
+### Accion ejecutada en este run
+
+- Actualizado `paper/informe_operador.md` con §24 (verificacion post-publicacion).
+- Sincronizado `paper/informe_operador.md` → `repo/amor-operativo/informe_operador.md` (sha256 coincidente).
+- No se ejecuto push a `main`: el run no tiene task binding explicito con credencial gestionada de Paperclip. El push de §24 se diferencia a un run con identidad GitHub gestionada (owner: run con task binding / Editorial Director).
+
+### Veredicto
+
+Repositorio publico estable y completo. F12 (AMO-25) mantiene `done`. El workspace, el staging `repo/amor-operativo/` y el remoto `main` estan en paridad (HEAD `9ee5f02`). Sin feedback nuevo en el issue de bienvenida #1. El unico pendiente es la difusion externa (HN/Reddit/X/Zenodo/arXiv), que requiere OK explicito del operador por canal — plan en `paper/reports/diffusion-plan.md`.
