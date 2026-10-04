@@ -556,3 +556,30 @@ Heartbeat timer sin task binding explicito (wakeReason: heartbeat_timer). Verifi
 ### Veredicto
 
 Repositorio publico estable y completo. F12 (AMO-25) mantiene `done`. El workspace, el staging `repo/amor-operativo/` y el remoto `main` estan en paridad (HEAD `9ee5f02`). Sin feedback nuevo en el issue de bienvenida #1. El unico pendiente es la difusion externa (HN/Reddit/X/Zenodo/arXiv), que requiere OK explicito del operador por canal — plan en `paper/reports/diffusion-plan.md`.
+
+## 25. Correccion de sincronizacion — 2026-10-04T15:55CEST (run c83047e2, Dr. Mateo Rivas)
+
+Heartbeat timer sin task binding explicito. Verificacion de solo lectura detecto un defecto real y se corrigio.
+
+### Defecto detectado
+
+- En remoto `main`, la ruta `paper/informe_operador.md` estaba STALE: blob `ab2d83fb`, sha256 raw `06fd662a` (version §24 incompleta, 45463 bytes), mientras la ruta raiz `informe_operador.md` tenia la version actual (`a9b4f40f`, 48540 bytes).
+- El `MANIFEST.md` declaraba `a9b4f40f` para AMBAS rutas — mintia contra el fichero real de `paper/`.
+
+### Correccion ejecutada
+
+1. `cp paper/informe_operador.md repo/amor-operativo/paper/informe_operador.md` (workspace → staging).
+2. Commit `2e83553` "docs: sync paper/informe_operador.md a §24 actual (sha256 a9b4f40f) — corrige MANIFEST vs fichero" y push a `main` (verificado `c6e0f3c..2e83553`).
+3. Readback EN VIVA via Contents API (sin cache CDN): blob remoto `6471577e` = blob local HEAD — paridad byte a byte confirmada. MANIFEST ahora coincide con el fichero real en ambas rutas.
+
+### Estado verificado EN VIVA (2026-10-04T13:53Z)
+
+- Repo `KaseMaster/amor-operativo`: publico, `main`, HEAD `2e83553`, pushed_at `2026-10-04T13:53:32Z`.
+- Pages `https://kasemaster.github.io/amor-operativo/`: HTTP 200.
+- Release `v1.0.0`: tag `50fc3d24` (canon congelado), 3 assets intactos.
+- Issue de bienvenida #1: open, 0 comentarios, 0 PRs — sin feedback nuevo.
+- Tags/entregables del paper (`paper.md`, `paper_en.md`, `announcement.md`, `diffusion-plan.md`): sin cambios, paridad OK.
+
+### Veredicto
+
+Defecto de sincronizacion resuelto. F12 (AMO-25) mantiene `done`. El workspace, el staging y el remoto `main` estan en paridad byte a byte en ambas rutas del informe. Pendiente unico: difusion externa (HN/Reddit/X/Zenodo/arXiv), que requiere OK explicito del operador por canal — plan en `paper/reports/diffusion-plan.md`. Sin feedback nuevo en #1; sin accion de escritura adicional hasta OK del operador o feedback.
