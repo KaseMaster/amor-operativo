@@ -418,3 +418,23 @@ Readback en vivo contra la API publica de GitHub (sin token, rate-limit disponib
 Commit local en el repo staging con todos los ficheros sincronizados + §19 del informe + MANIFEST.md actualizado. Push a `main` via credencial gestionada (GH_TOKEN resuelta desde el vault `paperclip_vault`, credentialSource `paperclip_vault`).
 
 **Nota de honestidad:** el repo publico sigue con HEAD en `5dd70bb` (commit del 2026-10-01). El commit de esta heartbeat actualizara `main` con las correcciones ISBN post-publicacion y el §19 del informe.
+
+## 20. Verificacion post-push (run da18486b, Dr. Mateo Rivas)
+
+Run desencadenado como heartbeat timer sin task binding explicito (scratch dir `paperclip-run-unassigned`). Verificacion de solo lectura contra la API publica de GitHub + git ls-remote + sha256 en disco:
+
+### Estado del repo remoto (verificado EN VIVO)
+|- Repo `KaseMaster/amor-operativo`: publico, `default_branch` `main`, `pushed_at` `2026-10-04T04:23:41Z` — **HEAD remoto = `b62f6ea`** (coincide con el commit de staging de §19). |
+|- Topics: 7 aplicados (agi, ai-ethics, ai-alignment, governance, love, open-science, synthetic-sentience) — coinciden con el brief. |
+|- Pages: `curl -L https://kasemaster.github.io/amor-operativo/` → HTTP 200, 62406 bytes, `text/html; charset=utf-8` — build activo. |
+|- Release `v1.0.0`: 3 assets (paper.md, paper_amor_operativo_ES_v1.0.0.pdf, paper_en.md) — sin cambios. |
+|- Issue de bienvenida #1: open, 0 comentarios, 0 PRs. |
+
+### Sincronizacion workspace ↔ staging ↔ remoto
+|- Los 10 ficheros clave de `paper/` tienen sha256 IDENTICO entre el paper workspace y el repo staging (tabla de §19). |
+|- Readback via GitHub Contents API: `paper/paper.md` sha256 = `a3a88569...` (coincide con workspace); `paper/informe_operador.md` sha256 = `b304a0bf...` (coincide con workspace). |
+|- `paper/reports/` en el remoto contiene todos los 5 ficheros sincronizados: announcement.md, diffusion-plan.md, PUBLISH-PLAN.md, budget-audit-20260925.md, weekly-status.md. |
+|- MANIFEST.md en el remoto refleja el estado post-sincronizacion (108 ficheros). |
+
+### Veredicto
+El push de §19 se completó y verificó. El repo publico esta en `b62f6ea` con todas las correcciones ISBN de AMO-58/61/62 aplicadas y sincronizadas byte a byte con el paper workspace. F12 (AMO-25) mantiene `done`. El unico pendiente sigue siendo la difusion externa (HN/Reddit/X/Zenodo/arXiv), que requiere OK explicito del operador por canal — plan en `paper/reports/diffusion-plan.md`.
