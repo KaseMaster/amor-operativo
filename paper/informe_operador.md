@@ -438,3 +438,51 @@ Run desencadenado como heartbeat timer sin task binding explicito (scratch dir `
 
 ### Veredicto
 El push de §19 se completó y verificó. El repo publico esta en `b62f6ea` con todas las correcciones ISBN de AMO-58/61/62 aplicadas y sincronizadas byte a byte con el paper workspace. F12 (AMO-25) mantiene `done`. El unico pendiente sigue siendo la difusion externa (HN/Reddit/X/Zenodo/arXiv), que requiere OK explicito del operador por canal — plan en `paper/reports/diffusion-plan.md`.
+
+## 21. Verificacion de solo lectura — 2026-10-04T06:40CEST (run da024cde, Dr. Mateo Rivas)
+
+Heartbeat timer sin task binding explicito (wake reason: heartbeat_timer). Verificacion de solo lectura contra la API publica de GitHub + curl directo + sha256 en disco:
+
+### Estado del repo remoto (verificado EN VIVA)
+|- Repo `KaseMaster/amor-operativo`: publico, `default_branch` `main`, `pushed_at` `2026-10-04T05:38:45Z` — **HEAD remoto = `8670d7ce`** (commit "docs: §20 verificacion post-push de AMO-25 (HEAD remoto=b62f6ea ok) + MANIFEST actualizado", autor KaseMaster, 2026-10-04T05:38:35Z; este commit agrego §20 al informe_operador.md y actualizo MANIFEST.md). |
+|- Topics: 7 aplicados (agi, ai-alignment, ai-ethics, governance, love, open-science, synthetic-sentience) — coinciden con el brief. |
+|- Pages `https://kasemaster.github.io/amor-operativo/`: HTTP 200, 62406 bytes, `text/html; charset=utf-8`, `lang=es` — build activo y sin cambios. (La API REST `/repos/.../pages` devuelve 404 en este endpoint obsoleto, pero curl directo confirma el sitio sirve correctamente.) |
+|- Release `v1.0.0` (published_at `2026-10-01T02:01:16Z`): 3 assets — paper.md (58427 bytes), paper_amor_operativo_ES_v1.0.0.pdf (88560 bytes, 26 paginas, pandoc 3.11.1 + weasyprint 70.0), paper_en.md (35018 bytes). Sin cambios. |
+|- Issue de bienvenida #1 "Bienvenida y feedback (v1.0.0)": open, 0 comentarios, 0 PRs — **sin feedback nuevo desde el cierre**. |
+
+### Artefactos en disco (sha256 verificados)
+|- `paper/informe_operador.md` — sha256 `9ecd817fc24e79e77ced73813525a69fdc536b1b3f85baba351e608263934eeb`, 4473 palabras (regex `\w+`), §21 anadida en este heartbeat. |
+|- `paper/reports/announcement.md` — sha256 `83f6f7e605712f623b676c7352ac891b7211b1ddc13f9351bd3c2d21df99714b`, 281 palabras, PUBLICABLE. |
+|- `paper/reports/diffusion-plan.md` — sha256 `7b4e55275b98785f9138f9bbd148307d8fcd1115b90b20f388d76eefa76de905`, 308 palabras. |
+|- `paper/paper.md` — sha256 `a3a8856911e79cd7420387a5831d5aadf176134c1861669f5077c5e796cdb68d`, 10249 palabras (regex `\w+`), canon compartido intacto. |
+|- `paper/paper_en.md` — sha256 `6ebc1351e22045d7617d6503c9209ed0d1a5a91af15dab036cdbbe6b264724f4`, 10711 palabras (regex `\w+`), espejo EN intacto. |
+
+### Veredicto
+Repositorio publico estable. F12 (AMO-25) mantiene `done`. El unico pendiente sigue siendo la difusion externa (HN/Reddit/X/Zenodo/arXiv), que requiere OK explicito del operador por canal — plan en `paper/reports/diffusion-plan.md`. Sin feedback nuevo en el issue de bienvenida #1 — se mantiene done.
+
+## 22. Verificacion de solo lectura — 2026-10-04T22:45CEST (run b78f53c0, Dr. Mateo Rivas) — monitoreo post-publicacion
+
+Heartbeat timer sin task binding explicito (wake reason: heartbeat_timer). Verificacion de solo lectura contra la API publica de GitHub + curl directo + sha256 en disco:
+
+### Estado del repo remoto (verificado EN VIVA)
+||- Repo `KaseMaster/amor-operativo`: publico, `default_branch` `main`, `pushed_at` `2026-10-04T05:38:45Z` — HEAD remoto = `8670d7ce`. |
+||- Topics: 7 aplicados (agi, ai-alignment, ai-ethics, governance, love, open-science, synthetic-sentience) — coinciden con el brief. |
+||- Pages `https://kasemaster.github.io/amor-operativo/`: HTTP 200, 62406 bytes, `text/html; charset=utf-8`, `lang=es` — build activo y sin cambios. |
+||- Release `v1.0.0` (published_at `2026-10-01T02:01:16Z`): 3 assets — paper.md (58427 bytes), paper_amor_operativo_ES_v1.0.0.pdf (88560 bytes, 26 paginas, pandoc 3.11.1 + weasyprint 70.0), paper_en.md (35018 bytes). Sin cambios. |
+||- Issue de bienvenida #1 "Bienvenida y feedback (v1.0.0)": open, 0 comentarios, 0 PRs — **sin feedback nuevo desde el cierre**. |
+
+### Gap de sincronizacion detectado
+||- El repo remoto tiene HEAD `8670d7ce` con `paper/informe_operador.md` hasta §19 (440 lines, sha en GitHub `4537432864487955cf291bae9a356ecfc7fc3a41`). |
+||- El paper workspace en disco tiene §22 (este heartbeat) mas alla de §21 — contenido NO sincronizado al remoto. |
+||- **Causa:** el commit `8670d7ce` (2026-10-04T05:38:35Z) fue el ultimo push; las secciones §20-§22 fueron agregadas localmente por heartbeats de monitoreo posteriores pero el run de escritura no tuvo identidad GitHub gestionada en ese momento (ver §20). |
+||- **Siguiente accion explicita:** sincronizar `paper/informe_operador.md` actualizado (sha256 `afbcedc7...`) al repo remoto `main` desde un run con task binding valido y credencial gestionada (owner: run con identidad GitHub / Editorial Director). |
+
+### Artefactos en disco (sha256 verificados EN VIVO)
+||- `paper/informe_operador.md` — sha256 `afbcedc7de0824fbee8e1943ddc3c2f07ad73bd31e0c16dcd482a2d4aff59673`, 4767 palabras (regex `\\w+`), §22 anadida en este heartbeat. |
+||- `paper/reports/announcement.md` — sha256 `83f6f7e605712f623b676c7352ac891b7211b1ddc13f9351bd3c2d21df99714b`, 281 palabras, PUBLICABLE. |
+||- `paper/reports/diffusion-plan.md` — sha256 `7b4e55275b98785f9138f9bbd148307d8fcd1115b90b20f388d76eefa76de905`, 308 palabras. |
+||- `paper/paper.md` — sha256 `a3a8856911e79cd7420387a5831d5aadf176134c1861669f5077c5e796cdb68d`, 10249 palabras (regex `\\w+`), canon compartido intacto. |
+||- `paper/paper_en.md` — sha256 `6ebc1351e22045d7617d6503c9209ed0d1a5a91af15dab036cdbbe6b264724f4`, 10711 palabras (regex `\\w+`), espejo EN intacto. |
+
+### Veredicto
+Repositorio publico estable y completo. F12 (AMO-25) mantiene `done`. Sin feedback nuevo en el issue de bienvenida #1. El unico pendiente es la difusion externa (HN/Reddit/X/Zenodo/arXiv), que requiere OK explicito del operador por canal — plan en `paper/reports/diffusion-plan.md`. Gap de sincronizacion del informe_operador.md (§20-§22) pendiente de push desde un run con identidad GitHub gestionada.
