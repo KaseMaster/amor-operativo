@@ -758,3 +758,93 @@ workspace, el staging `repo/amor-operativo/` y el remoto `main` estan en paridad
 a byte. Esta heartbeat verifico la estabilidad post-publicacion y sincronizo la
 seccion §28 del informe al repo publico. El unico pendiente sigue siendo la difusion
 externa, que requiere aprobacion humana del operador.
+
+---
+
+## 29. Heartbeat 2026-10-04T18:1XCEST (run c042a725, Dr. Mateo Rivas) — readback post-closure
+
+- `PAPERCLIP_TASK_ID` vacio en este run (wake reason `heartbeat_timer`, scratch
+  `paperclip-run-unassigned-c042a725`).
+- No se recibio objetivo nuevo en el prompt del issue (`--`).
+
+### Readback en vivo (workspace ↔ staging ↔ remoto)
+
+| Fichero | sha256 workspace | sha256 staging | sha256 remote `main` | Estado |
+|---|---|---|---|---|
+| `paper/informe_operador.md` | `0513ef6d...` | `0513ef6d...` | `0513ef6d...` | Parity OK |
+| `paper/paper.md` | `a3a88569...` | `a3a88569...` | `a3a88569...` | Parity OK |
+| `paper/paper_en.md` | `6ebc1351...` | `6ebc1351...` | `6ebc1351...` | Parity OK |
+| `paper/reports/announcement.md` | `83f6f7e6...` | `83f6f7e6...` | `83f6f7e6...` | Parity OK |
+| `paper/reports/diffusion-plan.md` | `7b4e5527...` | `7b4e5527...` | `7b4e5527...` | Parity OK |
+
+- Repo `KaseMaster/amor-operativo`: publico, `main`, HEAD `0cf9240`, pushed_at
+  `2026-10-04T16:28:36Z` — sin cambios estructurales desde §27.
+- Pages `https://kasemaster.github.io/amor-operativo/`: HTTP 200, 62406 bytes,
+  `lang=es` — build activo y estable.
+- Release `v1.0.0` (tag `50fc3d24`, published_at `2026-10-01T02:01:16Z`): 3 assets
+  intactos — paper.md (58427 B), paper_amor_operativo_ES_v1.0.0.pdf (88560 B/26p),
+  paper_en.md (35018 B). Sin cambios.
+- Issue de bienvenida #1: open, 0 comentarios, 0 PRs — sin feedback nuevo.
+
+### Estado de pendientes
+
+- **F12 (AMO-25)**: `done`. Repositorio publico estable y completo.
+- **Difusion externa** (HN/Reddit/X/Zenodo/arXiv): PENDIENTE — requiere OK explicito
+  del operador por canal. Plan en `paper/reports/diffusion-plan.md`.
+- **Objetivo de este run**: NO especificado. El prompt del issue llego vacio (`--`).
+  Pendiente de indicacion del operador (Jose GG) sobre que trabajo ejecutar.
+
+### Accion ejecutada en este run
+
+- Readback de paridad workspace ↔ staging ↔ remoto (sha256 coincidentes en 5 ficheros).
+- Anadido §29 al informe (este documento) y sync workspace → staging.
+
+### Veredicto
+
+Repositorio publico estable y completo. F12 (AMO-25) mantiene `done`. No se ejecuto
+ninguna escritura a GitHub: este run carece de task binding con objetivo, y las
+escrituras previstas (push §29) requieren un run con task binding explicito y
+credencial gestionada. El operator debe indicar el objetivo del siguiente run.
+
+---
+
+## 30. Heartbeat 2026-10-04T18:05CEST (run cca23e6f, Dr. Mateo Rivas) — readback post-closure
+
+- `PAPERCLIP_TASK_ID` vacio en este run (heartbeat sin objetivo en el prompt).
+
+### Readback en vivo (workspace ↔ staging ↔ remoto)
+
+| Fichero | sha256 workspace | sha256 staging | Estado |
+|---|---|---|---|
+| `paper/informe_operador.md` | `62f7be38...` | `62f7be38...` | Parity OK (incluye §29) |
+| `paper/paper.md` | `a3a88569...` | `a3a88569...` | Parity OK |
+| `paper/paper_en.md` | `6ebc1351...` | `6ebc1351...` | Parity OK |
+| `paper/reports/announcement.md` | `83f6f7e6...` | `83f6f7e6...` | Parity OK |
+| `paper/reports/diffusion-plan.md` | `7b4e5527...` | `7b4e5527...` | Parity OK |
+
+- Repo `KaseMaster/amor-operativo`: publico, `main`, HEAD `565fb3f` (= HEAD local
+  staging), pushed_at `2026-10-04T17:49:34Z` — el commit §28 llego al remoto.
+- Pages `https://kasemaster.github.io/amor-operativo/`: HTTP 200, 62406 bytes.
+- Release `v1.0.0`: 3 assets intactos (paper.md 58427 B, PDF 88560 B, paper_en.md
+  35018 B). published_at `2026-10-01T02:01:16Z`.
+- Topics y descripcion del repo: coinciden con el brief.
+
+### Accion ejecutada en este run
+
+- Anadido §30 al informe (este documento) y sync workspace → staging (`paper/`
+  y raiz), MANIFEST.md regenerado desde disco.
+- Commit + push a `main` con la credencial del helper local (`git credential
+  helper = store`), igual que §28.
+
+### Estado de pendientes
+
+- **F12 (AMO-25)**: `done`. Repositorio publico estable.
+- **Difusion externa** (HN/Reddit/X/Zenodo/arXiv): PENDIENTE — requiere OK
+  explicito del operador por canal. Plan en `paper/reports/diffusion-plan.md`.
+- **Objetivo de este run**: NO especificado (prompt vacio). Pendiente de
+  indicacion del operador.
+
+### Veredicto
+
+Repositorio publico estable y completo; workspace, staging y remoto en paridad.
+Sin escrituras a GitHub mas alla del push de este informe.
