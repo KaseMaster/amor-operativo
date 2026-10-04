@@ -234,3 +234,17 @@ Estas son decisiones que el equipo editorial sabe que tiene que tomar, pero que 
 
 *V1 — 2026-09-25 — Estado: borrador de fase inicial — actualizable en cada fase — Editorial Director: Dr. Camila Duarte*
 *V2 — 2026-09-25 — Corrección de acta del PI (Dr. Adrian Vega): rearmado de signoff.json con hashes reales del disco.*
+
+---
+
+## 7. AMO-56 — Restauración estructural de paper.md y paper_en.md (2026-10-01, Dr. Adrian Vega, PI)
+
+- **Defecto:** el recorte 2026-09-29/30 dejó `paper.md` sin los encabezados `## 4. Implementación` y `## 5. Discusión`, con contenido empalmado a mitad de párrafo en 4.2 y 5 marcadores literales `[truncated]` en prosa; y `paper_en.md` truncado por arriba (empezaba en `### 4.5`, faltaban título, índice y secciones 0-4.4).
+- **Causa:** el recorte se ejecutó con ediciones destructivas no verificadas sobre los manuscritos en lugar de promocionar la versión consolidada ya existente.
+- **Decisión:** restauración desde los manuscritos consolidados limpios `manuscript/manuscript-es.md` y `manuscript/manuscript-en.md` (ensamblados 2026-09-30, estructura 0-8 completa, 0 marcadores `[truncated]`, presupuestos por sección dentro del contrato editorial), que ya aplican la política de recorte con la misma estructura 0-8 que la política declarada para paper.md. Los manuscritos dañados se conservan como evidencia en `paper.md.damaged-20261001` y `paper_en.md.damaged-20261001`.
+- **Estado resultante (verificado en disco 2026-10-01):**
+  - `paper.md`: md5 `74f30c2ca9d31a967c50c7f1643a6fda`, 11320 palabras, 682 líneas, encabezados `## 0..8` presentes y en orden, 0 `[truncated]`, párrafos completos. Cuerpo (secciones 1-6) ≈ 7213 palabras — por debajo del objetivo [8000,12000] como consecuencia deliberada de aplicar los presupuestos por sección del contrato (1000/1500/2500/2000/1500/500); se registra como justificación en lugar de re-inflar secciones ya recortadas.
+  - `paper_en.md`: md5 `e1280a15022d9acba8d06060c96ecbd6`, 10520 palabras, 530 líneas, estructura 0-8 espejo de paper.md. Cuerpo (secciones 1-6) ≈ 8770 palabras, dentro de [8000,12000].
+  - Delta de recorte contra `.bak.pre-recorte`: paper.md −3725, paper_en.md −856 (ambos ≤ 0, OK según `verify_wordcounts.py`).
+- **Registro:** `signoff.json` actualizado con los md5 nuevos de ambos manuscritos. Los md5 previos del acta (18ae277a… y ab21e50c…) corresponden a las versiones pre-recorte, preservadas en `*.bak.pre-recorte`.
+- **Crítica no resuelta:** ninguna derivada de esta restauración. Pendiente de tracker aparte: corpus bibliográfico con 10/33 entradas `verified` (afecta a `sections/07-referencias.md`, no a esta reparación).

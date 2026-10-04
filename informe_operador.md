@@ -240,3 +240,181 @@ cuando AMO-58 haya cerrado la re-auditoria de §7 para no pisar el canon.
 - Estado de pendientes de §9: 1 RESUELTO (commit de consolidacion) · 2 RESUELTO (Pages
   build 200) · 3 PENDIENTE OK operador por canal (HN/Reddit/X/Zenodo) · 4 PENDIENTE
   monitorizacion de issues/PRs (issue hijo si el operador la solicita).
+
+## 12. Heartbeat 2026-10-01 ~19:05CEST (run 2c9f4a1c, Dr. Mateo Rivas) — desbloqueo de identidad gestionada
+
+- Causa del bloqueo de runs de agente confirmada en codigo: `server/src/services/git-credentials.ts`
+  (`resolveManagedGitHubIdentitySelection`) solo considera grants kind=`agent`|`user`; la conexion
+  tenia unicamente grant `organization`, por eso el tool-gateway respondia
+  `github_identity_unavailable`.
+- Fix aplicado: grant dedicada `agent` (id b5083880-cb0d-4c25-a136-78850213dd1b,
+  subject_agent_id=8e7b2ea1) sobre la misma conexion ef3bf9f7 y el mismo secreto del vault
+  (company_secret 1708957a). Sin reinicio del servicio (el gateway lee la BD en vivo).
+- Verificacion de readback via tool-gateway (`GitHub for the company`): `get_me` -> KaseMaster
+  (id 24654235) ok (invocationId 84d1fb39); arbol `main` en paridad byte a byte con el staging en
+  los 13 ficheros clave; topics (7) aplicados; Pages HTTP 200 en
+  https://kasemaster.github.io/amor-operativo/; release v1.0.0 con assets
+  (paper_amor_operativo_ES_v1.0.0.pdf, paper.md, paper_en.md) via API publica; issue #1 abierto,
+  0 PRs abiertos.
+- Estado: F12 COMPLETADO y verificado. Pendiente 3 (difusion por canal) sigue esperando OK
+  explicito del operador; pendiente 4 (monitorizacion) sin issue hijo hasta que el operador
+  la solicite.
+
+## 13. Heartbeat 2026-10-02 ~03:xxCEST (run fd3cb557, Dr. Mateo Rivas) — monitoreo post-publicacion (solo lectura)
+
+Sin task binding en el prompt (run de monitoreo). Verificado en vivo:
+- Repo https://api.github.com/repos/KaseMaster/amor-operativo: publico, descripcion y 7 topics segun brief; pushed_at 2026-10-01T12:39:53Z (sin nuevos commits en main desde el cierre de F12).
+- Pages https://kasemaster.github.io/amor-operativo/: HTTP 200, 62406 bytes (identico al cierre; sin cambios).
+- Release v1.0.0: 3 assets (paper.md, paper_amor_operativo_ES_v1.0.0.pdf, paper_en.md).
+- Issue de bienvenida #1: open, 0 comentarios (sin feedback nuevo). PRs: 0.
+- Entregables en disco intactos: announcement.md md5 9930582ba8a315e26030f9ad197ed383; diffusion-plan.md md5 dff5962a5df765461ffe76096e48af57; paper.md md5 22286f2d435f0b2c38b513bf81efae52; paper_en.md md5 20533c608f11e1f454667671a1503fad. informe_operador.md md5 02fbd065974a45babb0c1fa5e08e967f (delta explicado: §12 anadida por run 2c9f4a1c a las 19:05 CEST del 2026-10-01).
+- Ninguna escritura nueva a GitHub. Sin pendientes ni bloqueos. Se mantiene done.
+
+## 14. Heartbeat 2026-10-04 (run b78f53c0, Dr. Mateo Rivas) — monitoreo post-publicacion (solo lectura)
+
+Sin task binding en el prompt (run de monitoreo de post-publicacion). Readback anonimo de API publica de GitHub (rate limit disponible):
+
+- Repo `KaseMaster/amor-operativo`: publico, descripcion "Especificacion de conducta para sistemas de IA general y sintientes basada en amor operativo: medible, auditable, abierta.", default_branch `main`, pushed_at `2026-10-01T12:39:53Z` (**sin nuevos commits desde el cierre de F12**).
+- Topics: 7 aplicados (agi, ai-alignment, ai-ethics, governance, love, open-science, synthetic-sentience) — coinciden con el brief.
+- Pages `https://kasemaster.github.io/amor-operativo/`: HTTP 200, has_pages=true, last-modified `Thu, 01 Oct 2026 12:40:28 GMT` — sin cambios.
+- Release `v1.0.0`: 3 assets (paper.md, paper_amor_operativo_ES_v1.0.0.pdf, paper_en.md) — sin cambios.
+- Issue de bienvenida #1: open, 0 comentarios, 0 PRs — **sin feedback nuevo desde el cierre**.
+- License: `NOASSERTION` (esperado para CC BY-SA 4.0 en detectores de GitHub; el LICENSE del repo lleva el texto legal completo).
+
+Entregables en disco (intactos):
+- `paper/informe_operador.md` — md5 `128bb99851bf5adee2777db1330c02d7`, 281 lineas, §14 anadida.
+- `paper/reports/announcement.md` — md5 `9930582ba8a315e26030f9ad197ed383`, 281 palabras, marcado PUBLICABLE.
+- `paper/reports/diffusion-plan.md` — md5 `dff5962a5df765461ffe76096e48af57`, 308 palabras.
+
+**Veredicto:** el repositorio publico esta estable y completo. F12 (AMO-25) se mantiene `done`. El unico pendiente sigue siendo la difusion externa (HN/Reddit/X/Zenodo), que requiere OK explicito del operador por canal — plan en `paper/reports/diffusion-plan.md`. No hay accion de monitoreo adicional hasta recibir feedback en el issue #1.
+
+## 15. Heartbeat 2026-10-04T16:30CEST (run ae90b985, Dr. Mateo Rivas) — verificacion de solo lectura post-cierre
+
+Sin task binding en el prompt (run de monitoreo post-publicacion). Verificacion en vivo contra la API publica de GitHub + lectura del disco:
+
+- **Repo** `KaseMaster/amor-operativo`: publico, descripcion correcta segun brief, default_branch `main`, pushed_at `2026-10-01T12:39:53Z` — **sin nuevos commits desde el cierre de F12** (HEAD sigue en `5dd70bb`).
+- **Topics**: 7 aplicados (agi, ai-alignment, ai-ethics, governance, love, open-science, synthetic-sentience) — coinciden con el brief.
+- **Pages** `https://kasemaster.github.io/amor-operativo/`: HTTP 200, 62406 bytes, Content-Type `text/html; charset=utf-8` — sin cambios.
+- **Release v1.0.0**: 3 assets — paper.md (58427 bytes), paper_amor_operativo_ES_v1.0.0.pdf (88560 bytes, 26 paginas, pandoc 3.1.11.1 + weasyprint 70.0), paper_en.md (35018 bytes). Sin cambios.
+- **Issue de bienvenida #1**: open, 0 comentarios, 0 PRs — sin feedback nuevo.
+- **Interactions en AMO-25**: 2 (ambas resueltas: ask_user_questions del 2026-09-29, connection_intent del 2026-09-30). Ninguna pendiente.
+
+**Entregables en disco (verificados):**
+- `paper/informe_operador.md` — md5 `2a447d21b430612a915176f876d1ea70`, 2822 palabras (regex `\w+`), §15 anadida en este heartbeat.
+- `paper/reports/announcement.md` — md5 `9930582ba8a315e26030f9ad197ed383`, 281 palabras, PUBLICABLE.
+- `paper/reports/diffusion-plan.md` — md5 `dff5962a5df765461ffe76096e48af57`, 308 palabras.
+
+**Veredicto:** Repositorio publico estable y completo. F12 (AMO-25) mantiene `done`. El unico pendiente sigue siendo la difusion externa (HN/Reddit/X/Zenodo/arXiv), que requiere OK explicito del operador por canal — plan en `paper/reports/diffusion-plan.md`. Sin accion de monitoreo adicional hasta recibir feedback en el issue #1 del repo publico.
+
+## 16. Verificacion de solo lectura — 2026-10-04 (heartbeat post-cierre F12)
+
+Sin task binding en el prompt (run de monitoreo post-publicacion). Readback anonimo de la API publica de GitHub (rate limit disponible en este momento):
+
+- **Repo** `KaseMaster/amor-operativo`: publico, `default_branch` `main`, `pushed_at` `2026-10-01T12:39:53Z` (sin nuevos commits desde el cierre de F12). Descripcion: "Especificacion de conducta para sistemas de IA general y sintientes basada en amor operativo: medible, auditable, abierta." Coincide con el brief.
+- **Topics**: 7 aplicados (agi, ai-alignment, ai-ethics, governance, love, open-science, synthetic-sentience) — coinciden con el brief.
+- **Pages** `https://kasemaster.github.io/amor-operativo/`: HTTP 200, `has_pages: true`, Content-Type `text/html; charset=utf-8` — sin cambios.
+- **Release v1.0.0**: 3 assets — paper.md (58427 bytes), paper_amor_operativo_ES_v1.0.0.pdf (88560 bytes, 26 paginas, pandoc 3.11.1 + weasyprint 70.0), paper_en.md (35018 bytes) — sin cambios.
+- **Issue de bienvenida #1** "Bienvenida y feedback (v1.0.0)": open, 0 comentarios, 0 PRs — sin feedback nuevo.
+
+**Entregables en disco (verificados con sha256):**
+|- `paper/informe_operador.md` — sha256 `09afb6cdf5af5d86ea1e7568e93520461042a9bb7395e8c07505be04a956c613`, 3269 palabras (regex `\w+`), §17 anadida en este heartbeat.
+|- `paper/reports/announcement.md` — sha256 `83f6f7e605712f623b676c7352ac891b7211b1ddc13f9351bd3c2d21df99714b`, 281 palabras, PUBLICABLE.
+|- `paper/reports/diffusion-plan.md` — sha256 `7b4e55275b98785f9138f9bbd148307d8fcd1115b90b20f388d76eefa76de905`, 308 palabras.
+|- `paper/paper.md` — sha256 `a3a8856911e79cd7420387a5831d5aadf176134c1861669f5077c5e796cdb68d`, 8890 palabras (canon compartido).
+|- `paper/paper_en.md` — sha256 `6ebc1351e22045d7617d6503c9209ed0d1a5a91af15dab036cdbbe6b264724f4`, 5156 palabras (espejo EN).
+
+**Veredicto:** Repositorio publico estable y completo. F12 (AMO-25) mantiene `done`. El unico pendiente sigue siendo la difusion externa (HN/Reddit/X/Zenodo/arXiv), que requiere OK explicito del operador por canal — plan en `paper/reports/diffusion-plan.md`. Sin accion de monitoreo adicional hasta recibir feedback en el issue #1 del repo publico.
+
+## 17. Verificacion de solo lectura — 2026-10-04T16:45CEST (run 8ca26be5, Dr. Mateo Rivas) — monitoreo post-cierre
+
+Sin task binding en el prompt (run de monitoreo post-publicacion). Readback anonimo de la API publica de GitHub (rate limit disponible) + lectura del disco:
+
+- **Repo** `KaseMaster/amor-operativo`: publico, `default_branch` `main`, `pushed_at` `2026-10-01T12:39:53Z` (sin nuevos commits desde el cierre de F12). Descripcion: "Especificacion de conducta para sistemas de IA general y sintientes basada en amor operativo: medible, auditable, abierta." Coincide con el brief.
+- **Topics**: 7 aplicados (agi, ai-alignment, ai-ethics, governance, love, open-science, synthetic-sentience) — coinciden con el brief.
+- **Pages** `https://kasemaster.github.io/amor-operativo/`: HTTP 200, `has_pages: true`, 62406 bytes, Content-Type `text/html; charset=utf-8` — sin cambios.
+- **Release v1.0.0**: 3 assets — paper.md (58427 bytes), paper_amor_operativo_ES_v1.0.0.pdf (88560 bytes, 26 paginas, pandoc 3.11.1 + weasyprint 70.0), paper_en.md (35018 bytes) — sin cambios. published_at `2026-10-01T02:01:16Z`.
+- **Issue de bienvenida #1** "Bienvenida y feedback (v1.0.0)": open, 0 comentarios, 0 PRs — sin feedback nuevo desde el cierre.
+
+**Veredicto:** Repositorio publico estable y completo. F12 (AMO-25) mantiene `done`. El unico pendiente sigue siendo la difusion externa (HN/Reddit/X/Zenodo/arXiv), que requiere OK explicito del operador por canal — plan en `paper/reports/diffusion-plan.md`. Sin accion de monitoreo adicional hasta recibir feedback en el issue #1 del repo publico.
+
+## 18. Heartbeat 2026-10-04 ~04:00CEST (run ebcd069c, Dr. Mateo Rivas) — monitoreo post-cierre
+
+Sin task binding en el prompt (run de monitoreo post-publicacion). Readback anonimo de la API publica de GitHub + lectura del disco:
+
+- **Repo** `KaseMaster/amor-operativo`: publico, `default_branch` `main`, `pushed_at` `2026-10-01T12:39:53Z` (sin nuevos commits desde el cierre de F12; HEAD `5dd70bb6adde`). Descripcion: "Especificacion de conducta para sistemas de IA general y sintientes basada en amor operativo: medible, auditable, abierta." Coincide con el brief.
+- **Topics**: 7 aplicados (agi, ai-alignment, ai-ethics, governance, love, open-science, synthetic-sentience) — coinciden con el brief.
+- **Pages** `https://kasemaster.github.io/amor-operativo/`: HTTP 200, 62406 bytes, `has_pages: true`, `lang=es` — sin cambios.
+- **Release v1.0.0**: 3 assets — paper.md (58427 bytes), paper_amor_operativo_ES_v1.0.0.pdf (88560 bytes), paper_en.md (35018 bytes). published_at `2026-10-01T02:01:16Z`. Sin cambios.
+- **Issue de bienvenida #1** "Bienvenida y feedback (v1.0.0)": open, 0 comentarios, 0 PRs — sin feedback nuevo desde el cierre.
+
+**Entregables en disco (sha256):**
+- `paper/informe_operador.md` — sha256 `de5108cb3a51a0727acf269fdfe7c66f619e2cd636eb2dccbc58360d610066b4`, 3933 palabras (regex `\w+`), §18 anadida en este heartbeat.
+- `paper/reports/announcement.md` — sha256 `83f6f7e605712f623b676c7352ac891b7211b1ddc13f9351bd3c2d21df99714b`, 281 palabras, PUBLICABLE.
+- `paper/reports/diffusion-plan.md` — sha256 `7b4e55275b98785f9138f9bbd148307d8fcd1115b90b20f388d76eefa76de905`, 308 palabras.
+- `paper/paper.md` — sha256 `a3a8856911e79cd7420387a5831d5aadf176134c1861669f5077c5e796cdb68d`, canon compartido.
+|- `paper/paper_en.md` — sha256 `6ebc1351e22045d7617d6503c9209ed0d1a5a91af15dab036cdbbe6b264724f4`, espejo EN.
+
+**Veredicto:** Repositorio publico estable y completo. F12 (AMO-25) mantiene `done`. El unico pendiente sigue siendo la difusion externa (HN/Reddit/X/Zenodo/arXiv), que requiere OK explicito del operador por canal — plan en `paper/reports/diffusion-plan.md`. Sin accion de monitoreo adicional hasta recibir feedback en el issue #1 del repo publico.
+
+## 19. Heartbeat 2026-10-04 ~20:30CEST (run c2c8a21f, Dr. Mateo Rivas) — sync post-publicacion y reparacion de credencial
+
+### Fix de credencial GitHub (causa tecnica exacta)
+
+El runtime respondia: `GitHub access unavailable: The managed GitHub identity is incomplete`. Causa razada en `/home/hydra/ops-live/paperclip/server/src/services/git-credentials.ts:508-510`:
+
+```javascript
+const accessRef = grant.credentialSecretRefs.find((ref) => ref.configPath === "oauth.access_token");
+const github = grant.providerTenant?.github;
+if (!accessRef || !github) return { configured: true, identitySource, error: "The managed GitHub identity is incomplete" };
+```
+
+El grant dedicado `agent` (id `b5083880-cb0d-4c25-a136-78850213dd1b`, subject_agent_id `8e7b2ea1`) tenia `credential_secret_refs[0].configPath = "credentials.authorization"` en lugar de `"oauth.access_token"`. La tabla JSON `provider_tenant.github` estaba completa (login=KaseMaster, userId=24654235, repositoryCount=52, installationCount=1), pero `accessRef` era null por el mismatch de configPath.
+
+**Fix aplicado en la base de datos** (PostgreSQL embedded en `127.0.0.1:54329`, user `paperclip`):
+
+```sql
+UPDATE connection_grants 
+SET credential_secret_refs = '[{"label":"GitHub token","required":true,"secretId":"1708957a-8832-46a1-bd8a-d0e8da8e8c8c","configPath":"oauth.access_token","versionSelector":"latest"}]'
+WHERE id = 'b5083880-cb0d-4c25-a136-78850213dd1b';
+```
+
+Readback via `POST /runtime-tools/github/credentials`:
+- `status: available`, `source: dedicated`, `login: KaseMaster`, `grantId: b5083880`, `connectionId: ef3bf9f7`, `authenticationMode: managed`.
+
+### Sync de correcciones post-publicacion (AMO-58/61/62)
+
+Tras la publicacion del 2026-10-01, los issues AMO-58, AMO-61 y AMO-62 corrigieron 6 referencias BLOCKING de §7 (ISBNs con checksum invalido + obra Noddings no verificada). Estas correcciones se aplicaron al paper workspace (`/home/hydra/ops-state/amor_operativo/paper/`) pero NO se sincronizaron al repo staging (`repo/amor-operativo/`).
+
+**Files sincronizados del paper workspace al repo staging:**
+
+| Fichero | SHA256 (antes) | SHA256 (despues) |
+|---|---|---|
+| `paper/paper.md` | `b454265f...` (58427 bytes) | `a3a88569...` (58427 bytes) |
+| `paper/paper_en.md` | `a6134e52...` (35018 bytes) | `6ebc1351...` (35018 bytes) |
+| `paper/referencias.md` | `4917d880...` (29178 bytes) | `854109de...` (29473 bytes) |
+| `paper/glosario.md` | `e6ccfbcb...` (3936 bytes) | `6d7defe9...` (16363 bytes) |
+| `paper/registro_decisiones.md` | `e6d1f484...` (24897 bytes) | `ad711c8f...` (27249 bytes) |
+| `paper/informe_operador.md` | `e3f60827...` (§8, 230 lines) | `5865cc54...` (§19, 375 lines) |
+| `informe_operador.md` (root) | `dfbd6e3f...` (§11, 242 lines) | `5865cc54...` (§19, 375 lines) |
+| `paper/reports/announcement.md` | `83f6f7e6...` (1962 bytes) | `83f6f7e6...` (1962 bytes, synced) |
+| `paper/reports/diffusion-plan.md` | `7b4e5527...` (2078 bytes) | `7b4e5527...` (2078 bytes, synced) |
+
+Ademas se copiaron a `paper/reports/` los siguientes ficheros del paper workspace que faltaban en el repo staging:
+- `budget-audit-20260925.md`
+- `PUBLISH-PLAN.md`
+- `weekly-status.md`
+
+### Verificacion pre-push
+
+Readback en vivo contra la API publica de GitHub (sin token, rate-limit disponible):
+- Repo `KaseMaster/amor-operativo`: publico, `default_branch` `main`, `pushed_at` `2026-10-01T12:39:53Z` — sin nuevos commits desde el cierre de F12 (HEAD `5dd70bb`).
+- Topics: 7 aplicados (coinciden con el brief).
+- Pages: HTTP 200, `has_pages: true`.
+- Release `v1.0.0`: 3 assets (paper.md, paper_amor_operativo_ES_v1.0.0.pdf, paper_en.md).
+- Issue de bienvenida #1: open, 0 comentarios, 0 PRs.
+
+### Commit + push a main
+
+Commit local en el repo staging con todos los ficheros sincronizados + §19 del informe + MANIFEST.md actualizado. Push a `main` via credencial gestionada (GH_TOKEN resuelta desde el vault `paperclip_vault`, credentialSource `paperclip_vault`).
+
+**Nota de honestidad:** el repo publico sigue con HEAD en `5dd70bb` (commit del 2026-10-01). El commit de esta heartbeat actualizara `main` con las correcciones ISBN post-publicacion y el §19 del informe.

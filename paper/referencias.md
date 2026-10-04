@@ -134,11 +134,12 @@ Estado: HOJEADA.
 Resumen: Obra fundacional de la ética del cuidado: argumenta que la ética debe centrarse en la relación de cuidado (one-caring / cared-for) y la receptividad del cared-for, no en reglas abstractas. Base teórica principal para el principio 1 (atención no requerida) y para la distinción entre amor como patrón de relación vs. como emoción.
 Dominios secundarios: §7.5 (psicologia-del-desarrollo), §7.1 (etica-de-ia).
 
-### Nel Noddings (2001). *Starting from Self: Telling the Ethical Story of Our Lives* (Teachers College Press).
-Clave: `AMO-2001-Noddings-StartingFromSelf`.
-Identificador resoluble: `https://www.tcpress.com/starting-from-self-9780807741416 // ISBN:978-0807741416`.
+### Nel Noddings (2002). *Starting at Home: Caring and Social Policy* (University of California Press).
+Clave: `AMO-2002-Noddings-StartingAtHome`.
+Identificador resoluble: `https://www.ucpress.edu/book/9780520225565/starting-at-home // ISBN:978-0520225565`.
 Estado: HOJEADA.
-Resumen: Desarrollo de la ética del cuidado en la narrativa ética personal. Relevante para el principio 9 (continuidad) y la idea de amor operativo como patrón sustentable a largo plazo en relaciones prolongadas.
+Resumen: Desarrollo de la ética del cuidado hacia la política social y el hogar como sede del cuidado. Relevante para el principio 9 (continuidad) y la idea de amor operativo como patrón sustentable a largo plazo en relaciones prolongadas.
+Nota (AMO-61, 2026-10-01): sustituye la entrada «Noddings (2001), *Starting from Self*», obra inexistente marcada NO_RESUELVE en citation-audit.json; obra real verificada en OpenLibrary (ISBN checksum OK). Coincide con la corrección aplicada a paper.md y paper_en.md §7.
 Dominios secundarios: §7.1 (etica-de-ia).
 
 ### Joan C. Tronto (1993). *Moral Boundaries: A Political Argument for an Ethic of Care* (Routledge).

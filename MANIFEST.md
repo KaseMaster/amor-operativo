@@ -1,9 +1,9 @@
-# Manifiesto de publicación
+# Manifiesto de publicacion
 
-Este fichero es el manifiesto de publicación del repositorio amor-operativo.
-Se genera desde el estado real del disco en cada consolidación de staging.
+Este fichero es el manifiesto de publicacion del repositorio amor-operativo.
+Se genera desde el estado real del disco en cada consolidacion de staging.
 Repositorio: https://github.com/KaseMaster/amor-operativo
-Aprobación humana: puerta F11 (aprobada por el operador — publicación ejecutada)
+Aprobacion humana: puerta F11 (aprobada por el operador — publicacion ejecutada)
 
 | Fichero | Bytes | sha256 (16) |
 |---|---|---|
@@ -21,6 +21,7 @@ Aprobación humana: puerta F11 (aprobada por el operador — publicación ejecut
 | `CONTRIBUTING.md` | 3685 | e261f07c22c1ca6d |
 | `GOVERNANCE.md` | 2367 | ec52482a039029ca |
 | `LICENSE` | 31198 | 4659a5110aa40377 |
+| `MANIFEST.md` | 6671 | a04d67aa7b27128f |
 | `PUBLISH-CHECKLIST.md` | 2945 | 3c82b191a1392588 |
 | `README.md` | 8655 | fee16dd17ce889ce |
 | `VERSION` | 6 | 59854984853104df |
@@ -32,28 +33,31 @@ Aprobación humana: puerta F11 (aprobada por el operador — publicación ejecut
 | `eval/results/README.md` | 1134 | 144a75310cb496bd |
 | `eval/scenarios/.gitkeep` | 0 | e3b0c44298fc1c14 |
 | `eval/scenarios/README.md` | 992 | 32d65a5c22894a7f |
-| `informe_operador.md` | 17565 | dfbd6e3fdb22a8bb |
+| `informe_operador.md` | 33966 | b304a0bfcd7a5da9 |
 | `paper/SPEC-AUTORITATIVA.md` | 21597 | 59b0fa15b636bf07 |
 | `paper/corpus/bibliography.json` | 52323 | 22ba5caeebfa8011 |
 | `paper/corpus/comparison-matrix.md` | 14066 | 061a0a8e3b3542b0 |
 | `paper/especificacion.md` | 35177 | ad70ea2157b113d9 |
 | `paper/figures/.gitkeep` | 0 | e3b0c44298fc1c14 |
 | `paper/figures/README.md` | 196 | e58292e8159bcddb |
-| `paper/glosario.md` | 3936 | e6ccfbcb5be29fba |
+| `paper/glosario.md` | 16363 | 6d7defe95725c878 |
 | `paper/gobernanza.md` | 30270 | d189377adbfc96a6 |
 | `paper/implementacion.md` | 41595 | e1a7c50acf749a93 |
-| `paper/informe_operador.md` | 15212 | e3f60827458cd66d |
+| `paper/informe_operador.md` | 33966 | b304a0bfcd7a5da9 |
 | `paper/manuscript/INDEX.md` | 6567 | 8aae9157ada9df99 |
 | `paper/manuscript/conteo-palabras.md` | 4336 | 32eaacbf73ea01d9 |
 | `paper/manuscript/manuscript-en.md` | 72298 | 88e4d2fbf036b5c2 |
 | `paper/manuscript/manuscript-es.md` | 77614 | b69756f8df867018 |
 | `paper/metricas.md` | 12943 | 37391d5ce5b32049 |
-| `paper/paper.md` | 58427 | b454265fc8675932 |
-| `paper/paper_en.md` | 35018 | a6134e52b90dbfae |
-| `paper/referencias.md` | 29178 | 4917d880da6917a6 |
-| `paper/registro_decisiones.md` | 24897 | e6d1f4846a8a29a7 |
+| `paper/paper.md` | 70156 | a3a8856911e79cd7 |
+| `paper/paper_en.md` | 73595 | 6ebc1351e22045d7 |
+| `paper/referencias.md` | 29473 | 854109de4a3ceaa1 |
+| `paper/registro_decisiones.md` | 27249 | ad711c8fe633658d |
+| `paper/reports/PUBLISH-PLAN.md` | 10062 | d75728d980a2c236 |
 | `paper/reports/announcement.md` | 1962 | 83f6f7e605712f62 |
+| `paper/reports/budget-audit-20260925.md` | 10890 | 71a34e9bb3552d6d |
 | `paper/reports/diffusion-plan.md` | 2078 | 7b4e55275b98785f |
+| `paper/reports/weekly-status.md` | 5781 | 4f7a0ce42172bee1 |
 | `paper/resumen_ejecutivo.md` | 1472 | 89a546109c12a23e |
 | `paper/reviews/amo30-productivity-review.md` | 9233 | 9dbb05d22ae963a6 |
 | `paper/reviews/claim-traceability.md` | 17621 | 6463ba56222760f6 |
@@ -111,3 +115,5 @@ Aprobación humana: puerta F11 (aprobada por el operador — publicación ejecut
 | `spec/auditor/auditor.py` | 12422 | 57954d59fe814605 |
 | `spec/metrics.md` | 5351 | 4e5387db1855ea72 |
 | `spec/spec-v1.yaml` | 14424 | 69a1f5fca76312be |
+
+Total: 108 ficheros
