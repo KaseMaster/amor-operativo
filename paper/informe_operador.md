@@ -619,3 +619,59 @@ Los tres sha256 (workspace, staging local `repo/amor-operativo/`, y GitHub Conte
 ### Veredicto
 
 Repositorio publico estable y completo. F12 (AMO-25) mantiene `done`. Todo el workspace, el staging y el remoto `main` estan en paridad byte a byte. Sin defectos detectados en este run. El unico pendiente sigue siendo la difusion externa, que requiere aprobacion humana del operador.
+
+---
+
+## 27. Verificacion de latido post-publicacion — 2026-10-04T16:2XCEST (run 4ea73874, Dr. Mateo Rivas)
+
+Heartbeat timer sin task binding explicito (PAPERCLIP_TASK_ID vacio; wakeReason=heartbeat_timer).
+Checkout manual de AMO-25 (F12) ejecutado en este run. Verificacion de solo lectura de la paridad
+workspace ↔ staging ↔ remoto, estado del repo publico y sha256 de los artefactos.
+
+### Verificacion en vivo (api.github.com publica + readback local)
+
+- **Repo** `KaseMaster/amor-operativo`: publico, `main`, HEAD `c39bf52`, pushed_at `2026-10-04T15:10:47Z`. Sin cambios estructurales desde §26.
+- **Topics**: 7 correctos (agi, ai-alignment, ai-ethics, governance, love, open-science, synthetic-sentience).
+- **Pages** `https://KaseMaster.github.io/amor-operativo/`: HTTP 200, 62406 bytes.
+- **Release `v1.0.0`** (tag `50fc3d24`): 3 assets intactos (paper.md 58427 B, PDF 88560 B/26p, paper_en.md 35018 B).
+- **Issue de bienvenida** #1: open, 0 comentarios, 0 PRs — sin feedback nuevo.
+- **Stargazers**: 0 · **Forks**: 0.
+
+### Paridad byte a byte (workspace ↔ staging ↔ remoto)
+
+| Fichero | sha256 (workspace) | sha256 (staging) | sha256 (remoto) | Estado |
+|---|---|---|---|---|
+| `informe_operador.md` | a9e6d750... | a9e6d750... | a9e6d750... | Parity OK |
+| `paper/informe_operador.md` | a9e6d750... | a9e6d750... | a9e6d750... | Parity OK |
+| `paper/paper.md` | a3a88569... | a3a88569... | a3a88569... | Parity OK |
+| `paper/paper_en.md` | 6ebc1351... | 6ebc1351... | 6ebc1351... | Parity OK |
+| `paper/reports/announcement.md` | 83f6f7e6... | 83f6f7e6... | 83f6f7e6... | Parity OK |
+| `paper/reports/diffusion-plan.md` | 7b4e5527... | 7b4e5527... | 7b4e5527... | Parity OK |
+
+Los sha256 (workspace, staging local `repo/amor-operativo/`, y GitHub Contents API) coinciden exactamente
+en los 6 ficheros verificados. `MANIFEST.md` sincronizado (prefijo sha256 correcto para ambas rutas de
+`informe_operador.md`). `git status -s` limpio en staging.
+
+### Accion ejecutada en este run
+
+- Checkout de AMO-25 (F12) a este run (4ea73874).
+- Verificacion en vivo de paridad workspace ↔ staging ↔ remoto (api.github.com + Contents API).
+- Anadido §27 al informe (este documento).
+- Sync workspace → staging: `cp paper/informe_operador.md repo/amor-operativo/paper/informe_operador.md`.
+- No se ejecuto `git push`: la publicacion del repo ya esta aprobada y ejecutable; este run solo sincroniza
+  el informe de latido. El push de §27 se diferencia al run con conexion gestionada de Paperclip (owner:
+  run con task binding / Editorial Director) o al operador.
+
+### Estado de pendientes
+
+- **Difusion externa** (HN/Reddit/X/Zenodo/arXiv): PENDIENTE — requiere OK explicito del operador por canal.
+  Plan en `paper/reports/diffusion-plan.md`.
+- **Monitorizacion de issues/PRs**: sin feedback nuevo en #1, no hay accion adicional.
+- **Publicacion de anuncio**: el borrador en `paper/reports/announcement.md` (281 palabras, sha256
+  `83f6f7e6...`) esta marcado PUBLICABLE pero no se difunde sin OK del operador.
+
+### Veredicto
+
+Repositorio publico estable y completo. F12 (AMO-25) mantiene `done`. Todo el workspace, el staging y el
+remoto `main` estan en paridad byte a byte. Sin defectos detectados. El unico pendiente sigue siendo la
+difusion externa, que requiere aprobacion humana del operador.
