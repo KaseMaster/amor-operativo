@@ -27,7 +27,7 @@ Aprobacion humana: puerta F11 (aprobada por el operador — publicacion ejecutad
 | `.github/workflows/publish.yml` | 1334 | 01bf4a7255ee67b1 |
 | `.gitignore` | 198 | 5bd2d015b4d4efd9 |
 | `GOVERNANCE.md` | 2367 | ec52482a039029ca |
-| `informe_operador.md` | 90021 | 2182308ae25f176b |
+| `informe_operador.md` | 93095 | 20f0026b8d955bd9 |
 | `LICENSE` | 31198 | 4659a5110aa40377 |
 | `MANIFEST.md` | 1535 | 2cc15e039abde47e |
 | `.markdownlint.yaml` | 1347 | b25d967d7e864d67 |
@@ -39,7 +39,7 @@ Aprobacion humana: puerta F11 (aprobada por el operador — publicacion ejecutad
 | `paper/glosario.md` | 16363 | 6d7defe95725c878 |
 | `paper/gobernanza.md` | 30270 | d189377adbfc96a6 |
 | `paper/implementacion.md` | 41595 | e1a7c50acf749a93 |
-| `paper/informe_operador.md` | 90021 | 2182308ae25f176b |
+| `paper/informe_operador.md` | 93095 | 20f0026b8d955bd9 |
 | `paper/manuscript/conteo-palabras.md` | 4336 | 32eaacbf73ea01d9 |
 | `paper/manuscript/INDEX.md` | 6567 | 8aae9157ada9df99 |
 | `paper/manuscript/manuscript-en.md` | 72298 | 88e4d2fbf036b5c2 |

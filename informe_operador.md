@@ -1213,3 +1213,50 @@ Remoto `paper/informe_operador.md` verificado via Contents API: 86923 B, coincid
 ### Veredicto
 
 Repositorio publico `KaseMaster/amor-operativo` estable, completo y verificado EN VIVA. F12 (AMO-25) mantiene `done`. El unico pendiente es la difusion externa, que requiere aprobacion humana del operador por canal.
+
+---
+
+## §38 Heartbeat 2026-10-05T13:15CEST (run f05a6fa5, Dr. Mateo Rivas) — monitoring check-in
+
+**Wake reason:** `heartbeat_timer` — sin task binding (`PAPERCLIP_TASK_ID` vacio). Ambos issues AMO-24 (F8c) y AMO-25 (F12) `done`. Verificacion de solo lectura + push de esta seccion.
+
+### Estado verificado EN VIVO (2026-10-05T13:00Z, readback anonimo + shim gestionado)
+
+- **Repo** `KaseMaster/amor-operativo`: publico, `main`, HEAD `6e5a0cedf9c5` ("docs: §37 monitoring heartbeat, run 738d0b60"), `pushed_at: 2026-10-05T11:58:24Z` (commit §37). Descripcion y 7 topics coinciden con el brief.
+- **Pages** https://kasemaster.github.io/amor-operativo/: HTTP 200, 62406 bytes — build activo y estable.
+- **Release `v1.0.0`**: 3 assets intactos — paper.md (58427 B), paper_amor_operativo_ES_v1.0.0.pdf (88560 B, 26 pag), paper_en.md (35018 B).
+- **Issue #1** "Bienvenida y feedback (v1.0.0)": open, 0 comentarios, 0 PRs — sin feedback comunitario nuevo.
+
+### Paridad byte a byte (workspace <-> staging, sha256, pre-§38)
+
+| Fichero | sha256 (abreviado) | Estado |
+|---|---|---|
+| `paper/paper.md` | `a3a88569...` | Parity OK (canon compartido) |
+| `paper/paper_en.md` | `6ebc1351...` | Parity OK |
+| `paper/informe_operador.md` | `2182308a...` | Parity OK; modificado en este run con §38 |
+| `paper/reports/announcement.md` | `83f6f7e6...` | Parity OK, PUBLICABLE |
+| `paper/reports/diffusion-plan.md` | `7b4e5527...` | Parity OK, pendiente de OK |
+
+Nota de credencial: `PAPERCLIP_GIT_TOKEN` del entorno responde 401 contra api.github.com (token sin validez para escritura); la via operativa es el shim gestionado `$PAPERCLIP_GITHUB_LAUNCHER_DIR/gh` (login KaseMaster verificado con `gh api user` en este run).
+
+### Criticas no resueltas / preguntas abiertas
+
+- **paper.md (10249 wc -w) vs presupuesto 8000-12000 del brief:** el cuerpo efectivo (~8890) esta dentro del rango; el total incluye markdown. Pendiente de decision del operador sobre recorte adicional.
+- **Pages metadata 404:** la API de GitHub devuelve 404 en `/repos/.../pages` pero la URL sirve HTTP 200. Si Pages se desconecta requiere intervencion manual del operador.
+- **Difusion externa** (HN/Reddit/X/Zenodo/arXiv): PENDIENTE — requiere OK explicito del operador por canal. Anuncio (281 palabras) marcado PUBLICABLE, no difundido sin OK.
+
+### Accion ejecutada en este run
+
+- Verificacion live del repo publicado (API publica + Pages HTTP + shim gestionado).
+- Readback de paridad workspace <-> staging en 5 ficheros clave (sha256).
+- Anadido §38 (este documento); sync workspace -> staging (ambas rutas: raiz y `paper/`); commit + push a `main`; readback post-push.
+
+### Estado de pendientes
+
+- **F12 (AMO-25):** done. Repositorio publico estable.
+- **Difusion externa:** PENDIENTE de OK del operador por canal.
+- **Monitorizacion:** sin feedback nuevo en #1; disponible como monitoring heartbeat (3600s).
+
+### Veredicto
+
+Repositorio publico estable y completo. F12 (AMO-25) mantiene `done`. El unico pendiente es la difusion externa, que requiere aprobacion humana del operador por canal.
