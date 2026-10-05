@@ -1165,3 +1165,51 @@ Ambos issues asignados (AMO-24 F8c, AMO-25 F12) permanecen done. Repositorio pub
 
 ### Veredicto
 Workspace, staging y remoto `main` reacomodados en paridad byte a byte. Gap de § e48ca071 resuelto. F12 (AMO-25) mantiene `done`. El unico pendiente sigue siendo la difusion externa, que requiere aprobacion humana del operador por canal.
+
+---
+
+## §37 Heartbeat 2026-10-05T11:56Z (run 738d0b60, Dr. Mateo Rivas) — monitoring check-in
+
+**Wake reason:** `heartbeat_timer` — no task binding (`PAPERCLIP_TASK_ID` vacio). Ambos issues AMO-24 (F8c) y AMO-25 (F12) `done`.
+
+### Estado verificado EN VIVA (2026-10-05T11:55Z)
+
+- **Repo** `KaseMaster/amor-operativo`: publico, `main`, HEAD `6bd6737` (local = remoto, paridad OK). `pushed_at: 2026-10-05T10:48:18Z` (commit §36). Descripcion y 7 topics coinciden con el brief.
+- **Pages** https://kasemaster.github.io/amor-operativo/: HTTP 200, 62406 bytes — build activo y estable.
+- **Release `v1.0.0`** (tag `50fc3d24`): 3 assets intactos — paper.md (58427 B), paper_amor_operativo_ES_v1.0.0.pdf (88560 B, 26 pag), paper_en.md (35018 B).
+- **Issue #1** "Bienvenida y feedback (v1.0.0)": open, 0 comentarios, 0 PRs — sin feedback comunitario nuevo.
+- **Stats**: 0 stargazers, 0 forks. Sin activity comunitaria.
+
+### Paridad byte a byte (workspace <-> staging, sha256)
+
+| Fichero | sha256 (abreviado) | Palabras (wc -w) | Estado |
+|---|---|---|---|
+| `paper/paper.md` | `a3a88569...` | 10249 | Parity OK |
+| `paper/paper_en.md` | `6ebc1351...` | 10711 | Parity OK |
+| `paper/informe_operador.md` | `2637e762...` (pre-§37) | 11140 | Parity OK; modificado en este run con §37 |
+| `paper/reports/announcement.md` | `83f6f7e6...` | 281 | Parity OK, PUBLICABLE |
+| `paper/reports/diffusion-plan.md` | `7b4e5527...` | 308 | Parity OK, pendiente de OK |
+
+Remoto `paper/informe_operador.md` verificado via Contents API: 86923 B, coincide con local pre-§37.
+
+### Criticas no resueltas / preguntas abiertas
+
+- **paper.md (10249 wc -w) vs presupuesto 8000-12000 del brief:** el cuerpo efectivo (~8890) esta dentro del rango; el total incluye markdown. Pendiente de decision del operador sobre recorte adicional.
+- **Pages metadata 404:** la API de GitHub devuelve 404 en `/repos/.../pages` pero la URL sirve HTTP 200. Si Pages se desconecta requiere intervencion manual del operador (la conexion gestionada no expone acciones de Pages config).
+- **Difusion externa** (HN/Reddit/X/Zenodo/arXiv): PENDIENTE — requiere OK explicito del operador por canal. Plan en `paper/reports/diffusion-plan.md`. Anuncio (`announcement.md`, 281 palabras) marcado PUBLICABLE, no difundido sin OK.
+
+### Accion ejecutada en este run
+
+- Heartbeat de monitorizacion — verificacion live del repo publicado (API publica + Pages HTTP).
+- Readback de paridad workspace <-> staging <-> remoto en 5 ficheros clave (sha256).
+- Anadido §37 (este documento); sync workspace -> staging (ambas rutas); MANIFEST.md regenerado; commit + push a `main`.
+
+### Estado de pendientes
+
+- **F12 (AMO-25):** done. Repositorio publico estable.
+- **Difusion externa:** PENDIENTE de OK del operador por canal.
+- **Monitorizacion:** sin feedback nuevo en #1; disponible como monitoring heartbeat (3600s).
+
+### Veredicto
+
+Repositorio publico `KaseMaster/amor-operativo` estable, completo y verificado EN VIVA. F12 (AMO-25) mantiene `done`. El unico pendiente es la difusion externa, que requiere aprobacion humana del operador por canal.
