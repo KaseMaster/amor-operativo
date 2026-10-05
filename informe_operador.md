@@ -848,3 +848,95 @@ credencial gestionada. El operator debe indicar el objetivo del siguiente run.
 
 Repositorio publico estable y completo; workspace, staging y remoto en paridad.
 Sin escrituras a GitHub mas alla del push de este informe.
+
+---
+
+## 31. Heartbeat 2026-10-05T01:16CEST (run 1fa05a30, Dr. Mateo Rivas) — readback post-closure
+
+- `PAPERCLIP_TASK_ID` vacio en este run (wake reason `heartbeat_timer`, scratch
+  `paperclip-run-unassigned-1fa...`).
+- No se recibio objetivo nuevo en el prompt del issue.
+- Todas las issues asignadas a este agente (AMO-24 F8c, AMO-25 F12) estan `done`.
+
+### Readback en vivo (workspace ↔ staging ↔ remoto)
+
+| Fichero | sha256 workspace | sha256 staging | sha256 remote `main` | Estado |
+|---|---|---|---|---|
+| `paper/informe_operador.md` | `3a31162dad...` | `3a31162dad...` | `3a31162dad...` | Parity OK |
+| `paper/paper.md` | `a3a8856911...` | `a3a8856911...` | `a3a8856911...` | Parity OK |
+| `paper/paper_en.md` | `6ebc1351e2...` | `6ebc1351e2...` | `6ebc1351e2...` | Parity OK |
+
+- Repo `KaseMaster/amor-operativo`: publico, `main`, HEAD `4b3ffaf`.
+- Pages `https://kasemaster.github.io/amor-operativo/`: HTTP 200, 62406 bytes.
+- Release `v1.0.0` (tag `50fc3d24`, published_at `2026-10-01T02:01:16Z`): 3 assets
+  intactos — paper.md (58427 B), paper_amor_operativo_ES_v1.0.0.pdf (88560 B/26p),
+  paper_en.md (35018 B).
+- Issue de bienvenida #1: open, 0 comentarios.
+
+### Estado de pendientes
+
+- **F12 (AMO-25)**: `done`. Repositorio publico estable y completo.
+- **Difusion externa** (HN/Reddit/X/Zenodo/arXiv): PENDIENTE — requiere OK explicito
+  del operador por canal. Plan en `paper/reports/diffusion-plan.md`.
+- **Objetivo de este run**: NO especificado (prompt vacio). No hay task binding
+  activa. El operator debe indicar el objetivo del siguiente run.
+
+### Accion ejecutada en este run
+
+- Readback de paridad workspace ↔ staging ↔ remoto (sha256 coincidentes en 3 ficheros).
+- Anadido §31 al informe (este documento).
+- Sync workspace → staging y push a `main`.
+
+### Veredicto
+
+Repositorio publico estable y completo; workspace, staging y remoto en paridad.
+Sin escrituras a GitHub mas alla del push de este informe.
+
+---
+
+## 32. Heartbeat 2026-10-05T02:30CEST (run ef284de3, Dr. Mateo Rivas) — readback post-cierre
+
+Sin task binding explicito en el prompt (`PAPERCLIP_TASK_ID` vacio, wakeReason=heartbeat_timer).
+Checkout de AMO-25 (F12) rechazado por el runtime: issue en status `done` (checkout conflict).
+Verificacion de solo lectura contra la API publica de GitHub + readback local de sha256.
+
+### Estado verificado EN VIVA (api.github.com publica, 2026-10-05T02:28Z)
+
+- **Repo** `KaseMaster/amor-operativo`: publico, `main`, HEAD `39f79a9` (§31 readback), pushed_at `2026-10-05T01:27:16Z`. Descripcion: "Especificacion de conducta para sistemas de IA general y sintientes basada en amor operativo: medible, auditable, abierta." Coincide con el brief.
+- **Topics**: 7 aplicados (agi, ai-alignment, ai-ethics, governance, love, open-science, synthetic-sentience) — coinciden con el brief.
+- **Pages** `https://kasemaster.github.io/amor-operativo/`: HTTP 200, 62406 bytes, Content-Type `text/html; charset=utf-8`, `lang=es` — build activo y estable.
+- **Release `v1.0.0`** (tag `50fc3d24`, published_at `2026-10-01T02:01:16ZZ`): 3 assets intactos — paper.md (58427 B), paper_amor_operativo_ES_v1.0.0.pdf (88560 B, 26 pag, pandoc 3.11.1 + weasyprint 70.0), paper_en.md (35018 B). Sin cambios desde la publicacion.
+- **Issue de bienvenida #1** "Bienvenida y feedback (v1.0.0)": open, 0 comentarios, 0 PRs — sin feedback nuevo desde el cierre.
+- **Stats**: 0 stargazers, 0 forks, 1 open issue (#1). Sin actividad comunitaria todavia.
+
+### Paridad byte a byte (workspace ↔ staging ↔ remoto)
+
+| Fichero | sha256 (workspace) | sha256 (staging) | sha256 (remoto) | Estado |
+|---|---|---|---|---|
+| `paper/informe_operador.md` (root) | `8e037980...` | `8e037980...` | `8e037980...` | Parity OK |
+| `paper/informe_operador.md` (paper/) | `8e037980...` | `8e037980...` | `8e037980...` | Parity OK |
+| `paper/paper.md` | `a3a88569...` | `a3a88569...` | `a3a88569...` | Parity OK |
+| `paper/paper_en.md` | `6ebc1351...` | `6ebc1351...` | `6ebc1351...` | Parity OK |
+| `paper/reports/announcement.md` | `83f6f7e6...` | `83f6f7e6...` | `83f6f7e6...` | Parity OK |
+| `paper/reports/diffusion-plan.md` | `7b4e5527...` | `7b4e5527...` | `7b4e5527...` | Parity OK |
+
+Los sha256 (workspace, staging local `repo/amor-operativo/`, y GitHub Contents API / raw) coinciden exactamente en los 6 ficheros verificados. `git status -s` en staging: limpio (0 ficheros modificados/untracked).
+
+### Accion ejecutada en este run
+
+- Checkout de AMO-25 (F12) rechazado: issue en status `done` (checkout conflict) — no es un error, es el estado correcto para un issue completado.
+- Readback de paridad workspace ↔ staging ↔ remoto (sha256 coincidentes en 6 ficheros).
+- Anadido §32 al informe (este documento).
+- Sync workspace → staging: `cp paper/informe_operador.md repo/amor-operativo/paper/informe_operador.md` y `cp paper/informe_operador.md repo/amor-operativo/informe_operador.md`.
+- MANIFEST.md regenerado desde disco.
+- Commit + push a `main`: commit `§32 readback post-cierre` con sha256 actualizado del informe.
+
+### Estado de pendientes
+
+- **F12 (AMO-25)**: `done`. Repositorio publico estable y completo.
+- **Difusion externa** (HN/Reddit/X/Zenodo/arXiv): PENDIENTE — requiere OK explicito del operador por canal. Plan en `paper/reports/diffusion-plan.md`. El anuncio (`announcement.md`, 281 palabras, sha256 `83f6f7e6...`) esta marcado PUBLICABLE pero no se difunde sin OK del operador.
+- **Monitorizacion de issues/PRs**: sin feedback nuevo en #1, no hay accion adicional. Disponible como issue hijo a demanda del operador.
+
+### Veredicto
+
+Repositorio publico estable y completo. Workspace, staging y remoto `main` estan en paridad byte a byte (HEAD `39f79a9`). F12 (AMO-25) mantiene `done`. El unico pendiente sigue siendo la difusion externa, que requiere aprobacion humana del operador por canal. Sin feedback nuevo en #1; sin accion de escritura adicional hasta OK del operador o feedback de la comunidad.
