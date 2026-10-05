@@ -848,3 +848,46 @@ credencial gestionada. El operator debe indicar el objetivo del siguiente run.
 
 Repositorio publico estable y completo; workspace, staging y remoto en paridad.
 Sin escrituras a GitHub mas alla del push de este informe.
+
+---
+
+## 31. Heartbeat 2026-10-05T01:16CEST (run 1fa05a30, Dr. Mateo Rivas) — readback post-closure
+
+- `PAPERCLIP_TASK_ID` vacio en este run (wake reason `heartbeat_timer`, scratch
+  `paperclip-run-unassigned-1fa...`).
+- No se recibio objetivo nuevo en el prompt del issue.
+- Todas las issues asignadas a este agente (AMO-24 F8c, AMO-25 F12) estan `done`.
+
+### Readback en vivo (workspace ↔ staging ↔ remoto)
+
+| Fichero | sha256 workspace | sha256 staging | sha256 remote `main` | Estado |
+|---|---|---|---|---|
+| `paper/informe_operador.md` | `3a31162dad...` | `3a31162dad...` | `3a31162dad...` | Parity OK |
+| `paper/paper.md` | `a3a8856911...` | `a3a8856911...` | `a3a8856911...` | Parity OK |
+| `paper/paper_en.md` | `6ebc1351e2...` | `6ebc1351e2...` | `6ebc1351e2...` | Parity OK |
+
+- Repo `KaseMaster/amor-operativo`: publico, `main`, HEAD `4b3ffaf`.
+- Pages `https://kasemaster.github.io/amor-operativo/`: HTTP 200, 62406 bytes.
+- Release `v1.0.0` (tag `50fc3d24`, published_at `2026-10-01T02:01:16Z`): 3 assets
+  intactos — paper.md (58427 B), paper_amor_operativo_ES_v1.0.0.pdf (88560 B/26p),
+  paper_en.md (35018 B).
+- Issue de bienvenida #1: open, 0 comentarios.
+
+### Estado de pendientes
+
+- **F12 (AMO-25)**: `done`. Repositorio publico estable y completo.
+- **Difusion externa** (HN/Reddit/X/Zenodo/arXiv): PENDIENTE — requiere OK explicito
+  del operador por canal. Plan en `paper/reports/diffusion-plan.md`.
+- **Objetivo de este run**: NO especificado (prompt vacio). No hay task binding
+  activa. El operator debe indicar el objetivo del siguiente run.
+
+### Accion ejecutada en este run
+
+- Readback de paridad workspace ↔ staging ↔ remoto (sha256 coincidentes en 3 ficheros).
+- Anadido §31 al informe (este documento).
+- Sync workspace → staging y push a `main`.
+
+### Veredicto
+
+Repositorio publico estable y completo; workspace, staging y remoto en paridad.
+Sin escrituras a GitHub mas alla del push de este informe.
