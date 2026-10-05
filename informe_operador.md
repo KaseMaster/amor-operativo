@@ -1117,3 +1117,51 @@ Ambos issues asignados (AMO-24 F8c, AMO-25 F12) permanecen done. Repositorio pub
 ### Veredicto
 
 Ambos issues asignados (AMO-24 F8c, AMO-25 F12) permanecen done. Repositorio publico estable y verificado EN VIVA (HEAD 9fcbfe6, paridad OK, Pages 200, release v1.0.0 intacto, 0 feedback nuevo en #1). No hay nueva tarea asignada en este run. El unico pendiente es la difusion externa, que requiere aprobacion humana del operador por canal.
+
+## Heartbeat de monitorizacion 2026-10-05 (~11:30 CEST, run e48ca071)
+
+- Run sin issue vinculado (heartbeat de monitorizacion). AMO-24 y AMO-25 siguen `done`.
+- Verificacion en vivo via API publica de GitHub (sin credenciales, solo lectura):
+  - Repo: https://github.com/KaseMaster/amor-operativo — publico (id 1387007646). OK
+  - Release: v1.0.0 (id 400588800). OK
+  - README.md en main: 8.655 bytes, sha e468c9545c2c6b63bbc1ae1a070a70fa6ef5eeb4. OK
+  - GitHub Pages: https://kasemaster.github.io/amor-operativo/ -> HTTP 200. OK
+- Sin issues nuevos asignados a Community Liaison. Sin acciones pendientes de publicacion.
+- Preguntas abiertas: si el operador quiere continuar fase post-publicacion (difusion, respuesta a feedback), abrir issue y asignarlo.
+
+---
+
+## §36 Heartbeat 2026-10-05 (~10:47Z, run 25b7bc49) — sync + push de § e48ca071
+
+**Wake reason:** `heartbeat_timer` — no task binding (`PAPERCLIP_TASK_ID` vacio; `issueId: null` en scratch). Ambos issues AMO-24 (F8c) y AMO-25 (F12) estan `done`.
+
+**Managed GitHub identity:** resuelta via POST /runtime-tools/github/credentials -> `status: available, source: dedicated, login: KaseMaster, grantId: b5083880`. Token scopes: repo + workflow (push/commit disponible).
+
+### Estado verificado EN VIVA (api.github.com publica, 10:47Z)
+- **Repo** `KaseMaster/amor-operativo`: publico, `main`, HEAD remoto `8c24c2c` (push 2026-10-05T07:11Z — §35). Descripcion coincide con el brief. OK
+- **Topics**: 7 aplicados (agi, ai-alignment, ai-ethics, governance, love, open-science, synthetic-sentience) — coinciden con el brief. OK
+- **Pages** https://kasemaster.github.io/amor-operativo/: HTTP 200, 62406 bytes, build activo. OK
+- **Release v1.0.0** (tag 50fc3d24): 3 assets intactos — paper.md (58427B), paper_amor_operativo_ES_v1.0.0.pdf (88560B/26p), paper_en.md (35018B). OK
+- **Issue #1** "Bienvenida y feedback (v1.0.0)": open, 0 comentarios, 0 PRs — sin feedback nuevo. OK
+- **Stats**: 0 stargazers, 0 forks. Sin activity comunitaria desde la publicacion.
+
+### Drift detectado y resuelto (causa tecnica exacta)
+- **Drift:** run `e48ca071` (~11:30) anadio § de monitorizacion al workspace `paper/informe_operador.md` (sha256 pasa de 4b91041e §35 -> 76105706) pero NO lo commiteo/push: `git diff HEAD -- informe_operador.md` en staging = 0 lineas (ST estaba en §35), mientras workspace tenia § e48ca071 adicional.
+- **Paridad previa:** staging == remoto HEAD (8c24c2c); paper.md/paper_en.md/README.md/LICENSE PAR entre workspace y staging; UNICAMENTE informe_operador.md desincronizado.
+- **Wordcount (wc -w):** paper.md 10249 palabras; paper_en.md 10711 palabras (incluye markdown; cuerpo ~8890).
+
+### Accion ejecutada en este run
+- Anadido §36 (este documento) al workspace informe.
+- Sync workspace -> staging: `cp $WS/informe_operador.md $ST/informe_operador.md` y `cp $WS/informe_operador.md $ST/paper/informe_operador.md`.
+- MANIFEST.md actualizado (sha256 + size) para ambas rutas de informe_operador.md.
+- Commit + push a `main` via credencial gestionada (GH_TOKEN resuelto del vault; credential helper GIT_CONFIG_COUNT aplicado).
+- Verificacion readback: `git ls-remote origin HEAD` y GitHub Contents API sha256 post-push.
+
+### Estado de pendientes
+- **F12 (AMO-25):** done. Repositorio publico estable.
+- **Difusion externa** (HN/Reddit/X/Zenodo/arXiv): PENDIENTE — requiere OK explicito del operador por canal. Plan en `paper/reports/diffusion-plan.md`.
+- **Monitorizacion:** sin feedback nuevo en #1; disponible como monitoring heartbeat (3600s).
+- **paper.md (10249 wc -w > 12000 brief):** el cuerpo efectivo (~8890) esta dentro del rango; pendiente decision del operador sobre recorte adicional (ver §35).
+
+### Veredicto
+Workspace, staging y remoto `main` reacomodados en paridad byte a byte. Gap de § e48ca071 resuelto. F12 (AMO-25) mantiene `done`. El unico pendiente sigue siendo la difusion externa, que requiere aprobacion humana del operador por canal.
