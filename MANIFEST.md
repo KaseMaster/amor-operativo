@@ -21,7 +21,7 @@ Aprobacion humana: puerta F11 (aprobada por el operador — publicacion ejecutad
 | `CONTRIBUTING.md` | 3685 | e261f07c22c1ca6d |
 | `GOVERNANCE.md` | 2367 | ec52482a039029ca |
 | `LICENSE` | 31198 | 4659a5110aa40377 |
-| `MANIFEST.md` | 6930 | a5a81630192c9b47 |
+| `MANIFEST.md` | 6909 | 5130f37ef21ba099 |
 | `PUBLISH-CHECKLIST.md` | 2945 | 3c82b191a1392588 |
 | `README.md` | 8655 | fee16dd17ce889ce |
 | `VERSION` | 6 | 59854984853104df |
@@ -33,7 +33,7 @@ Aprobacion humana: puerta F11 (aprobada por el operador — publicacion ejecutad
 | `eval/results/README.md` | 1134 | 144a75310cb496bd |
 | `eval/scenarios/.gitkeep` | 0 | e3b0c44298fc1c14 |
 | `eval/scenarios/README.md` | 992 | 32d65a5c22894a7f |
-| `informe_operador.md` | 65550 | 3a31162dad92044c |
+| `informe_operador.md` | 75855 | 02cf45fdc76946c3 |
 | `paper/SPEC-AUTORITATIVA.md` | 21597 | 59b0fa15b636bf07 |
 | `paper/corpus/bibliography.json` | 52323 | 22ba5caeebfa8011 |
 | `paper/corpus/comparison-matrix.md` | 14066 | 061a0a8e3b3542b0 |
@@ -43,7 +43,7 @@ Aprobacion humana: puerta F11 (aprobada por el operador — publicacion ejecutad
 | `paper/glosario.md` | 16363 | 6d7defe95725c878 |
 | `paper/gobernanza.md` | 30270 | d189377adbfc96a6 |
 | `paper/implementacion.md` | 41595 | e1a7c50acf749a93 |
-| `paper/informe_operador.md` | 65550 | 3a31162dad92044c |
+| `paper/informe_operador.md` | 75855 | 02cf45fdc76946c3 |
 | `paper/manuscript/INDEX.md` | 6567 | 8aae9157ada9df99 |
 | `paper/manuscript/conteo-palabras.md` | 4336 | 32eaacbf73ea01d9 |
 | `paper/manuscript/manuscript-en.md` | 72298 | 88e4d2fbf036b5c2 |
